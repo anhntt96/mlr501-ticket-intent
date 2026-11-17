@@ -1,7 +1,6 @@
 # MLR501 – Phân loại intent ticket CSKH super-app tiếng Việt (bản thử)
 
 Bản thu nhỏ (mini pipeline) để tự đi hết quy trình nghiên cứu trước khi chia việc cho nhóm.
-Ghi chú trong Obsidian: `10-Projects/Học thạc sĩ/MLR501/` (`MLR501 - Đề tài nhóm.md`, `MLR501 - Danh mục intent.md`).
 
 ## Cấu trúc
 
