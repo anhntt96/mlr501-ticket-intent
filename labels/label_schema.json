@@ -1,0 +1,200 @@
+{
+  "version": "v1",
+  "date": "2026-11-16",
+  "note": "Nhãn 2 tầng: service (dịch vụ) + issue (loại vấn đề). Nhãn đầy đủ = service/issue. Dựa trên danh mục tự lập theo trang trợ giúp công khai của các super-app; không dùng tài liệu nội bộ.",
+  "services": {
+    "transport": {"vi": "Di chuyển", "definition": "Gọi xe máy, ô tô: chuyến xe, tài xế chở khách, điểm đón, điểm đến."},
+    "food": {"vi": "Đồ ăn", "definition": "Đặt đồ ăn, đồ uống từ quán/nhà hàng giao tận nơi."},
+    "mart": {"vi": "Đi chợ", "definition": "Đặt hàng tạp hoá, siêu thị, thực phẩm tươi, đồ gia dụng giao tận nơi."},
+    "express": {"vi": "Giao hàng", "definition": "Gửi bưu kiện, hàng hoá từ người gửi đến người nhận."},
+    "finance": {"vi": "Tài chính", "definition": "Ví điện tử, nạp/rút/chuyển tiền, liên kết thẻ ngân hàng, giao dịch không gắn với chuyến xe hay đơn hàng cụ thể."},
+    "business": {"vi": "Doanh nghiệp", "definition": "Hồ sơ doanh nghiệp, chuyến xe/đơn hàng công tác, thẻ và thanh toán của doanh nghiệp."},
+    "membership": {"vi": "Gói hội viên", "definition": "Gói hội viên trả phí theo tháng/năm."},
+    "dine_out": {"vi": "Đi ăn nhà hàng", "definition": "Đặt bàn và dùng voucher khi ăn tại nhà hàng (không giao đồ ăn)."},
+    "account": {"vi": "Tài khoản", "definition": "Đăng nhập, thông tin cá nhân, bảo mật, xoá dữ liệu, xoá tài khoản."}
+  },
+  "issues": {
+    "overcharged": {
+      "vi": "Bị tính phí cao hơn giá hiển thị",
+      "definition": "Số tiền bị trừ hoặc phải trả cao hơn giá đã hiển thị khi đặt.",
+      "not": "Bị trừ tiền khi giao dịch thất bại -> charged_but_failed.",
+      "services": ["transport", "food", "mart", "express"],
+      "examples": ["Lúc đặt xe báo 45k mà xuống xe bị trừ 68k là sao vậy", "Đơn đồ ăn hiện 120.000đ nhưng ví bị trừ 155.000đ"]
+    },
+    "payment_method_failed": {
+      "vi": "Không thanh toán được bằng ví điện tử/ngân hàng",
+      "definition": "Không chọn được hoặc thanh toán bị từ chối bằng ví, thẻ, ngân hàng; tiền chưa bị trừ.",
+      "not": "Tiền đã bị trừ mà giao dịch không thành công -> charged_but_failed. Không thêm/liên kết được thẻ -> link_card_failed.",
+      "services": ["transport", "food", "mart", "express"],
+      "examples": ["Mình chọn thanh toán bằng ví mà cứ báo lỗi, không đặt xe được", "Thẻ ngân hàng bị từ chối khi đặt đơn đi chợ"]
+    },
+    "charged_but_failed": {
+      "vi": "Bị trừ tiền dù giao dịch không thành công",
+      "definition": "Tiền đã bị trừ nhưng chuyến xe/đơn hàng/giao dịch báo thất bại hoặc không được tạo.",
+      "not": "Giao dịch thành công nhưng tính sai số tiền -> overcharged.",
+      "services": ["transport", "food", "mart", "express", "finance"],
+      "examples": ["Đặt đơn báo thất bại mà tài khoản ngân hàng vẫn bị trừ 230.000đ", "Nạp tiền vào ví không thành công nhưng ngân hàng đã trừ tiền"]
+    },
+    "safety_incident": {
+      "vi": "Báo cáo tai nạn, sự cố an toàn",
+      "definition": "Tai nạn giao thông, va chạm, tài xế lái ẩu, quấy rối, đe doạ, hoặc tình huống nguy hiểm trong chuyến xe.",
+      "not": "Tài xế không đến -> driver_no_show.",
+      "services": ["transport"],
+      "examples": ["Tài xế chạy quá nhanh rồi va vào xe khác, tôi bị trầy chân", "Tài xế nói năng thô tục và có hành vi quấy rối tôi"]
+    },
+    "driver_no_show": {
+      "vi": "Tài xế không đến điểm đón",
+      "definition": "Đã có tài xế nhận chuyến nhưng không đến, đến sai chỗ, hoặc bắt khách tự huỷ.",
+      "not": "Không tìm được tài xế/không đặt được -> cannot_book.",
+      "services": ["transport"],
+      "examples": ["Tài xế nhận chuyến rồi đứng im một chỗ 20 phút không tới", "Chờ mãi tài xế không đến điểm đón, gọi không nghe máy"]
+    },
+    "cannot_book": {
+      "vi": "Không đặt được xe",
+      "definition": "Không tạo được chuyến: không có tài xế nhận, ứng dụng báo lỗi khi đặt, không bấm đặt được.",
+      "not": "Lỗi do phương thức thanh toán -> payment_method_failed.",
+      "services": ["transport"],
+      "examples": ["Bấm đặt xe hoài mà không có tài xế nào nhận", "App báo lỗi hệ thống mỗi lần tôi đặt xe"]
+    },
+    "lost_item": {
+      "vi": "Để quên đồ/điện thoại trên xe",
+      "definition": "Khách để quên đồ vật trên xe sau chuyến đi, muốn liên hệ tài xế lấy lại.",
+      "not": "",
+      "services": ["transport"],
+      "examples": ["Em để quên điện thoại trên xe lúc 8h sáng nay, giúp em liên hệ tài xế", "Tôi bỏ quên túi xách trên xe, làm sao lấy lại"]
+    },
+    "trip_howto": {
+      "vi": "Hỏi cách dùng tính năng chuyến xe",
+      "definition": "Câu hỏi cách làm: theo dõi tài xế, đổi điểm đến, chọn hồ sơ thanh toán, quản lý địa điểm đã lưu, thêm điểm dừng. Không phải khiếu nại.",
+      "not": "",
+      "services": ["transport"],
+      "examples": ["Làm sao thêm điểm dừng giữa đường khi đang đi?", "Đổi điểm đến khi tài xế đã nhận chuyến được không"]
+    },
+    "food_safety": {
+      "vi": "Vệ sinh an toàn thực phẩm",
+      "definition": "Dị vật trong món ăn, mất vệ sinh, nghi ngộ độc, đau bụng sau khi ăn.",
+      "not": "Món bị đổ, nguội, ôi, hỏng nhưng không có dị vật/ngộ độc -> order_damaged.",
+      "services": ["food"],
+      "examples": ["Trong tô phở có con gián, quá kinh khủng", "Ăn xong cả nhà bị đau bụng, nghi ngộ độc thức ăn"]
+    },
+    "order_cancelled": {
+      "vi": "Đơn hàng bị huỷ",
+      "definition": "Đơn bị quán/cửa hàng/tài xế/hệ thống huỷ mà khách không muốn, hoặc khách hỏi vì sao đơn bị huỷ.",
+      "not": "Khách muốn tự huỷ đơn: hiện chưa có nhãn riêng.",
+      "services": ["food", "mart"],
+      "examples": ["Đơn đồ ăn của tôi tự nhiên bị huỷ dù đã chờ 30 phút", "Sao đơn đi chợ bị huỷ mà không báo lý do"]
+    },
+    "order_not_received": {
+      "vi": "Chưa nhận được đơn / giao không thành công",
+      "definition": "App báo đã giao hoặc đang giao quá lâu nhưng người nhận chưa nhận được; tài xế giao không thành công.",
+      "not": "Nhận được nhưng thiếu/sai -> order_missing_wrong.",
+      "services": ["food", "mart", "express"],
+      "examples": ["App báo đã giao mà tôi chưa nhận được gì", "Người nhận chưa nhận được bưu kiện dù đã 3 ngày"]
+    },
+    "order_missing_wrong": {
+      "vi": "Thiếu hoặc sai món/sản phẩm, nhận nhầm đơn",
+      "definition": "Nhận được đơn nhưng thiếu món, sai món, sai sản phẩm, hoặc nhận nhầm đơn của người khác.",
+      "not": "Hàng đúng nhưng hư/đổ -> order_damaged.",
+      "services": ["food", "mart", "express"],
+      "examples": ["Đặt 2 ly trà sữa mà chỉ nhận 1 ly", "Đơn đi chợ giao nhầm sữa tươi thành sữa chua"]
+    },
+    "order_damaged": {
+      "vi": "Hàng/món bị đổ, hư hỏng, kém chất lượng, thất lạc",
+      "definition": "Thức ăn bị đổ, ôi, hỏng; sản phẩm kém chất lượng, hết hạn; bưu gửi hư hại hoặc thất lạc.",
+      "not": "Dị vật, ngộ độc -> food_safety.",
+      "services": ["food", "mart", "express"],
+      "examples": ["Canh bị đổ hết ra túi, không ăn được", "Bưu kiện tới nơi bị móp méo, đồ bên trong vỡ"]
+    },
+    "fraud_report": {
+      "vi": "Báo cáo bất thường, gian lận, lừa đảo",
+      "definition": "Giao dịch lạ không phải mình làm, tài khoản bị chiếm, bị lừa chuyển tiền, tin nhắn giả mạo.",
+      "not": "",
+      "services": ["finance"],
+      "examples": ["Ví bị trừ 2 triệu mà tôi không hề giao dịch", "Có người giả nhân viên gọi xin mã OTP, tôi lỡ đưa rồi"]
+    },
+    "link_card_failed": {
+      "vi": "Không liên kết/thêm được thẻ, ví",
+      "definition": "Không thêm hoặc liên kết được thẻ ngân hàng, thẻ tín dụng (kể cả thẻ doanh nghiệp), ví điện tử vào tài khoản.",
+      "not": "Thẻ đã liên kết nhưng thanh toán bị lỗi -> payment_method_failed.",
+      "services": ["finance", "business"],
+      "examples": ["Liên kết thẻ Vietcombank báo lỗi hoài", "Không thêm được thẻ tín dụng công ty vào hồ sơ doanh nghiệp"]
+    },
+    "business_profile": {
+      "vi": "Vấn đề hồ sơ doanh nghiệp",
+      "definition": "Không tạo được hồ sơ doanh nghiệp, chuyến/đơn công tác bị tính vào hồ sơ cá nhân.",
+      "not": "Đổi email/SĐT -> update_contact.",
+      "services": ["business"],
+      "examples": ["Tạo hồ sơ doanh nghiệp mãi không được", "Chuyến đi công tác sáng nay bị tính vào hồ sơ cá nhân"]
+    },
+    "refund_request": {
+      "vi": "Yêu cầu hoàn tiền chuyến xe/đơn hàng",
+      "definition": "Yêu cầu hoàn tiền cho chuyến xe hoặc đơn hàng đã thanh toán bằng hồ sơ/thẻ doanh nghiệp, không kèm lỗi cụ thể khác.",
+      "not": "Có lỗi cụ thể (thiếu món, bị trừ tiền khi thất bại...) -> dùng issue của lỗi đó.",
+      "services": ["business"],
+      "examples": ["Công ty cần hoàn tiền chuyến xe ngày 12/11 đã trả bằng thẻ doanh nghiệp", "Làm sao yêu cầu hoàn tiền cho đơn công tác"]
+    },
+    "membership_cancel": {
+      "vi": "Không huỷ được gói hội viên",
+      "definition": "Muốn huỷ gói hội viên nhưng không tìm thấy chỗ huỷ hoặc huỷ bị lỗi, vẫn bị gia hạn.",
+      "not": "",
+      "services": ["membership"],
+      "examples": ["Tôi đã huỷ gói hội viên mà tháng này vẫn bị trừ tiền", "Tìm mãi không thấy chỗ huỷ gói hội viên"]
+    },
+    "membership_subscribe": {
+      "vi": "Không đăng ký được gói hội viên",
+      "definition": "Muốn đăng ký hoặc nâng cấp gói hội viên nhưng không được.",
+      "not": "",
+      "services": ["membership"],
+      "examples": ["Bấm đăng ký gói hội viên báo lỗi", "Sao tài khoản tôi không đăng ký được gói tiết kiệm"]
+    },
+    "reservation_issue": {
+      "vi": "Vấn đề đặt bàn nhà hàng",
+      "definition": "Không đặt được bàn, đến nơi nhà hàng không có bàn đã đặt, đổi/huỷ đặt bàn.",
+      "not": "",
+      "services": ["dine_out"],
+      "examples": ["Tôi đặt bàn 7h tối qua app mà tới nơi quán nói không có", "Muốn đổi giờ đặt bàn thì làm sao"]
+    },
+    "voucher_issue": {
+      "vi": "Vấn đề voucher nhà hàng",
+      "definition": "Không áp dụng được voucher ăn tại nhà hàng, voucher bị từ chối, mua voucher không nhận được.",
+      "not": "",
+      "services": ["dine_out"],
+      "examples": ["Nhà hàng không chịu nhận voucher tôi mua trên app", "Mua voucher buffet rồi mà không thấy trong tài khoản"]
+    },
+    "update_contact": {
+      "vi": "Đổi số điện thoại/email",
+      "definition": "Cập nhật số điện thoại, email của tài khoản cá nhân hoặc hồ sơ doanh nghiệp; xác minh số mới.",
+      "not": "",
+      "services": ["account", "business"],
+      "examples": ["Tôi đổi sim mới, muốn cập nhật số điện thoại", "Cần đổi email nhận hoá đơn của hồ sơ doanh nghiệp"]
+    },
+    "login_failed": {
+      "vi": "Không đăng nhập được",
+      "definition": "Không vào được tài khoản: không nhận OTP, tài khoản bị khoá, báo lỗi khi đăng nhập.",
+      "not": "Quên mật khẩu/PIN -> forgot_credential.",
+      "services": ["account"],
+      "examples": ["Đăng nhập không nhận được mã OTP", "Tài khoản bị khoá, không vào được app"]
+    },
+    "forgot_credential": {
+      "vi": "Quên mật khẩu / mã PIN",
+      "definition": "Quên mật khẩu hoặc mã PIN, muốn đặt lại.",
+      "not": "",
+      "services": ["account"],
+      "examples": ["Em quên mã PIN ví, đặt lại sao ạ", "Quên mật khẩu tài khoản rồi"]
+    },
+    "delete_history": {
+      "vi": "Xoá lịch sử chuyến xe",
+      "definition": "Muốn xoá lịch sử chuyến xe, đơn hàng khỏi tài khoản.",
+      "not": "Xoá cả tài khoản -> delete_account.",
+      "services": ["account"],
+      "examples": ["Làm sao xoá lịch sử các chuyến xe cũ", "Tôi muốn xoá lịch sử đi lại trong app"]
+    },
+    "delete_account": {
+      "vi": "Xoá vĩnh viễn tài khoản",
+      "definition": "Muốn xoá vĩnh viễn tài khoản và dữ liệu.",
+      "not": "",
+      "services": ["account"],
+      "examples": ["Tôi muốn xoá vĩnh viễn tài khoản", "Không dùng nữa, xoá tài khoản giúp tôi"]
+    }
+  }
+}

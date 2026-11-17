@@ -1,0 +1,22 @@
+{
+  "model_name": "vinai/phobert-base-v2",
+  "segment": true,
+  "max_len": 64,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "epochs": 10,
+  "warmup_ratio": 0.1,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "modes": [
+    "flat",
+    "hier"
+  ],
+  "train_variants": [
+    "clean"
+  ],
+  "device": "mps"
+}

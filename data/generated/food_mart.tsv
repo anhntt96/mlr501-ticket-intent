@@ -1,0 +1,301 @@
+service	issue	explicit	text
+food	overcharged	1	Đơn đồ ăn hiện 120.000đ nhưng ví bị trừ 155.000đ
+food	overcharged	1	Giá món trên app 45k mà tính tiền thành 59k, quán có tính thêm gì không
+food	overcharged	1	Tôi đặt cơm trưa tổng 89.000đ, thanh toán xong bị trừ 112.000đ
+food	overcharged	1	Phí giao đồ ăn lúc đặt là 15k, sau khi giao bị tính 28k
+food	overcharged	1	Mã giảm giá đã áp dụng mà đơn trà sữa vẫn bị tính đủ giá
+food	overcharged	1	Đơn bún bò báo 70k, tài xế đòi thêm 20k tiền quán tăng giá
+food	overcharged	1	Mình bị tính tiền đơn đồ ăn cao hơn giá hiển thị khi đặt
+food	overcharged	1	Hoá đơn món ăn ghi 210.000đ trong khi màn hình đặt hàng chỉ 168.000đ
+food	overcharged	1	Sao đơn pizza bị tính phí dịch vụ mà lúc đặt không thấy ghi
+food	overcharged	1	Em đặt 2 phần gà rán giá 98k, bị trừ 136k ạ
+food	overcharged	1	Đơn đồ ăn tối qua bị trừ tiền nhiều hơn tổng đơn 35.000đ
+food	overcharged	1	Món trên app ghi giá khuyến mãi nhưng thanh toán lại theo giá gốc
+food	overcharged	1	Tôi đặt cà phê 3 ly 87k, ví trừ 117k, kiểm tra giúp
+food	overcharged	1	Quán tính thêm tiền hộp và túi mà app không báo trước, tổng cao hơn giá đặt
+food	overcharged	0	Tôi bị tính phí cao hơn giá hiển thị lúc đặt, mong được hoàn phần chênh lệch
+food	overcharged	0	Giá hiện 76.000đ nhưng tài khoản bị trừ 104.000đ
+food	overcharged	0	Số tiền bị trừ không khớp với giá trên app, cao hơn 22k
+food	overcharged	1	Đặt bánh mì 2 ổ giá 40k mà bị tính 58k phí giao đồ ăn quá cao
+food	overcharged	1	Đơn lẩu bị tính phụ phí giờ cao điểm dù lúc đặt hiển thị không có
+food	overcharged	1	Tổng đơn đồ ăn sau giảm giá là 95k, ngân hàng báo trừ 128k
+food	payment_method_failed	1	Đặt đồ ăn chọn ví mà báo lỗi thanh toán, không đặt được đơn
+food	payment_method_failed	1	Thẻ ngân hàng bị từ chối khi tôi đặt cơm trưa
+food	payment_method_failed	1	Sao không thanh toán được đơn đồ ăn bằng thẻ tín dụng
+food	payment_method_failed	1	Ví còn đủ tiền mà đặt trà sữa cứ báo thanh toán không thành công
+food	payment_method_failed	1	Mình chọn thanh toán qua ngân hàng khi đặt đồ ăn thì app báo lỗi
+food	payment_method_failed	1	Đơn đồ ăn không cho chọn thanh toán bằng ví, chỉ cho tiền mặt
+food	payment_method_failed	1	Em đặt món mà thẻ ATM báo không hỗ trợ ạ
+food	payment_method_failed	1	Thanh toán đơn đồ ăn bị treo ở bước xác thực ngân hàng
+food	payment_method_failed	1	Không thể trả tiền đơn gà rán bằng ví điện tử từ tối qua
+food	payment_method_failed	1	Đổi qua 2 thẻ khác vẫn không thanh toán được đơn bún chả
+food	payment_method_failed	1	Mỗi lần đặt đồ ăn chọn thẻ Visa là báo giao dịch bị từ chối
+food	payment_method_failed	1	Không chọn được ví khi đặt đồ ăn, nút bị mờ
+food	payment_method_failed	1	Đặt đồ ăn cho công ty, thanh toán bằng thẻ không được
+food	payment_method_failed	1	App báo phương thức thanh toán không khả dụng cho quán này
+food	payment_method_failed	0	Ví của tôi báo lỗi khi thanh toán, tiền chưa bị trừ
+food	payment_method_failed	0	Thanh toán bằng ngân hàng báo hết thời gian chờ, không trừ tiền
+food	payment_method_failed	0	Không thanh toán được bằng ví điện tử, xử lý giúp tôi
+food	payment_method_failed	1	Tôi muốn trả đơn đồ ăn bằng thẻ nhưng hệ thống báo lỗi xác thực
+food	payment_method_failed	1	Mã QR thanh toán đơn món ăn không quét được
+food	payment_method_failed	1	Đặt đồ ăn khuya mà ví không thanh toán được, quán sắp đóng cửa
+food	charged_but_failed	1	Đặt đơn báo thất bại mà tài khoản ngân hàng vẫn bị trừ 230.000đ
+food	charged_but_failed	1	Đơn đồ ăn không tạo được nhưng ví đã trừ tiền
+food	charged_but_failed	1	Tôi bị trừ 85k cho đơn cơm không thành công
+food	charged_but_failed	1	Quán huỷ đơn rồi mà tiền đồ ăn chưa được hoàn
+food	charged_but_failed	1	Thanh toán đơn trà sữa báo lỗi nhưng ngân hàng gửi tin nhắn trừ tiền
+food	charged_but_failed	1	Đặt món 2 lần đều lỗi, ví bị trừ tiền 2 lần
+food	charged_but_failed	1	Đơn đồ ăn bị lỗi hệ thống nhưng tôi vẫn mất 156.000đ
+food	charged_but_failed	1	App báo không đặt được đơn mà thẻ đã bị trừ tiền
+food	charged_but_failed	1	Mình không nhận được đơn nào mà ví ghi thanh toán đơn đồ ăn
+food	charged_but_failed	1	Đơn pizza báo thất bại sau khi trả tiền, khi nào hoàn lại
+food	charged_but_failed	1	Em bị trừ tiền đặt đồ ăn dù màn hình báo đặt hàng không thành công
+food	charged_but_failed	1	Đơn bị huỷ do không tìm được tài xế nhưng tiền vẫn chưa về
+food	charged_but_failed	1	Thanh toán xong app văng ra, đơn đồ ăn không có mà tiền đã trừ
+food	charged_but_failed	0	Bị trừ tiền dù giao dịch không thành công, cần hoàn tiền gấp
+food	charged_but_failed	0	Thanh toán báo lỗi nhưng tài khoản vẫn bị trừ 92.000đ
+food	charged_but_failed	0	Giao dịch thất bại mà tiền đã mất, giải quyết giúp tôi
+food	charged_but_failed	1	Tôi đặt cơm văn phòng bị lỗi, ngân hàng trừ tiền 3 ngày chưa hoàn
+food	charged_but_failed	1	Đơn đồ ăn hiện thất bại mà ví bị trừ đúng số tiền đơn
+food	charged_but_failed	1	Quán hết món nên đơn bị huỷ, tiền đã trả chưa thấy hoàn
+food	charged_but_failed	1	Đơn bánh ngọt không thành công mà vẫn bị trừ tiền thẻ
+food	food_safety	1	Trong tô phở có con gián, quá kinh khủng
+food	food_safety	1	Ăn xong cả nhà bị đau bụng, nghi ngộ độc thức ăn
+food	food_safety	1	Tôi tìm thấy sợi tóc trong hộp cơm vừa giao
+food	food_safety	1	Có mảnh nilon lẫn trong món gỏi cuốn
+food	food_safety	1	Con tôi ăn gà rán xong bị nôn và tiêu chảy
+food	food_safety	1	Trong ly trà sữa có con ruồi chết
+food	food_safety	1	Món bún có mùi lạ, ăn vào thấy buồn nôn, quán làm mất vệ sinh
+food	food_safety	1	Phát hiện mẩu kim loại nhỏ trong bánh mì, suýt cắn phải
+food	food_safety	1	Thịt trong cơm sườn còn sống, có máu, sợ ăn vào bị bệnh
+food	food_safety	1	Tôi bị ngộ độc sau khi ăn hải sản đặt qua app, phải đi viện
+food	food_safety	1	Có con sâu trong đĩa rau xào
+food	food_safety	1	Hộp đồ ăn dính vết bẩn và có mùi hôi, rất mất vệ sinh
+food	food_safety	1	Ăn salad xong bị dị ứng nặng dù đã ghi chú không bỏ đậu phộng
+food	food_safety	1	Trong canh có mảnh vỡ thuỷ tinh
+food	food_safety	1	Cả văn phòng ăn cơm trưa đặt qua app xong đều đau bụng
+food	food_safety	1	Thấy con kiến bò trong hộp bánh ngọt
+food	food_safety	1	Đồ ăn có dị vật, tôi muốn báo cáo quán này
+food	food_safety	1	Nước uống có cặn đen và mùi lạ, uống xong bị đau họng
+food	food_safety	1	Sushi có mùi tanh nặng, ăn vào bị nổi mẩn đỏ khắp người
+food	food_safety	1	Tôi nghi quán dùng dầu chiên cũ, ăn xong bị đau bụng dữ dội
+food	order_cancelled	1	Đơn đồ ăn của tôi tự nhiên bị huỷ dù đã chờ 30 phút
+food	order_cancelled	1	Quán tự huỷ đơn mà không báo lý do
+food	order_cancelled	1	Tài xế nhận đơn đồ ăn rồi huỷ ngang
+food	order_cancelled	1	Sao đơn cơm trưa của mình bị hệ thống huỷ vậy
+food	order_cancelled	1	Đơn trà sữa bị huỷ vì quán hết món, sao không báo sớm
+food	order_cancelled	1	Tôi đặt đồ ăn lần thứ 3 vẫn bị huỷ đơn
+food	order_cancelled	1	Đơn đã chuẩn bị xong mà lại hiện thông báo đơn bị huỷ
+food	order_cancelled	1	Quán nhận đơn rồi 20 phút sau huỷ, tôi lỡ bữa trưa
+food	order_cancelled	1	Em đặt bánh sinh nhật mà đơn bị huỷ sát giờ giao
+food	order_cancelled	1	Đơn đồ ăn bị huỷ do không có tài xế, lý do gì vậy
+food	order_cancelled	1	Tại sao đơn đồ ăn của tôi bị huỷ khi đang giao
+food	order_cancelled	1	Đơn phở bị huỷ mà tôi không hề bấm huỷ
+food	order_cancelled	1	Tài xế gọi bảo tôi huỷ đơn đồ ăn vì quán đông quá
+food	order_cancelled	1	Đặt đồ ăn cho cả nhóm, đơn bị huỷ không rõ lý do
+food	order_cancelled	1	Quán báo đóng cửa rồi huỷ đơn dù app vẫn hiện đang mở
+food	order_cancelled	1	Mình muốn biết vì sao đơn đồ ăn tối qua bị huỷ
+food	order_cancelled	1	Đơn cơm văn phòng 15 suất bị huỷ lúc 11h, cả phòng không có gì ăn
+food	order_cancelled	1	Đơn bị huỷ liên tục mỗi lần đặt ở quán này
+food	order_cancelled	1	Đơn đồ ăn bị huỷ sau khi tôi đã đợi gần 1 tiếng
+food	order_cancelled	1	Hệ thống tự huỷ đơn gà rán của tôi, có được đền bù không
+food	order_not_received	1	App báo đã giao đồ ăn mà tôi chưa nhận được gì
+food	order_not_received	1	Đơn cơm trưa giao quá 1 tiếng vẫn chưa tới
+food	order_not_received	1	Tài xế đánh dấu đã giao nhưng tôi không nhận được đơn trà sữa
+food	order_not_received	1	Đơn đồ ăn hiện đang giao từ 12h mà giờ 13h30 vẫn chưa thấy
+food	order_not_received	1	Tài xế giao đồ ăn không thành công rồi mang đi luôn
+food	order_not_received	1	Tôi không nhận được đơn bún bò dù đã thanh toán
+food	order_not_received	1	Tài xế bảo đã để đồ ăn ở bảo vệ nhưng bảo vệ không thấy
+food	order_not_received	1	Đơn đồ ăn của mình bị giao nhầm địa chỉ, mình chưa nhận được
+food	order_not_received	1	Đã gọi tài xế 5 lần không nghe máy, đơn đồ ăn vẫn chưa tới
+food	order_not_received	1	App báo hoàn thành nhưng tôi không hề nhận đơn pizza
+food	order_not_received	1	Em đặt đồ ăn cho mẹ ở nhà, mẹ nói chưa ai giao tới
+food	order_not_received	1	Tài xế nhắn không tìm thấy nhà rồi kết thúc đơn, tôi chưa nhận được món
+food	order_not_received	1	Đơn đồ ăn trễ 45 phút so với dự kiến và vẫn chưa có
+food	order_not_received	1	Tôi chờ đơn cơm ở sảnh toà nhà mà tài xế không đến giao
+food	order_not_received	1	Đồ ăn chưa tới mà trạng thái đã chuyển sang giao thành công
+food	order_not_received	1	Tài xế giao đồ ăn thất bại vì không gọi được cho tôi, nhưng điện thoại tôi không có cuộc gọi nào
+food	order_not_received	1	Đơn trà sữa giao cho ai vậy, tôi chưa nhận được
+food	order_not_received	1	Đặt đồ ăn từ 7h tối mà 9h vẫn chưa nhận
+food	order_not_received	1	Đơn món ăn hiện đã giao kèm ảnh nhưng ảnh chụp không phải nhà tôi
+food	order_not_received	1	Mình chưa nhận được đơn cơm gà, cần hoàn tiền hoặc giao lại
+food	order_missing_wrong	1	Đặt 2 ly trà sữa mà chỉ nhận 1 ly
+food	order_missing_wrong	1	Quán giao sai món, tôi đặt bún chả mà nhận bún thịt nướng
+food	order_missing_wrong	1	Thiếu phần nước chấm và rau sống trong đơn
+food	order_missing_wrong	1	Tôi đặt cơm không hành mà quán vẫn cho hành
+food	order_missing_wrong	1	Đơn đồ ăn thiếu 1 hộp cơm, đặt 4 nhận 3
+food	order_missing_wrong	1	Nhận nhầm đơn đồ ăn của người khác, không phải món mình đặt
+food	order_missing_wrong	1	Pizza size L mà giao size M
+food	order_missing_wrong	1	Thiếu món tráng miệng trong combo đã đặt
+food	order_missing_wrong	1	Đặt trà sữa ít đường mà nhận được loại nhiều đường, sai topping
+food	order_missing_wrong	1	Đơn gà rán thiếu 2 miếng so với combo
+food	order_missing_wrong	1	Em đặt phở bò mà quán giao phở gà ạ
+food	order_missing_wrong	1	Món ăn kèm trong đơn bị thiếu, quán quên bỏ vào
+food	order_missing_wrong	1	Tôi đặt món chay nhưng nhận được món có thịt
+food	order_missing_wrong	1	Thiếu đồ uống trong đơn đồ ăn trưa
+food	order_missing_wrong	1	Tài xế giao đơn đồ ăn sai, túi đồ ghi tên người khác
+food	order_missing_wrong	1	Đặt 3 phần bánh mì, thiếu 1 phần pate
+food	order_missing_wrong	1	Combo ghi có khoai tây chiên mà không thấy đâu
+food	order_missing_wrong	1	Đơn cơm văn phòng giao thiếu 5 suất
+food	order_missing_wrong	1	Món nướng giao sai vị, mình chọn không cay mà nhận loại cay
+food	order_missing_wrong	1	Đơn của tôi thiếu muỗng đũa và thiếu luôn ly nước đã trả tiền
+food	order_damaged	1	Canh bị đổ hết ra túi, không ăn được
+food	order_damaged	1	Trà sữa giao tới bị đổ một nửa
+food	order_damaged	1	Pizza bị dồn về một góc, hộp móp méo
+food	order_damaged	1	Đồ ăn giao tới nguội lạnh và bị chua
+food	order_damaged	1	Cơm bị thiu, có mùi chua khó chịu
+food	order_damaged	1	Bánh kem giao tới bị chảy và vỡ nát
+food	order_damaged	1	Hộp bún bị bể, nước dùng chảy ra hết
+food	order_damaged	1	Ly cà phê bị đổ, túi đồ ướt sũng
+food	order_damaged	1	Rau trong món gỏi bị héo úa, không còn tươi
+food	order_damaged	1	Món lẩu giao tới bị tràn nước, thức ăn dính hết vào túi
+food	order_damaged	1	Bánh mì bị ỉu và cứng như đá
+food	order_damaged	1	Sữa chua trong đơn bị hỏng, có mùi lạ
+food	order_damaged	1	Tài xế làm rơi đồ ăn nên hộp cơm bị bể nắp
+food	order_damaged	1	Trái cây trong đơn bị dập nát hết
+food	order_damaged	1	Gà rán giao tới bị nhũn, dầu thấm ra hộp
+food	order_damaged	1	Nước ngọt bị xì hết gas, ly bị nứt
+food	order_damaged	1	Đồ ăn bị đổ lẫn vào nhau, không ăn nổi
+food	order_damaged	1	Món sushi bị nát và không còn lạnh khi giao tới
+food	order_damaged	1	Súp bị đổ ra ngoài, chỉ còn một ít trong hộp
+food	order_damaged	1	Đơn bánh ngọt giao tới bị hư, kem bị chảy và chua
+mart	overcharged	1	Đơn đi chợ hiện 350.000đ nhưng bị trừ 412.000đ
+mart	overcharged	1	Giá rau củ trên app khác với giá bị tính khi giao hàng
+mart	overcharged	1	Tôi đặt hàng siêu thị tổng 520k, thanh toán xong bị trừ 589k
+mart	overcharged	1	Khuyến mãi mua 1 tặng 1 nhưng đơn đi chợ vẫn bị tính tiền cả 2
+mart	overcharged	1	Phí giao hàng tạp hoá tăng từ 15k lên 32k sau khi đặt
+mart	overcharged	1	Thịt heo tính theo cân nặng thực tế cao hơn nhiều so với giá ước tính
+mart	overcharged	1	Đơn mua sữa cho con bị tính cao hơn giá hiển thị 40.000đ
+mart	overcharged	1	Mình áp mã giảm giá đi chợ thành công mà hoá đơn không trừ
+mart	overcharged	1	Hoá đơn đi chợ ghi thêm phí đóng gói không được báo trước
+mart	overcharged	1	Đơn hàng siêu thị bị tính 2 lần một sản phẩm
+mart	overcharged	1	Giá trên app là 89k một thùng nước, khi giao bị tính 115k
+mart	overcharged	1	Đặt đồ tạp hoá 230k mà ví bị trừ 278k, kiểm tra giúp
+mart	overcharged	1	Em mua trứng gà giá 32k một vỉ, bị tính 45k ạ
+mart	overcharged	1	Đơn đi chợ cuối tuần bị tính phí dịch vụ cao bất thường
+mart	overcharged	0	Tôi bị tính tiền cao hơn giá hiển thị trên app, cần hoàn phần chênh lệch
+mart	overcharged	0	Giá đặt là 156.000đ mà tài khoản bị trừ 199.000đ
+mart	overcharged	0	Số tiền trừ không đúng với tổng đơn lúc đặt
+mart	overcharged	1	Mua đồ siêu thị giá giảm 20% mà vẫn bị tính giá gốc
+mart	overcharged	1	Đơn đi chợ của tôi bị cộng thêm 25k không rõ lý do
+mart	overcharged	1	Tôi đặt hoa quả 1kg giá 60k nhưng bị tính 1,5kg
+mart	payment_method_failed	1	Thẻ ngân hàng bị từ chối khi đặt đơn đi chợ
+mart	payment_method_failed	1	Đặt hàng siêu thị chọn ví báo lỗi thanh toán
+mart	payment_method_failed	1	Không thanh toán được đơn tạp hoá bằng thẻ tín dụng
+mart	payment_method_failed	1	Đơn đi chợ chỉ cho trả tiền mặt, không chọn được ví
+mart	payment_method_failed	1	Ví còn tiền mà đặt đồ siêu thị vẫn báo thanh toán thất bại
+mart	payment_method_failed	1	Thanh toán đơn đi chợ qua ngân hàng bị treo ở bước OTP
+mart	payment_method_failed	1	Em đặt hàng tạp hoá mà thẻ ATM không dùng được ạ
+mart	payment_method_failed	1	Mình không trả được đơn đi chợ bằng ví điện tử từ sáng
+mart	payment_method_failed	1	Đặt đồ siêu thị cho mẹ, thẻ Visa báo bị từ chối
+mart	payment_method_failed	1	Không chọn được phương thức thanh toán ngân hàng cho đơn đi chợ
+mart	payment_method_failed	1	Đơn hàng tạp hoá báo phương thức thanh toán không hợp lệ
+mart	payment_method_failed	1	Thanh toán đơn rau củ bằng ví cứ quay vòng rồi báo lỗi
+mart	payment_method_failed	1	Mình đổi sang thẻ khác mà vẫn không đặt được đơn siêu thị
+mart	payment_method_failed	1	Sao đơn đi chợ trên 500k không cho trả bằng ví
+mart	payment_method_failed	0	Không thanh toán được bằng thẻ ngân hàng, tiền chưa bị trừ
+mart	payment_method_failed	0	Ví điện tử báo lỗi khi thanh toán, nhờ kiểm tra
+mart	payment_method_failed	0	Thẻ tín dụng của tôi bị từ chối dù còn hạn mức
+mart	payment_method_failed	1	Thanh toán đơn đi chợ bằng mã QR không được
+mart	payment_method_failed	1	Đặt hàng siêu thị cứ báo lỗi xác thực ngân hàng
+mart	payment_method_failed	1	Tôi không trả được tiền đơn tạp hoá bằng ví, phải huỷ đơn
+mart	charged_but_failed	1	Đơn đi chợ báo thất bại mà ngân hàng đã trừ 345.000đ
+mart	charged_but_failed	1	Đặt hàng siêu thị lỗi nhưng ví vẫn bị trừ tiền
+mart	charged_but_failed	1	Cửa hàng huỷ đơn đi chợ rồi mà tiền chưa hoàn
+mart	charged_but_failed	1	Tôi bị trừ 2 lần cho một đơn tạp hoá không thành công
+mart	charged_but_failed	1	App báo không đặt được đơn đi chợ nhưng thẻ bị trừ tiền
+mart	charged_but_failed	1	Đơn hàng siêu thị không được tạo mà tiền đã mất
+mart	charged_but_failed	1	Thanh toán đơn rau củ báo lỗi, ngân hàng nhắn trừ 189k
+mart	charged_but_failed	1	Mình không nhận được đơn đi chợ nào mà ví ghi đã thanh toán
+mart	charged_but_failed	1	Đơn đi chợ bị huỷ do hết hàng, tiền chưa thấy hoàn sau 3 ngày
+mart	charged_but_failed	1	Em đặt hàng tạp hoá bị lỗi giữa chừng, tiền bị trừ mà không có đơn
+mart	charged_but_failed	1	Đơn siêu thị báo thất bại sau khi thanh toán, khi nào được hoàn
+mart	charged_but_failed	1	Hệ thống lỗi khi đặt đi chợ nhưng tôi vẫn bị trừ tiền
+mart	charged_but_failed	1	Đơn đi chợ không thành công mà vẫn bị trừ tiền ví
+mart	charged_but_failed	0	Bị trừ tiền dù giao dịch báo không thành công
+mart	charged_but_failed	0	Thanh toán thất bại nhưng tài khoản bị trừ 267.000đ, hoàn giúp tôi
+mart	charged_but_failed	0	Giao dịch lỗi mà tiền vẫn bị trừ, đã 2 ngày chưa hoàn
+mart	charged_but_failed	1	Đặt đồ siêu thị 3 lần lỗi, bị trừ tiền cả 3
+mart	charged_but_failed	1	Đơn tạp hoá báo hết hàng và huỷ, tiền trả trước vẫn chưa về
+mart	charged_but_failed	1	Đơn đi chợ thất bại mà ngân hàng đã trừ đúng số tiền đơn
+mart	charged_but_failed	1	Tôi trả tiền đơn siêu thị xong thì app báo đặt hàng thất bại
+mart	order_cancelled	1	Sao đơn đi chợ bị huỷ mà không báo lý do
+mart	order_cancelled	1	Cửa hàng tự huỷ đơn tạp hoá của tôi
+mart	order_cancelled	1	Đơn siêu thị bị huỷ vì hết hàng sau khi tôi chờ 40 phút
+mart	order_cancelled	1	Tài xế nhận đơn đi chợ rồi huỷ
+mart	order_cancelled	1	Đơn hàng đi chợ bị hệ thống huỷ lúc đang chuẩn bị
+mart	order_cancelled	1	Tôi đặt đồ siêu thị 3 lần đều bị huỷ đơn
+mart	order_cancelled	1	Đơn rau củ bị huỷ sát giờ giao, nhà không có gì nấu
+mart	order_cancelled	1	Em đặt sữa cho con mà đơn bị huỷ không rõ lý do
+mart	order_cancelled	1	Đơn đi chợ của tôi bị huỷ khi đang giao
+mart	order_cancelled	1	Cửa hàng báo đóng cửa rồi huỷ đơn tạp hoá
+mart	order_cancelled	1	Mình không bấm huỷ mà đơn siêu thị lại hiện đã huỷ
+mart	order_cancelled	1	Đơn đi chợ cuối tuần bị huỷ, có được bồi thường không
+mart	order_cancelled	1	Tại sao đơn hàng tạp hoá bị huỷ sau khi đã xác nhận
+mart	order_cancelled	1	Tài xế gọi bảo tôi huỷ đơn đi chợ vì hàng nặng quá
+mart	order_cancelled	1	Đơn siêu thị bị huỷ do không có tài xế nhận
+mart	order_cancelled	1	Tôi muốn biết lý do đơn đi chợ hôm qua bị huỷ
+mart	order_cancelled	1	Đơn mua đồ Tết bị huỷ khiến tôi phải đi mua lại
+mart	order_cancelled	1	Đơn tạp hoá đặt trước cho sáng mai bị huỷ tối nay
+mart	order_cancelled	1	Cứ đặt ở cửa hàng này là đơn đi chợ bị huỷ
+mart	order_cancelled	1	Đơn siêu thị bị huỷ một phần rồi huỷ luôn toàn bộ
+mart	order_not_received	1	Đơn đi chợ báo đã giao mà tôi chưa nhận được
+mart	order_not_received	1	Hàng siêu thị giao trễ 2 tiếng vẫn chưa tới
+mart	order_not_received	1	Tài xế đánh dấu giao thành công nhưng tôi không nhận đơn tạp hoá
+mart	order_not_received	1	Đơn rau củ hiện đang giao từ sáng tới chiều chưa thấy
+mart	order_not_received	1	Tài xế giao đơn đi chợ không thành công rồi mang hàng đi
+mart	order_not_received	1	Mình đã thanh toán đơn siêu thị nhưng không nhận được hàng
+mart	order_not_received	1	Tài xế bảo để hàng ở cổng nhưng tôi không thấy
+mart	order_not_received	1	Đơn đi chợ giao sai địa chỉ, tôi chưa nhận được
+mart	order_not_received	1	Gọi tài xế không được, đơn tạp hoá vẫn chưa tới
+mart	order_not_received	1	App báo hoàn thành mà tôi không nhận được thùng sữa
+mart	order_not_received	1	Em đặt đồ siêu thị giao cho bà, bà nói chưa có ai giao
+mart	order_not_received	1	Tài xế nhắn không tìm thấy nhà rồi kết thúc đơn đi chợ
+mart	order_not_received	1	Đơn hàng tạp hoá trễ hẹn giao và chưa có thông tin
+mart	order_not_received	1	Tôi chờ ở chung cư mà tài xế không giao đơn đi chợ lên
+mart	order_not_received	1	Trạng thái đơn siêu thị là đã giao nhưng tôi chưa nhận
+mart	order_not_received	1	Đặt đi chợ từ 8h sáng mà 12h trưa vẫn chưa có hàng
+mart	order_not_received	1	Đơn đi chợ hiện ảnh giao hàng không phải nhà tôi
+mart	order_not_received	1	Tôi chưa nhận được đơn hàng tạp hoá, cần giao lại hoặc hoàn tiền
+mart	order_not_received	1	Tài xế giao đồ siêu thị thất bại vì nói không liên lạc được tôi
+mart	order_not_received	1	Đơn rau thịt cho bữa tối vẫn chưa tới dù quá giờ dự kiến
+mart	order_missing_wrong	1	Đơn đi chợ giao nhầm sữa tươi thành sữa chua
+mart	order_missing_wrong	1	Thiếu 2 hộp trứng trong đơn siêu thị
+mart	order_missing_wrong	1	Đặt gạo 5kg mà giao túi 2kg
+mart	order_missing_wrong	1	Đơn tạp hoá thiếu nước rửa chén đã trả tiền
+mart	order_missing_wrong	1	Nhận nhầm đơn đi chợ của nhà khác
+mart	order_missing_wrong	1	Giao sai loại dầu ăn, tôi đặt dầu đậu nành mà nhận dầu hướng dương
+mart	order_missing_wrong	1	Đơn đi chợ thiếu mấy món rau, chỉ có thịt
+mart	order_missing_wrong	1	Em đặt tã size M mà giao size S ạ
+mart	order_missing_wrong	1	Thiếu 1 thùng nước suối trong đơn hàng siêu thị
+mart	order_missing_wrong	1	Đơn của tôi bị đổi sản phẩm thay thế mà không hỏi ý kiến
+mart	order_missing_wrong	1	Đặt 1kg thịt bò mà chỉ nhận được 500g
+mart	order_missing_wrong	1	Đơn đi chợ giao sai nhãn hiệu sữa bột cho con
+mart	order_missing_wrong	1	Thiếu túi trái cây trong đơn tạp hoá
+mart	order_missing_wrong	1	Đơn hàng siêu thị thiếu 3 trong 10 món đã đặt
+mart	order_missing_wrong	1	Giao nhầm bột giặt loại khác, không phải loại tôi chọn
+mart	order_missing_wrong	1	Mình đặt cá hồi phi lê mà nhận cá basa
+mart	order_missing_wrong	1	Đơn đi chợ thiếu hộp bánh quy khuyến mãi tặng kèm
+mart	order_missing_wrong	1	Túi hàng đi chợ ghi tên người khác, đồ bên trong không phải của tôi
+mart	order_missing_wrong	1	Đặt 6 lon bia mà chỉ có 4 lon
+mart	order_missing_wrong	1	Đơn tạp hoá thiếu gói mì và sai loại nước mắm
+mart	order_damaged	1	Trứng trong đơn đi chợ bị vỡ gần hết
+mart	order_damaged	1	Rau củ giao tới bị héo và dập
+mart	order_damaged	1	Hộp sữa trong đơn siêu thị đã hết hạn sử dụng
+mart	order_damaged	1	Thịt giao tới có mùi hôi, không còn tươi
+mart	order_damaged	1	Chai nước tương bị vỡ, đổ ra cả túi hàng
+mart	order_damaged	1	Trái cây trong đơn bị thối một nửa
+mart	order_damaged	1	Đồ đông lạnh giao tới đã tan chảy hết
+mart	order_damaged	1	Bao gạo bị rách, gạo rơi vãi
+mart	order_damaged	1	Sản phẩm trong đơn đi chợ kém chất lượng, không giống hình
+mart	order_damaged	1	Bánh mì gói giao tới đã mốc
+mart	order_damaged	1	Lon nước ngọt bị móp và rỉ nước
+mart	order_damaged	1	Hộp sữa chua bị phồng, có dấu hiệu hư
+mart	order_damaged	1	Cá giao tới bị ươn, không dùng được
+mart	order_damaged	1	Chai dầu gội bị bể nắp, chảy ra hết
+mart	order_damaged	1	Đơn tạp hoá có gói mì bị nát vụn
+mart	order_damaged	1	Kem giao tới bị chảy nước hoàn toàn
+mart	order_damaged	1	Hoa quả nhập khẩu kém chất lượng, bị dập nhiều chỗ
+mart	order_damaged	1	Bánh kẹo trong đơn đi chợ sắp hết hạn, chỉ còn 2 ngày
+mart	order_damaged	1	Thùng sữa bị ướt và rách, nhiều hộp bị móp
+mart	order_damaged	1	Rau xà lách bị úng nước, không ăn được

@@ -1,0 +1,19 @@
+Tổng câu: 900 (bỏ 0 câu trùng)
+Service: 9 · Issue: 26 · Nhãn đầy đủ: 45
+Theo tập: {'test': 135, 'val': 135, 'train': 630}
+Không nêu rõ dịch vụ (explicit=0): 36
+Độ dài TB: 12.2 từ
+
+Số câu theo service:
+  account     100
+  business    80
+  dine_out    40
+  express     120
+  finance     60
+  food        160
+  mart        140
+  membership  40
+  transport   160
+
+Số câu theo nhãn (ít nhất / nhiều nhất):
+  min 20 · max 20

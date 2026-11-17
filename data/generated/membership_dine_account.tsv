@@ -1,0 +1,181 @@
+service	issue	explicit	text
+membership	membership_cancel	1	Tôi đã huỷ gói hội viên mà tháng này vẫn bị trừ tiền
+membership	membership_cancel	1	Tìm mãi không thấy chỗ huỷ gói hội viên
+membership	membership_cancel	1	Bấm huỷ gói hội viên báo lỗi
+membership	membership_cancel	1	Gói hội viên tự gia hạn dù tôi đã tắt gia hạn
+membership	membership_cancel	1	Muốn huỷ gói tiết kiệm hàng tháng nhưng app không cho
+membership	membership_cancel	1	Em không dùng nữa, huỷ gói hội viên giúp em ạ
+membership	membership_cancel	1	Huỷ gói hội viên rồi mà vẫn hiện đang hoạt động
+membership	membership_cancel	1	Gói hội viên bị trừ phí năm mới dù tôi đã huỷ từ tháng trước
+membership	membership_cancel	1	Làm sao dừng gia hạn tự động gói hội viên
+membership	membership_cancel	1	Nút huỷ gói hội viên bị mờ, không bấm được
+membership	membership_cancel	1	Tôi huỷ gói hội viên nhưng không nhận được xác nhận
+membership	membership_cancel	1	Mình muốn huỷ gói hội viên và được hoàn phần phí chưa dùng
+membership	membership_cancel	1	App báo không thể huỷ gói hội viên trong thời gian khuyến mãi
+membership	membership_cancel	1	Huỷ gói hội viên ở đâu, tìm trong cài đặt không thấy
+membership	membership_cancel	1	Gói hội viên vẫn trừ tiền thẻ sau khi tôi bấm huỷ
+membership	membership_cancel	1	Tôi lỡ đăng ký gói hội viên, muốn huỷ ngay
+membership	membership_cancel	1	Không huỷ được gói hội viên vì báo lỗi hệ thống
+membership	membership_cancel	1	Gói hội viên của tôi bị gia hạn tự động mà không thông báo trước
+membership	membership_cancel	1	Đã gửi yêu cầu huỷ gói hội viên 3 lần mà vẫn chưa được
+membership	membership_cancel	1	Hết thời gian dùng thử thì gói hội viên tự trừ tiền, tôi muốn huỷ
+membership	membership_subscribe	1	Bấm đăng ký gói hội viên báo lỗi
+membership	membership_subscribe	1	Sao tài khoản tôi không đăng ký được gói tiết kiệm
+membership	membership_subscribe	1	Thanh toán gói hội viên xong mà gói không được kích hoạt
+membership	membership_subscribe	1	Không thấy mục đăng ký gói hội viên trong app
+membership	membership_subscribe	1	Muốn nâng cấp gói hội viên lên gói năm mà không được
+membership	membership_subscribe	1	Em đăng ký gói hội viên mà báo tài khoản không đủ điều kiện ạ
+membership	membership_subscribe	1	Đăng ký gói hội viên báo không hỗ trợ ở khu vực của tôi
+membership	membership_subscribe	1	Mình muốn dùng thử gói hội viên miễn phí nhưng không đăng ký được
+membership	membership_subscribe	1	Gói hội viên đăng ký rồi nhưng không thấy ưu đãi áp dụng
+membership	membership_subscribe	1	Không đăng ký lại được gói hội viên sau khi đã huỷ
+membership	membership_subscribe	1	Đăng ký gói hội viên bằng ví báo lỗi thanh toán gói
+membership	membership_subscribe	1	Làm sao đăng ký gói hội viên giảm giá đặt xe
+membership	membership_subscribe	1	Tôi đã trả phí gói hội viên nhưng tài khoản vẫn là thành viên thường
+membership	membership_subscribe	1	Mã khuyến mãi gói hội viên không dùng được khi đăng ký
+membership	membership_subscribe	1	Đăng ký gói hội viên gia đình không thêm được người thân
+membership	membership_subscribe	1	Nút đăng ký gói hội viên cứ quay vòng không phản hồi
+membership	membership_subscribe	1	Chuyển từ gói tháng sang gói năm báo lỗi
+membership	membership_subscribe	1	Không kích hoạt được gói hội viên vừa mua
+membership	membership_subscribe	1	Tài khoản mới tạo không đăng ký được gói hội viên
+membership	membership_subscribe	1	Gói hội viên sinh viên báo không xác minh được thẻ sinh viên
+dine_out	reservation_issue	1	Tôi đặt bàn 7h tối qua app mà tới nơi quán nói không có
+dine_out	reservation_issue	1	Muốn đổi giờ đặt bàn thì làm sao
+dine_out	reservation_issue	1	Không đặt được bàn nhà hàng, app báo hết chỗ dù quán còn trống
+dine_out	reservation_issue	1	Huỷ đặt bàn rồi mà vẫn bị trừ tiền cọc
+dine_out	reservation_issue	1	Nhà hàng không xác nhận đặt bàn của tôi
+dine_out	reservation_issue	1	Đặt bàn 10 người mà tới nơi chỉ có bàn 6 người
+dine_out	reservation_issue	1	Em muốn huỷ đặt bàn tối nay ạ
+dine_out	reservation_issue	1	Đặt bàn báo thành công nhưng nhà hàng không nhận được thông tin
+dine_out	reservation_issue	1	Tôi bị nhà hàng huỷ đặt bàn sát giờ
+dine_out	reservation_issue	1	Đổi số người trong đặt bàn ở đâu
+dine_out	reservation_issue	1	Đặt bàn cho tiệc sinh nhật mà quán xếp sai khu vực đã chọn
+dine_out	reservation_issue	1	Tới đúng giờ đặt bàn mà phải chờ 40 phút mới có chỗ
+dine_out	reservation_issue	1	Không chọn được khung giờ khi đặt bàn nhà hàng
+dine_out	reservation_issue	1	Tiền cọc đặt bàn chưa được hoàn sau khi nhà hàng huỷ
+dine_out	reservation_issue	1	Đặt bàn qua app nhưng nhà hàng nói phải đặt qua điện thoại
+dine_out	reservation_issue	1	Mình đặt bàn nhầm ngày, muốn đổi sang ngày mai
+dine_out	reservation_issue	1	Nhà hàng nhận đặt bàn rồi đóng cửa không báo
+dine_out	reservation_issue	1	Đặt bàn buffet trưa không nhận được tin nhắn xác nhận
+dine_out	reservation_issue	1	App báo đặt bàn thất bại nhưng nhà hàng vẫn giữ bàn
+dine_out	reservation_issue	1	Đến nhà hàng đã đặt bàn thì bị từ chối vì quá giờ 5 phút
+dine_out	voucher_issue	1	Nhà hàng không chịu nhận voucher tôi mua trên app
+dine_out	voucher_issue	1	Mua voucher buffet rồi mà không thấy trong tài khoản
+dine_out	voucher_issue	1	Voucher nhà hàng báo đã hết hạn dù còn 1 tuần
+dine_out	voucher_issue	1	Quét mã voucher tại nhà hàng báo không hợp lệ
+dine_out	voucher_issue	1	Voucher giảm 30% ăn tại chỗ không áp dụng được
+dine_out	voucher_issue	1	Tôi muốn hoàn tiền voucher nhà hàng chưa dùng
+dine_out	voucher_issue	1	Voucher đã dùng rồi mà nhà hàng nói chưa nhận được
+dine_out	voucher_issue	1	Em mua voucher lẩu 2 người mà nhà hàng bảo chỉ áp dụng cuối tuần ạ
+dine_out	voucher_issue	1	Mã voucher nhà hàng bị trừ nhưng hoá đơn vẫn tính đủ tiền
+dine_out	voucher_issue	1	Voucher mua làm quà tặng không chuyển được cho bạn
+dine_out	voucher_issue	1	Nhà hàng đóng cửa vĩnh viễn, voucher tôi mua giờ sao
+dine_out	voucher_issue	1	Không tìm thấy voucher nhà hàng trong mục ưu đãi của tôi
+dine_out	voucher_issue	1	Voucher ăn tại nhà hàng bị khoá không rõ lý do
+dine_out	voucher_issue	1	Dùng voucher mà nhà hàng bắt gọi thêm món mới cho áp dụng
+dine_out	voucher_issue	1	Voucher nhà hàng mua 2 cái chỉ hiện 1
+dine_out	voucher_issue	1	Mã voucher hiển thị nhưng nhân viên nhà hàng không quét được
+dine_out	voucher_issue	1	Voucher nướng BBQ báo đã sử dụng dù tôi chưa đi ăn
+dine_out	voucher_issue	1	Nhà hàng từ chối voucher vì nói chương trình đã kết thúc
+dine_out	voucher_issue	1	Mua voucher nhà hàng thanh toán xong nhưng không nhận được mã
+dine_out	voucher_issue	1	Voucher sinh nhật ăn tại nhà hàng không áp dụng cho bàn đông người
+account	update_contact	1	Tôi đổi sim mới, muốn cập nhật số điện thoại
+account	update_contact	1	Làm sao đổi số điện thoại đăng nhập tài khoản
+account	update_contact	1	Số cũ bị mất, cần chuyển tài khoản sang số mới
+account	update_contact	1	Đổi email tài khoản cá nhân ở đâu
+account	update_contact	1	Cập nhật số điện thoại báo số này đã được dùng cho tài khoản khác
+account	update_contact	1	Em muốn đổi số điện thoại nhưng không nhận được mã OTP ở số mới ạ
+account	update_contact	1	Xác minh số điện thoại mới bị lỗi
+account	update_contact	1	Không thay được số điện thoại vì số cũ không còn dùng để nhận mã
+account	update_contact	1	Tôi muốn thay email nhận hoá đơn chuyến xe
+account	update_contact	1	Đổi số điện thoại xong không đăng nhập được bằng số mới
+account	update_contact	1	Cập nhật thông tin liên lạc của tài khoản thế nào
+account	update_contact	1	Chuyển từ số Viettel sang số Vinaphone, cần đổi số trong tài khoản
+account	update_contact	1	Mình đi nước ngoài dùng số mới, muốn cập nhật số điện thoại
+account	update_contact	1	Xác minh email mới không nhận được thư
+account	update_contact	1	Đổi số điện thoại báo phải xác minh khuôn mặt nhưng không chụp được
+account	update_contact	1	Tôi muốn đổi email vì email cũ bị hack
+account	update_contact	1	Số điện thoại trong tài khoản sai một số, sửa giúp tôi
+account	update_contact	1	Đổi số điện thoại tài khoản cần giấy tờ gì
+account	update_contact	1	Cập nhật số điện thoại mới bị báo vượt quá số lần thay đổi
+account	update_contact	1	Mất điện thoại và sim, muốn chuyển tài khoản sang số mới
+account	login_failed	1	Đăng nhập không nhận được mã OTP
+account	login_failed	1	Tài khoản bị khoá, không vào được app
+account	login_failed	1	Nhập đúng số điện thoại mà app báo tài khoản không tồn tại
+account	login_failed	1	Đăng nhập trên điện thoại mới bị báo thiết bị không được phép
+account	login_failed	1	Cứ đăng nhập là app văng ra
+account	login_failed	1	Em bị đăng xuất rồi không đăng nhập lại được ạ
+account	login_failed	1	Tài khoản bị tạm khoá vì nhập sai nhiều lần
+account	login_failed	1	Mã OTP đăng nhập về rất trễ, nhập vào thì báo hết hạn
+account	login_failed	1	Đăng nhập bằng Facebook báo lỗi
+account	login_failed	1	App báo tài khoản đã bị vô hiệu hoá
+account	login_failed	1	Đăng nhập xác minh khuôn mặt không thành công
+account	login_failed	1	Mình không đăng nhập được từ sáng, báo lỗi máy chủ
+account	login_failed	1	Đổi điện thoại xong không vào được tài khoản cũ
+account	login_failed	1	Đăng nhập báo số điện thoại đã liên kết với thiết bị khác
+account	login_failed	1	Tôi không nhận được cuộc gọi xác minh khi đăng nhập
+account	login_failed	1	Tài khoản bị khoá vì nghi ngờ gian lận, tôi cần mở lại để đăng nhập
+account	login_failed	1	Đăng nhập bằng Google cứ quay về màn hình đầu
+account	login_failed	1	Không vào được tài khoản dù đã cài lại app
+account	login_failed	1	Đăng nhập báo phiên làm việc hết hạn liên tục
+account	login_failed	1	Đăng nhập trên máy tính bảng không được, điện thoại thì vẫn vào
+account	forgot_credential	1	Em quên mã PIN ví, đặt lại sao ạ
+account	forgot_credential	1	Quên mật khẩu tài khoản rồi
+account	forgot_credential	1	Làm sao đặt lại mã PIN khi không nhớ mã cũ
+account	forgot_credential	1	Tôi quên mật khẩu, bấm quên mật khẩu không nhận được email
+account	forgot_credential	1	Đặt lại mã PIN báo lỗi xác minh
+account	forgot_credential	1	Không nhớ mã PIN thanh toán, cần đổi mã mới
+account	forgot_credential	1	Quên mật khẩu đăng nhập trên web, khôi phục thế nào
+account	forgot_credential	1	Mình nhập sai mã PIN 5 lần vì quên, giờ đặt lại sao
+account	forgot_credential	1	Quên mật khẩu mà email cũ không còn dùng
+account	forgot_credential	1	Đổi mã PIN mới cần những thông tin gì
+account	forgot_credential	1	Tôi muốn khôi phục mật khẩu tài khoản
+account	forgot_credential	1	Quên mã PIN nên không chuyển tiền được, giúp tôi đặt lại
+account	forgot_credential	1	Đặt lại mật khẩu xong vẫn báo sai mật khẩu
+account	forgot_credential	1	Mã PIN đã đặt lâu rồi không nhớ
+account	forgot_credential	1	Quên mật khẩu, link đặt lại mật khẩu báo hết hạn
+account	forgot_credential	1	Bố tôi quên mã PIN ví, làm sao đặt lại cho bố
+account	forgot_credential	1	Muốn đổi mật khẩu vì quên mất mật khẩu cũ
+account	forgot_credential	1	Khôi phục mã PIN bắt xác minh khuôn mặt mà không được
+account	forgot_credential	1	Quên mật khẩu tài khoản, số điện thoại vẫn dùng bình thường
+account	forgot_credential	1	Hỏi cách lấy lại mã PIN đã quên
+account	delete_history	1	Làm sao xoá lịch sử các chuyến xe cũ
+account	delete_history	1	Tôi muốn xoá lịch sử đi lại trong app
+account	delete_history	1	Xoá một chuyến xe khỏi lịch sử có được không
+account	delete_history	1	Em muốn xoá lịch sử đặt đồ ăn ạ
+account	delete_history	1	Không tìm thấy chỗ xoá lịch sử chuyến đi
+account	delete_history	1	Xoá toàn bộ lịch sử hoạt động trong tài khoản thế nào
+account	delete_history	1	Mình không muốn người khác xem được lịch sử chuyến xe, xoá giúp
+account	delete_history	1	Có cách nào ẩn hoặc xoá lịch sử chuyến xe không
+account	delete_history	1	Xoá lịch sử đơn hàng đi chợ ở đâu
+account	delete_history	1	Tôi muốn xoá các địa điểm và chuyến xe gần đây trong lịch sử
+account	delete_history	1	Lịch sử chuyến xe hiện nhiều địa chỉ riêng tư, muốn xoá đi
+account	delete_history	1	Xoá lịch sử chuyến đi tháng trước giúp tôi
+account	delete_history	1	Làm sao xoá lịch sử giao dịch các chuyến xe
+account	delete_history	1	Em dùng chung điện thoại, muốn xoá lịch sử chuyến xe ạ
+account	delete_history	1	Yêu cầu xoá dữ liệu lịch sử di chuyển của tôi
+account	delete_history	1	Xoá lịch sử chuyến xe có ảnh hưởng hoá đơn không
+account	delete_history	1	Bấm xoá lịch sử chuyến xe mà không thấy mất
+account	delete_history	1	Muốn xoá lịch sử tìm kiếm địa điểm và chuyến đi
+account	delete_history	1	Tôi cần xoá một chuyến xe trong lịch sử vì lý do cá nhân
+account	delete_history	1	Có xoá được lịch sử chuyến xe trên web không
+account	delete_account	1	Tôi muốn xoá vĩnh viễn tài khoản
+account	delete_account	1	Không dùng nữa, xoá tài khoản giúp tôi
+account	delete_account	1	Làm sao xoá tài khoản và toàn bộ dữ liệu cá nhân
+account	delete_account	1	Em muốn đóng tài khoản vĩnh viễn ạ
+account	delete_account	1	Xoá tài khoản thì số dư ví còn lại xử lý thế nào
+account	delete_account	1	Không tìm thấy nút xoá tài khoản trong cài đặt
+account	delete_account	1	Yêu cầu xoá tài khoản theo quyền bảo vệ dữ liệu cá nhân
+account	delete_account	1	Tôi đã gửi yêu cầu xoá tài khoản mà vẫn đăng nhập được
+account	delete_account	1	Xoá tài khoản báo lỗi vì còn đơn chưa hoàn tất
+account	delete_account	1	Mình muốn xoá tài khoản cũ để đăng ký lại bằng số khác
+account	delete_account	1	Xoá vĩnh viễn tài khoản có khôi phục lại được không
+account	delete_account	1	Huỷ tài khoản và xoá luôn thẻ đã liên kết giúp tôi
+account	delete_account	1	Tôi không muốn công ty lưu dữ liệu của tôi nữa, hãy xoá tài khoản
+account	delete_account	1	Xoá tài khoản mất bao lâu thì hoàn tất
+account	delete_account	1	Bố tôi mất rồi, gia đình muốn xoá tài khoản của bố
+account	delete_account	1	Xoá tài khoản xong vẫn nhận tin nhắn quảng cáo
+account	delete_account	1	Tôi muốn khoá và xoá tài khoản vĩnh viễn
+account	delete_account	1	Hướng dẫn xoá tài khoản trên điện thoại
+account	delete_account	1	Không thể xoá tài khoản vì báo cần xác minh danh tính
+account	delete_account	1	Gỡ app rồi nhưng muốn xoá hẳn tài khoản

@@ -1,0 +1,261 @@
+service	issue	explicit	text
+express	overcharged	1	Gửi hàng báo phí 35.000đ nhưng bị trừ 58.000đ
+express	overcharged	1	Phí giao hàng nhanh hiển thị 42k, sau khi giao bị tính 67k
+express	overcharged	1	Tôi gửi bưu kiện nội thành giá 28k mà bị tính 45k
+express	overcharged	1	Đơn giao hàng bị cộng phụ phí cồng kềnh dù gói hàng nhỏ
+express	overcharged	1	Phí ship gửi tài liệu lúc đặt 25k, cuối cùng trừ 40k
+express	overcharged	1	Gửi hàng bị tính phí chờ trong khi tài xế đến trễ
+express	overcharged	1	Mình gửi đồ qua quận 7 giá báo 55k mà bị trừ 82k
+express	overcharged	1	Đơn giao hàng tính thêm phí thu hộ mà tôi không chọn
+express	overcharged	1	Phí gửi hàng cao hơn giá app báo gần 20.000đ
+express	overcharged	1	Gửi bánh kem cho bạn, giá đặt 48k mà tài xế đòi thêm 20k
+express	overcharged	1	Tôi bị tính phí gửi hàng 2 lần cho 1 đơn
+express	overcharged	1	Đơn giao hàng xe tải nhỏ báo 350k, bị trừ 470k
+express	overcharged	1	Em gửi hàng có mã giảm giá nhưng vẫn bị tính đủ phí ship ạ
+express	overcharged	1	Cước gửi bưu kiện bị tính theo cân nặng sai, cao hơn thực tế
+express	overcharged	0	Số tiền bị trừ cao hơn giá hiển thị lúc đặt
+express	overcharged	0	Giá báo 39.000đ, tài khoản trừ 61.000đ, mong hoàn phần chênh
+express	overcharged	0	Tôi bị tính tiền nhiều hơn giá đã thấy trên app
+express	overcharged	1	Phí giao hàng liên tỉnh bị tính cao hơn bảng giá
+express	overcharged	1	Gửi hàng về Thủ Đức bị tính thêm phí qua cầu không báo trước
+express	overcharged	1	Đơn gửi đồ ăn cho mẹ bị tính phí ship 70k thay vì 45k
+express	payment_method_failed	1	Gửi hàng chọn ví thì báo lỗi thanh toán
+express	payment_method_failed	1	Không thanh toán được phí giao hàng bằng thẻ ngân hàng
+express	payment_method_failed	1	Đơn gửi bưu kiện không cho chọn thanh toán bằng ví
+express	payment_method_failed	1	Thẻ tín dụng bị từ chối khi tôi đặt giao hàng
+express	payment_method_failed	1	Ví còn tiền mà không trả được phí gửi hàng
+express	payment_method_failed	1	Thanh toán đơn giao hàng bị treo ở bước xác thực OTP
+express	payment_method_failed	1	Em gửi hàng mà thẻ ATM không thanh toán được ạ
+express	payment_method_failed	1	Đặt giao hàng cho khách, chọn ngân hàng thì báo lỗi
+express	payment_method_failed	1	Phương thức thanh toán ví không khả dụng cho dịch vụ giao hàng
+express	payment_method_failed	1	Mình đổi qua thẻ khác vẫn không đặt được đơn gửi hàng
+express	payment_method_failed	1	Người nhận trả phí ship bằng ví không được
+express	payment_method_failed	1	Gửi tài liệu gấp mà thanh toán bằng ví cứ báo thất bại
+express	payment_method_failed	1	Không chọn được hình thức người gửi trả bằng thẻ
+express	payment_method_failed	1	Thanh toán đơn giao hàng bằng mã QR không quét được
+express	payment_method_failed	0	Thẻ ngân hàng bị từ chối, tiền chưa trừ, nhờ kiểm tra
+express	payment_method_failed	0	Ví điện tử báo lỗi khi thanh toán, không rõ vì sao
+express	payment_method_failed	0	Tôi không thể thanh toán bằng ví, phải dùng tiền mặt
+express	payment_method_failed	1	Gửi hàng liên tỉnh không trả được bằng thẻ Visa
+express	payment_method_failed	1	Đơn giao hàng báo phương thức thanh toán không hợp lệ
+express	payment_method_failed	1	Tôi không trả được phí gửi bưu kiện bằng ví từ sáng nay
+express	charged_but_failed	1	Đặt giao hàng báo thất bại mà ví bị trừ 45.000đ
+express	charged_but_failed	1	Không tìm được tài xế giao hàng nhưng tiền đã trừ
+express	charged_but_failed	1	Đơn gửi bưu kiện không tạo được mà thẻ bị trừ tiền
+express	charged_but_failed	1	Tôi bị trừ phí ship cho một đơn giao hàng bị huỷ
+express	charged_but_failed	1	App báo gửi hàng không thành công nhưng ngân hàng nhắn trừ tiền
+express	charged_but_failed	1	Đặt giao hàng 2 lần lỗi, bị trừ tiền 2 lần
+express	charged_but_failed	1	Đơn giao hàng bị huỷ do hệ thống, phí đã trả chưa hoàn
+express	charged_but_failed	1	Mình không gửi được đơn nào mà ví ghi thanh toán giao hàng
+express	charged_but_failed	1	Thanh toán phí gửi hàng báo lỗi nhưng tiền vẫn mất
+express	charged_but_failed	1	Em đặt ship hàng lỗi giữa chừng, tiền bị trừ mà không có đơn
+express	charged_but_failed	1	Đơn giao hàng thất bại sau khi thanh toán, khi nào được hoàn
+express	charged_but_failed	1	Tài xế huỷ đơn giao hàng mà phí ship không được trả lại
+express	charged_but_failed	1	Gửi hàng báo hết tài xế, tiền trả trước chưa về ví
+express	charged_but_failed	0	Bị trừ tiền dù giao dịch không thành công, đề nghị hoàn
+express	charged_but_failed	0	Thanh toán thất bại mà tài khoản vẫn bị trừ 63.000đ
+express	charged_but_failed	0	Giao dịch lỗi nhưng tiền đã bị trừ 2 ngày chưa hoàn
+express	charged_but_failed	1	Đơn gửi tài liệu không thành công mà thẻ bị trừ tiền
+express	charged_but_failed	1	Hệ thống lỗi khi đặt giao hàng nhưng vẫn trừ tiền
+express	charged_but_failed	1	Đặt xe tải giao hàng báo thất bại, bị trừ 350.000đ
+express	charged_but_failed	1	Đơn ship hàng không được tạo nhưng ví ghi nhận đã thanh toán
+express	order_not_received	1	Người nhận chưa nhận được bưu kiện dù đã 3 ngày
+express	order_not_received	1	App báo giao hàng thành công mà người nhận nói chưa có
+express	order_not_received	1	Tài xế giao hàng không thành công rồi không hoàn lại cho tôi
+express	order_not_received	1	Đơn gửi hàng hiện đang giao từ sáng tới tối chưa tới
+express	order_not_received	1	Tài xế bảo không liên lạc được người nhận nên giao thất bại
+express	order_not_received	1	Bưu kiện gửi cho khách vẫn chưa tới tay sau 2 ngày
+express	order_not_received	1	Tài xế đánh dấu đã giao nhưng khách của tôi không nhận được
+express	order_not_received	1	Đơn giao hàng trễ hẹn mà không có thông báo
+express	order_not_received	1	Người nhận chờ ở nhà cả ngày mà tài xế không đến giao
+express	order_not_received	1	Tài xế giao hàng thất bại 2 lần, giờ hàng ở đâu
+express	order_not_received	1	Mình gửi tài liệu gấp mà người nhận chưa nhận được
+express	order_not_received	1	Tài xế nói đã giao cho bảo vệ nhưng người nhận không thấy
+express	order_not_received	1	Đơn ship hàng hiện ảnh giao không đúng địa chỉ người nhận
+express	order_not_received	1	Em gửi quà sinh nhật cho bạn, bạn chưa nhận được ạ
+express	order_not_received	1	Tài xế giao hàng không thành công vì nói sai địa chỉ, nhưng địa chỉ đúng
+express	order_not_received	1	Đơn giao hàng liên tỉnh quá hạn dự kiến 4 ngày
+express	order_not_received	1	Người nhận chưa nhận được hàng mà tiền thu hộ đã bị trừ
+express	order_not_received	1	Tôi không biết bưu kiện đang ở đâu, người nhận vẫn chưa có
+express	order_not_received	1	Tài xế nhận hàng rồi nhưng không giao tới người nhận
+express	order_not_received	1	Hàng gửi cho khách bị giao thất bại mà không gọi cho tôi
+express	order_missing_wrong	1	Người nhận nhận sai đơn hàng, không phải hàng tôi gửi
+express	order_missing_wrong	1	Bưu kiện giao tới bị thiếu 1 trong 2 hộp
+express	order_missing_wrong	1	Tài xế giao nhầm đơn của người khác cho tôi
+express	order_missing_wrong	1	Gửi 3 thùng hàng mà người nhận chỉ nhận được 2
+express	order_missing_wrong	1	Nhận nhầm gói hàng, tên người nhận không phải tôi
+express	order_missing_wrong	1	Hàng giao tới thiếu phụ kiện so với lúc tôi gửi
+express	order_missing_wrong	1	Tài xế đổi nhầm bưu kiện giữa 2 người nhận
+express	order_missing_wrong	1	Khách báo nhận được hàng khác hoàn toàn với đơn tôi gửi
+express	order_missing_wrong	1	Đơn giao hàng thiếu tài liệu trong phong bì
+express	order_missing_wrong	1	Em nhận được bưu kiện nhưng bên trong không phải đồ của em
+express	order_missing_wrong	1	Gửi 2 túi đồ cho mẹ mà mẹ chỉ nhận 1 túi
+express	order_missing_wrong	1	Người nhận nói thùng hàng nhẹ hơn, thiếu đồ bên trong
+express	order_missing_wrong	1	Tài xế giao sai đơn, bưu kiện của tôi đi tới nhà khác
+express	order_missing_wrong	1	Hàng gửi cho khách bị tráo, nhận được món rẻ tiền hơn
+express	order_missing_wrong	1	Đơn ghép giao hàng bị lẫn, người nhận nhận nhầm của đơn khác
+express	order_missing_wrong	1	Thiếu một chiếc giày trong hộp hàng gửi đi
+express	order_missing_wrong	1	Tôi gửi 5 hộp bánh, người nhận báo thiếu 2 hộp
+express	order_missing_wrong	1	Bưu kiện tới tay người nhận nhưng là hàng của shop khác
+express	order_missing_wrong	1	Giao nhầm hồ sơ của công ty khác cho đối tác của tôi
+express	order_missing_wrong	1	Người nhận nhận sai kiện hàng, mã vận đơn không khớp
+express	order_damaged	1	Bưu kiện tới nơi bị móp méo, đồ bên trong vỡ
+express	order_damaged	1	Hàng gửi bị thất lạc, tài xế nói làm rơi mất
+express	order_damaged	1	Gửi bình hoa mà tới nơi bị bể nát
+express	order_damaged	1	Thùng hàng bị ướt sũng do tài xế để ngoài mưa
+express	order_damaged	1	Bưu kiện của tôi bị mất trong lúc vận chuyển
+express	order_damaged	1	Điện thoại gửi đi bị nứt màn hình khi tới tay người nhận
+express	order_damaged	1	Hộp bánh gửi cho khách bị dập nát hoàn toàn
+express	order_damaged	1	Tài xế làm thất lạc túi hồ sơ quan trọng
+express	order_damaged	1	Gói hàng bị rách, đồ bên trong rơi mất một phần
+express	order_damaged	1	Đồ gốm gửi đi bị vỡ dù đã đóng gói kỹ
+express	order_damaged	1	Hàng gửi bị hư hại nặng, tôi cần bồi thường
+express	order_damaged	1	Tài xế báo bưu kiện bị thất lạc, giờ làm sao
+express	order_damaged	1	Laptop gửi sửa bị móp góc sau khi giao
+express	order_damaged	1	Chai rượu gửi tặng bị vỡ trong thùng
+express	order_damaged	1	Kiện hàng thất lạc 3 ngày không tìm thấy
+express	order_damaged	1	Hoa tươi gửi tới bị héo và gãy cành
+express	order_damaged	1	Bưu kiện giao tới bị bóc ra và dán lại, đồ bên trong hỏng
+express	order_damaged	1	Máy sấy tóc gửi đi bị vỡ vỏ
+express	order_damaged	1	Hàng dễ vỡ đã ghi chú mà tài xế vẫn làm hỏng
+express	order_damaged	1	Gửi tranh khung kính tới nơi bị nứt kính
+finance	charged_but_failed	1	Nạp tiền vào ví không thành công nhưng ngân hàng đã trừ tiền
+finance	charged_but_failed	1	Chuyển tiền từ ví sang ngân hàng báo lỗi mà ví vẫn bị trừ
+finance	charged_but_failed	1	Rút tiền về tài khoản thất bại, số dư ví đã bị trừ 2.000.000đ
+finance	charged_but_failed	1	Thanh toán hoá đơn điện qua ví báo lỗi nhưng tiền bị trừ
+finance	charged_but_failed	1	Tôi nạp 500k vào ví, ngân hàng trừ rồi mà ví không có tiền
+finance	charged_but_failed	1	Chuyển tiền cho bạn qua ví không thành công mà vẫn bị trừ
+finance	charged_but_failed	1	Mua thẻ điện thoại trong ví báo thất bại nhưng tiền đã mất
+finance	charged_but_failed	1	Giao dịch nạp tiền ví bị treo, ngân hàng báo đã trừ 1 triệu
+finance	charged_but_failed	1	Em rút tiền từ ví về ngân hàng thất bại, ví bị trừ mà tài khoản không nhận ạ
+finance	charged_but_failed	1	Thanh toán hoá đơn nước trong ví lỗi, bị trừ tiền 2 lần
+finance	charged_but_failed	1	Quét mã QR thanh toán tại cửa hàng báo thất bại mà ví vẫn trừ tiền
+finance	charged_but_failed	1	Nạp tiền điện thoại qua ví không nhận được mà ví đã trừ
+finance	charged_but_failed	1	Chuyển khoản từ ví báo lỗi nhưng người nhận không nhận được, tiền mất
+finance	charged_but_failed	1	Tôi đóng học phí qua ví bị lỗi, tiền đã trừ mà trường chưa nhận
+finance	charged_but_failed	1	Giao dịch ví thất bại nhưng ngân hàng liên kết vẫn trừ tiền
+finance	charged_but_failed	1	Nạp tiền vào ví từ thẻ Vietcombank báo lỗi, tiền đã bị trừ
+finance	charged_but_failed	1	Mua vé xem phim bằng ví báo không thành công nhưng số dư giảm
+finance	charged_but_failed	1	Rút tiền từ ví báo đang xử lý 3 ngày, số dư đã trừ
+finance	charged_but_failed	1	Thanh toán qua ví ở siêu thị báo lỗi, quầy bắt trả lại bằng tiền mặt, ví vẫn trừ
+finance	charged_but_failed	1	Chuyển tiền vào ví tiết kiệm thất bại nhưng ví chính bị trừ
+finance	fraud_report	1	Ví bị trừ 2 triệu mà tôi không hề giao dịch
+finance	fraud_report	1	Có người giả nhân viên gọi xin mã OTP, tôi lỡ đưa rồi
+finance	fraud_report	1	Tài khoản ví của tôi bị đăng nhập từ thiết bị lạ
+finance	fraud_report	1	Có nhiều giao dịch lạ trong lịch sử ví mà tôi không làm
+finance	fraud_report	1	Tôi nhận tin nhắn giả mạo app yêu cầu bấm link xác minh tài khoản
+finance	fraud_report	1	Bị lừa chuyển 5 triệu qua ví cho người bán hàng online
+finance	fraud_report	1	Ai đó đã đổi số điện thoại tài khoản ví của tôi
+finance	fraud_report	1	Ví bị rút sạch tiền lúc nửa đêm, tôi cần khoá tài khoản gấp
+finance	fraud_report	1	Có người dùng thẻ của tôi liên kết vào ví khác
+finance	fraud_report	1	Tôi muốn báo cáo một tài khoản lừa đảo nhận tiền qua ví
+finance	fraud_report	1	Nhận cuộc gọi tự xưng ngân hàng yêu cầu chuyển tiền vào ví để bảo vệ tài khoản
+finance	fraud_report	1	Phát hiện giao dịch thanh toán ở nước ngoài bằng ví của tôi
+finance	fraud_report	1	Tài khoản bị chiếm, kẻ gian đã chuyển tiền đi
+finance	fraud_report	1	Có người mạo danh tôi mở ví và vay tiền
+finance	fraud_report	1	Em bị lừa nhập mã PIN vào trang web giả, giờ ví mất tiền
+finance	fraud_report	1	Hoạt động bất thường: ví liên tục gửi mã OTP dù tôi không đăng nhập
+finance	fraud_report	1	Tôi nghi ngờ tài khoản bị hack vì số dư ví giảm bất thường
+finance	fraud_report	1	Người lạ nhắn tin bảo tôi trúng thưởng và đòi phí nhận qua ví
+finance	fraud_report	1	Có giao dịch mua hàng bằng ví mà tôi không xác nhận
+finance	fraud_report	1	Báo cáo lừa đảo: chuyển tiền đặt cọc qua ví rồi bị chặn liên lạc
+finance	link_card_failed	1	Liên kết thẻ Vietcombank báo lỗi hoài
+finance	link_card_failed	1	Không thêm được thẻ tín dụng vào ví
+finance	link_card_failed	1	Liên kết tài khoản ngân hàng không nhận được mã OTP
+finance	link_card_failed	1	Thẻ ATM nội địa báo không hỗ trợ liên kết
+finance	link_card_failed	1	Tôi nhập đúng thông tin thẻ mà vẫn báo thẻ không hợp lệ
+finance	link_card_failed	1	Không liên kết được ví điện tử khác vào tài khoản
+finance	link_card_failed	1	Thêm thẻ Visa báo lỗi xác thực 3D Secure
+finance	link_card_failed	1	Liên kết ngân hàng báo tên chủ thẻ không khớp
+finance	link_card_failed	1	Em thêm thẻ mới mà cứ báo đã vượt quá số lần thử ạ
+finance	link_card_failed	1	Thẻ đã huỷ liên kết rồi giờ liên kết lại không được
+finance	link_card_failed	1	Không liên kết được tài khoản Techcombank vào ví
+finance	link_card_failed	1	Thêm thẻ Mastercard báo ngân hàng từ chối
+finance	link_card_failed	1	Liên kết ngân hàng xong báo thành công nhưng không thấy thẻ trong ví
+finance	link_card_failed	1	Thẻ ghi nợ quốc tế không liên kết được
+finance	link_card_failed	1	Tôi không thêm được thẻ vì báo số điện thoại không trùng với ngân hàng
+finance	link_card_failed	1	Liên kết thẻ bị treo ở bước xác minh
+finance	link_card_failed	1	Mình muốn liên kết thêm thẻ thứ 2 nhưng không được
+finance	link_card_failed	1	Thêm phương thức thanh toán ngân hàng báo lỗi hệ thống
+finance	link_card_failed	1	Thẻ mới cấp lại không liên kết được vào ví
+finance	link_card_failed	1	Liên kết ví với tài khoản BIDV cứ báo thất bại
+business	link_card_failed	1	Không thêm được thẻ tín dụng công ty vào hồ sơ doanh nghiệp
+business	link_card_failed	1	Thẻ doanh nghiệp báo lỗi khi liên kết
+business	link_card_failed	1	Tôi là quản trị viên, không thêm được thẻ thanh toán cho công ty
+business	link_card_failed	1	Thẻ tín dụng doanh nghiệp bị từ chối khi thêm vào tài khoản công ty
+business	link_card_failed	1	Hồ sơ doanh nghiệp không cho thêm thẻ Visa của công ty
+business	link_card_failed	1	Liên kết thẻ công ty báo tên chủ thẻ không khớp tên doanh nghiệp
+business	link_card_failed	1	Không thêm được thẻ thứ hai cho phòng kế toán
+business	link_card_failed	1	Thêm thẻ doanh nghiệp không nhận được mã OTP
+business	link_card_failed	1	Thẻ công ty mới cấp lại không thêm được vào hồ sơ doanh nghiệp
+business	link_card_failed	1	Phương thức thanh toán của doanh nghiệp không thêm được, báo lỗi
+business	link_card_failed	1	Em là admin công ty, thêm thẻ tín dụng doanh nghiệp bị báo không hợp lệ ạ
+business	link_card_failed	1	Thẻ doanh nghiệp đã thêm nhưng không hiện trong danh sách thanh toán công ty
+business	link_card_failed	1	Không liên kết được tài khoản ngân hàng của công ty
+business	link_card_failed	1	Thẻ Mastercard doanh nghiệp bị từ chối khi xác thực
+business	link_card_failed	1	Muốn đổi thẻ thanh toán của công ty nhưng thêm thẻ mới không được
+business	link_card_failed	1	Thêm thẻ doanh nghiệp cứ báo vượt quá số lần thử
+business	link_card_failed	1	Hồ sơ công ty báo không hỗ trợ loại thẻ này
+business	link_card_failed	1	Không thể cài thẻ công ty làm phương thức thanh toán mặc định cho nhân viên
+business	link_card_failed	1	Thêm thẻ tín dụng doanh nghiệp bị treo ở bước xác minh
+business	link_card_failed	1	Thẻ công ty liên kết thất bại dù ngân hàng xác nhận thẻ bình thường
+business	business_profile	1	Tạo hồ sơ doanh nghiệp mãi không được
+business	business_profile	1	Chuyến đi công tác sáng nay bị tính vào hồ sơ cá nhân
+business	business_profile	1	Tôi đăng ký tài khoản doanh nghiệp nhưng báo lỗi xác minh
+business	business_profile	1	Đơn đồ ăn tiếp khách bị tính vào ví cá nhân thay vì công ty
+business	business_profile	1	Không mời được nhân viên vào hồ sơ doanh nghiệp
+business	business_profile	1	Chuyến xe công việc tuần trước bị trừ vào thẻ cá nhân của tôi
+business	business_profile	1	Hồ sơ doanh nghiệp bị khoá không rõ lý do
+business	business_profile	1	Không chuyển được chuyến xe đã đi từ hồ sơ cá nhân sang doanh nghiệp
+business	business_profile	1	Em tạo hồ sơ công việc nhưng không liên kết được với công ty ạ
+business	business_profile	1	Nhân viên của tôi không thấy hồ sơ doanh nghiệp khi đặt xe
+business	business_profile	1	Đăng ký doanh nghiệp báo mã số thuế không hợp lệ
+business	business_profile	1	Các chuyến công tác tháng này đều bị tính vào hồ sơ cá nhân
+business	business_profile	1	Không tạo được nhóm chi phí trong hồ sơ doanh nghiệp
+business	business_profile	1	Hồ sơ doanh nghiệp chờ duyệt đã 1 tuần chưa xong
+business	business_profile	1	Tôi chọn hồ sơ công việc mà chuyến xe vẫn bị trừ tiền cá nhân
+business	business_profile	1	Không thể tạo hồ sơ doanh nghiệp cho chi nhánh mới
+business	business_profile	1	Đơn giao hàng của công ty bị ghi nhận vào tài khoản riêng của tôi
+business	business_profile	1	Báo cáo chi phí doanh nghiệp không có chuyến xe hôm qua vì bị tính vào hồ sơ cá nhân
+business	business_profile	1	Mình đã rời công ty mà vẫn bị gắn vào hồ sơ doanh nghiệp cũ
+business	business_profile	1	Hồ sơ doanh nghiệp báo lỗi khi thêm thông tin công ty
+business	refund_request	1	Công ty cần hoàn tiền chuyến xe ngày 12/11 đã trả bằng thẻ doanh nghiệp
+business	refund_request	1	Làm sao yêu cầu hoàn tiền cho đơn công tác
+business	refund_request	1	Tôi muốn hoàn tiền một chuyến xe công việc đặt nhầm
+business	refund_request	1	Đề nghị hoàn tiền đơn đồ ăn tiếp khách thanh toán bằng tài khoản công ty
+business	refund_request	1	Phòng kế toán cần hoàn lại tiền 3 chuyến xe của nhân viên
+business	refund_request	1	Chuyến công tác bị huỷ kế hoạch, công ty muốn hoàn tiền
+business	refund_request	1	Hoàn tiền chuyến xe hồ sơ doanh nghiệp về thẻ công ty thế nào
+business	refund_request	1	Em là admin, muốn yêu cầu hoàn tiền đơn giao hàng của công ty ạ
+business	refund_request	1	Yêu cầu hoàn tiền chuyến xe đi sân bay của giám đốc
+business	refund_request	1	Công ty tôi cần hoàn tiền đơn đặt cơm hội nghị
+business	refund_request	1	Thủ tục hoàn tiền cho chuyến xe doanh nghiệp mất bao lâu
+business	refund_request	1	Nhân viên đặt xe bằng hồ sơ công ty cho việc riêng, công ty yêu cầu hoàn tiền
+business	refund_request	1	Tôi muốn hoàn tiền chuyến xe công việc ngày 10/11 về tài khoản doanh nghiệp
+business	refund_request	1	Đơn công tác đã thanh toán nhưng không dùng, cần hoàn tiền
+business	refund_request	1	Doanh nghiệp yêu cầu hoàn tiền các chuyến xe trùng lặp trong báo cáo
+business	refund_request	1	Hoàn tiền giúp tôi chuyến đi khách hàng đã trả bằng thẻ doanh nghiệp
+business	refund_request	1	Công ty cần hoàn phí đơn giao tài liệu hôm qua
+business	refund_request	1	Mình gửi yêu cầu hoàn tiền chuyến xe công việc mà chưa có phản hồi
+business	refund_request	1	Làm sao để công ty nhận lại tiền chuyến xe đã thanh toán bằng hồ sơ doanh nghiệp
+business	refund_request	1	Đề nghị hoàn tiền 2 chuyến xe công tác bị tính dư trong tháng
+business	update_contact	1	Cần đổi email nhận hoá đơn của hồ sơ doanh nghiệp
+business	update_contact	1	Công ty đổi số hotline, muốn cập nhật số điện thoại hồ sơ doanh nghiệp
+business	update_contact	1	Thay đổi email quản trị viên tài khoản doanh nghiệp
+business	update_contact	1	Kế toán mới vào, cần đổi email nhận báo cáo chi phí của công ty
+business	update_contact	1	Cập nhật số điện thoại liên hệ của doanh nghiệp thế nào
+business	update_contact	1	Email công ty cũ không dùng nữa, muốn đổi email hồ sơ doanh nghiệp
+business	update_contact	1	Tôi muốn đổi người liên hệ chính của tài khoản công ty
+business	update_contact	1	Hồ sơ doanh nghiệp không cho sửa email liên hệ
+business	update_contact	1	Đổi số điện thoại admin công ty báo lỗi xác minh
+business	update_contact	1	Công ty chuyển tên miền email, cần cập nhật email cho hồ sơ doanh nghiệp
+business	update_contact	1	Em muốn đổi email nhận hoá đơn VAT của công ty ạ
+business	update_contact	1	Sửa thông tin liên lạc của doanh nghiệp ở đâu
+business	update_contact	1	Không nhận được mã xác minh khi đổi số điện thoại hồ sơ công ty
+business	update_contact	1	Cần cập nhật email liên hệ cho chi nhánh trong tài khoản doanh nghiệp
+business	update_contact	1	Quản trị viên cũ nghỉ việc, đổi số điện thoại sang người mới thế nào
+business	update_contact	1	Hoá đơn doanh nghiệp đang gửi về email cũ, nhờ đổi giúp
+business	update_contact	1	Tôi muốn cập nhật số điện thoại và email của tài khoản công ty
+business	update_contact	1	Đổi email hồ sơ doanh nghiệp xong không nhận được thư xác nhận
+business	update_contact	1	Công ty đổi địa chỉ email kế toán, cập nhật ở đâu
+business	update_contact	1	Muốn đổi số điện thoại liên hệ trong hồ sơ doanh nghiệp vì số cũ bị mất

@@ -1,0 +1,811 @@
+id,service,issue,label,explicit,variant,text
+t0002,transport,lost_item,transport/lost_item,1,clean,Tài xế nói không thấy đồ nhưng tôi chắc chắn để quên điện thoại trên xe
+t0002,transport,lost_item,transport/lost_item,1,no_diacritics,Tai xe noi khong thay do nhung toi chac chan de quen dien thoai tren xe
+t0002,transport,lost_item,transport/lost_item,1,teencode,tài xế nói ko thấy đồ nhưng tôi chắc chắn để quên điện thoại trên xe
+t0002,transport,lost_item,transport/lost_item,1,telex,Tài xế nói không thấy đồ nhuwng tooi chắc chắn để quên điện thoại trên xe
+t0002,transport,lost_item,transport/lost_item,1,code_switch,Tài xế nói không thấy đồ nhưng tôi chắc chắn để quên điện thoại trên xe
+t0002,transport,lost_item,transport/lost_item,1,mixed,tai xe noi ko thay do nhung e chac chan de quen dien thoai tren xe
+t0018,account,forgot_credential,account/forgot_credential,1,clean,Quên mật khẩu mà email cũ không còn dùng
+t0018,account,forgot_credential,account/forgot_credential,1,no_diacritics,Quen mat khau ma email cu khong con dung
+t0018,account,forgot_credential,account/forgot_credential,1,teencode,quên mật khẩu mà email cũ ko còn dùng
+t0018,account,forgot_credential,account/forgot_credential,1,telex,Quên mật khaaur mà email cũ khoong còn dùng
+t0018,account,forgot_credential,account/forgot_credential,1,code_switch,Quên password mà email cũ không còn dùng
+t0018,account,forgot_credential,account/forgot_credential,1,mixed,quen mat khau ma email cu ko con dung
+t0019,food,order_cancelled,food/order_cancelled,1,clean,Tại sao đơn đồ ăn của tôi bị huỷ khi đang giao
+t0019,food,order_cancelled,food/order_cancelled,1,no_diacritics,Tai sao don do an cua toi bi huy khi dang giao
+t0019,food,order_cancelled,food/order_cancelled,1,teencode,tại sao đơn đồ ăn của e bị huỷ khi đang giao
+t0019,food,order_cancelled,food/order_cancelled,1,telex,taij sao đơn đồ ăn của tôi bị huyr khi đang giao
+t0019,food,order_cancelled,food/order_cancelled,1,code_switch,Tại sao order đồ ăn của tôi bị cancel khi đang giao
+t0019,food,order_cancelled,food/order_cancelled,1,mixed,tai sao don do an cua e bi cancel khi dang giao
+t0025,transport,safety_incident,transport/safety_incident,1,clean,"Em bị té xe trong chuyến đi lúc 9h sáng, đầu gối chảy máu"
+t0025,transport,safety_incident,transport/safety_incident,1,no_diacritics,"Em bi te xe trong chuyen di luc 9h sang, dau goi chay mau"
+t0025,transport,safety_incident,transport/safety_incident,1,teencode,"em bị té xe trong chuyến đi lúc 9h sáng, đầu gối chảy máu"
+t0025,transport,safety_incident,transport/safety_incident,1,telex,"Em bị té xe trong chuyến đi lucs 9h sáng, ddaauf gối chảy máu"
+t0025,transport,safety_incident,transport/safety_incident,1,code_switch,"Em bị té xe trong chuyến đi lúc 9h sáng, đầu gối chảy máu"
+t0025,transport,safety_incident,transport/safety_incident,1,mixed,"em bi te xe trong chuyen di luc 9h sang, dau goi chay mau"
+t0036,finance,link_card_failed,finance/link_card_failed,1,clean,Tôi không thêm được thẻ vì báo số điện thoại không trùng với ngân hàng
+t0036,finance,link_card_failed,finance/link_card_failed,1,no_diacritics,Toi khong them duoc the vi bao so dien thoai khong trung voi ngan hang
+t0036,finance,link_card_failed,finance/link_card_failed,1,teencode,e ko thêm dc thẻ vì báo số điện thoại không trùng vs ngân hàng
+t0036,finance,link_card_failed,finance/link_card_failed,1,telex,Tôi không thêm được ther vì báo số điện thoại không trùng với ngân hangf
+t0036,finance,link_card_failed,finance/link_card_failed,1,code_switch,Tôi không thêm được thẻ vì báo số điện thoại không trùng với ngân hàng
+t0036,finance,link_card_failed,finance/link_card_failed,1,mixed,e khong them dc the vi bao so dien thoai ko trung vs ngan hang
+t0044,food,order_not_received,food/order_not_received,1,clean,Tài xế giao đồ ăn không thành công rồi mang đi luôn
+t0044,food,order_not_received,food/order_not_received,1,no_diacritics,Tai xe giao do an khong thanh cong roi mang di luon
+t0044,food,order_not_received,food/order_not_received,1,teencode,tài xế giao đồ ăn ko thành công r mang đi luôn
+t0044,food,order_not_received,food/order_not_received,1,telex,Tài xế giao đồ ăn khoong thanhf công rồi mang đi luôn
+t0044,food,order_not_received,food/order_not_received,1,code_switch,Tài xế giao đồ ăn không thành công rồi mang đi luôn
+t0044,food,order_not_received,food/order_not_received,1,mixed,tai xe giao do an ko thanh cong r mang di luon
+t0057,transport,cannot_book,transport/cannot_book,1,clean,"Tôi không đặt được ô tô từ sáng tới giờ, cứ quay vòng tìm tài xế rồi thất bại"
+t0057,transport,cannot_book,transport/cannot_book,1,no_diacritics,"Toi khong dat duoc o to tu sang toi gio, cu quay vong tim tai xe roi that bai"
+t0057,transport,cannot_book,transport/cannot_book,1,teencode,"e không đặt dc ô tô từ sáng tới giờ, cứ quay vòng tìm tài xế r thất bại"
+t0057,transport,cannot_book,transport/cannot_book,1,telex,"Tôi không đặt được ô tô từ sáng tới giờ, cuws quay vòng tìm tài xế rồi thất baij"
+t0057,transport,cannot_book,transport/cannot_book,1,code_switch,"Tôi không đặt được ô tô từ sáng tới giờ, cứ quay vòng tìm tài xế rồi thất bại"
+t0057,transport,cannot_book,transport/cannot_book,1,mixed,"toi khong dat dc o to tu sang toi gio, cu quay vong tim tai xe r that bai"
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,clean,Gói hội viên đăng ký rồi nhưng không thấy ưu đãi áp dụng
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,no_diacritics,Goi hoi vien dang ky roi nhung khong thay uu dai ap dung
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,teencode,gói hội viên đăng ký r nhưng không thấy ưu đãi áp dụng
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,telex,Gói hooij viên đăng ký rồi nhuwng không thấy ưu đãi áp dụng
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,code_switch,Gói hội viên đăng ký rồi nhưng không thấy ưu đãi áp dụng
+t0058,membership,membership_subscribe,membership/membership_subscribe,1,mixed,goi hoi vien dang ky roi nhung ko thay uu dai ap dung
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,clean,Đơn đi chợ giao sai nhãn hiệu sữa bột cho con
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,no_diacritics,Don di cho giao sai nhan hieu sua bot cho con
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,teencode,đơn đi chợ giao sai nhãn hiệu sữa bột cho con
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,telex,Đơn đi chợ giao sai nhãn hiệu suwax bootj cho con
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,code_switch,order đi chợ giao sai nhãn hiệu sữa bột cho con
+t0061,mart,order_missing_wrong,mart/order_missing_wrong,1,mixed,order di cho giao sai nhan hieu sua bot cho con
+t0062,transport,safety_incident,transport/safety_incident,1,clean,"Xe bị ngã khi đi qua đoạn đường trơn, tôi bị thương ở tay"
+t0062,transport,safety_incident,transport/safety_incident,1,no_diacritics,"Xe bi nga khi di qua doan duong tron, toi bi thuong o tay"
+t0062,transport,safety_incident,transport/safety_incident,1,teencode,"xe bị ngã khi đi qua đoạn đường trơn, e bị thương ở tay"
+t0062,transport,safety_incident,transport/safety_incident,1,telex,"Xe bị ngã khi đi qua đoạn đường trơn, tooi bij thương ở tay"
+t0062,transport,safety_incident,transport/safety_incident,1,code_switch,"Xe bị ngã khi đi qua đoạn đường trơn, tôi bị thương ở tay"
+t0062,transport,safety_incident,transport/safety_incident,1,mixed,"xe bi nga khi di qua doan duong tron, toi bi thuong o tay"
+t0084,business,refund_request,business/refund_request,1,clean,Đề nghị hoàn tiền 2 chuyến xe công tác bị tính dư trong tháng
+t0084,business,refund_request,business/refund_request,1,no_diacritics,De nghi hoan tien 2 chuyen xe cong tac bi tinh du trong thang
+t0084,business,refund_request,business/refund_request,1,teencode,đề nghị hoàn tiền 2 chuyến xe công tác bị tính dư trong tháng
+t0084,business,refund_request,business/refund_request,1,telex,Đề nghị hoàn tiền 2 chuyến xe công tacs bị tính dư trong thangs
+t0084,business,refund_request,business/refund_request,1,code_switch,Đề nghị hoàn tiền 2 chuyến xe công tác bị tính dư trong tháng
+t0084,business,refund_request,business/refund_request,1,mixed,de nghi hoan tien 2 chuyen xe cong tac bi tinh du trong thang
+t0091,account,update_contact,account/update_contact,1,clean,Đổi số điện thoại xong không đăng nhập được bằng số mới
+t0091,account,update_contact,account/update_contact,1,no_diacritics,Doi so dien thoai xong khong dang nhap duoc bang so moi
+t0091,account,update_contact,account/update_contact,1,teencode,đổi số điện thoại xong ko đăng nhập dc bằng số mới
+t0091,account,update_contact,account/update_contact,1,telex,Đổi số ddieenj thoại xong không đăng nhập được bằng soos mới
+t0091,account,update_contact,account/update_contact,1,code_switch,Đổi số điện thoại xong không đăng nhập được bằng số mới
+t0091,account,update_contact,account/update_contact,1,mixed,doi so dien thoai xong ko dang nhap dc bang so moi
+t0115,food,food_safety,food/food_safety,1,clean,Thấy con kiến bò trong hộp bánh ngọt
+t0115,food,food_safety,food/food_safety,1,no_diacritics,Thay con kien bo trong hop banh ngot
+t0115,food,food_safety,food/food_safety,1,teencode,thấy con kiến bò trong hộp bánh ngọt
+t0115,food,food_safety,food/food_safety,1,telex,thaays con kiến bò trong hộp bánh ngotj
+t0115,food,food_safety,food/food_safety,1,code_switch,Thấy con kiến bò trong hộp bánh ngọt
+t0115,food,food_safety,food/food_safety,1,mixed,thay con kien bo trong hop banh ngot
+t0118,transport,safety_incident,transport/safety_incident,1,clean,"Trong chuyến xe tài xế cứ hỏi chuyện riêng tư, xin số điện thoại, tôi rất sợ"
+t0118,transport,safety_incident,transport/safety_incident,1,no_diacritics,"Trong chuyen xe tai xe cu hoi chuyen rieng tu, xin so dien thoai, toi rat so"
+t0118,transport,safety_incident,transport/safety_incident,1,teencode,"trong chuyến xe tài xế cứ hỏi chuyện riêng tư, xin số điện thoại, tôi rất sợ"
+t0118,transport,safety_incident,transport/safety_incident,1,telex,"Trong chuyến xe tài xế cứ hỏi chuyeenj riêng tư, xin số điện thoại, tooi rất sợ"
+t0118,transport,safety_incident,transport/safety_incident,1,code_switch,"Trong chuyến xe tài xế cứ hỏi chuyện riêng tư, xin số điện thoại, tôi rất sợ"
+t0118,transport,safety_incident,transport/safety_incident,1,mixed,"trong chuyen xe tai xe cu hoi chuyen rieng tu, xin so dien thoai, e rat so"
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,clean,Thẻ tín dụng của tôi bị từ chối dù còn hạn mức
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,no_diacritics,The tin dung cua toi bi tu choi du con han muc
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,teencode,thẻ tín dụng của e bị từ chối dù còn hạn mức
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,telex,Thẻ tín dungj của tôi bị tuwf chối dù còn hạn mức
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,code_switch,Thẻ tín dụng của tôi bị từ chối dù còn hạn mức
+t0124,mart,payment_method_failed,mart/payment_method_failed,0,mixed,the tin dung cua e bi tu choi du con han muc
+t0126,express,charged_but_failed,express/charged_but_failed,0,clean,"Bị trừ tiền dù giao dịch không thành công, đề nghị hoàn"
+t0126,express,charged_but_failed,express/charged_but_failed,0,no_diacritics,"Bi tru tien du giao dich khong thanh cong, de nghi hoan"
+t0126,express,charged_but_failed,express/charged_but_failed,0,teencode,"bị trừ tiền dù giao dịch ko thành công, đề nghị hoàn"
+t0126,express,charged_but_failed,express/charged_but_failed,0,telex,"Bị trừ tiền dù giao dịch khoong thành công, đề nghị hoanf"
+t0126,express,charged_but_failed,express/charged_but_failed,0,code_switch,"Bị trừ tiền dù giao dịch không thành công, đề nghị hoàn"
+t0126,express,charged_but_failed,express/charged_but_failed,0,mixed,"bi tru tien du giao dich khong thanh cong, de nghi hoan"
+t0128,account,delete_account,account/delete_account,1,clean,Làm sao xoá tài khoản và toàn bộ dữ liệu cá nhân
+t0128,account,delete_account,account/delete_account,1,no_diacritics,Lam sao xoa tai khoan va toan bo du lieu ca nhan
+t0128,account,delete_account,account/delete_account,1,teencode,lm sao xoá tk và toàn bộ dữ liệu cá nhân
+t0128,account,delete_account,account/delete_account,1,telex,lamf sao xoá tài khoản và toanf bộ dữ liệu cá nhân
+t0128,account,delete_account,account/delete_account,1,code_switch,Làm sao xoá account và toàn bộ dữ liệu cá nhân
+t0128,account,delete_account,account/delete_account,1,mixed,lm sao xoa tk va toan bo du lieu ca nhan
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,clean,"Thanh toán hoá đơn nước trong ví lỗi, bị trừ tiền 2 lần"
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,no_diacritics,"Thanh toan hoa don nuoc trong vi loi, bi tru tien 2 lan"
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,teencode,"thanh toán hoá đơn nước trong ví lỗi, bị trừ tiền 2 lần"
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,telex,"Thanh toán hoas đơn nước trong ví lỗi, bị trừ tieenf 2 lần"
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,code_switch,"Thanh toán hoá đơn nước trong ví lỗi, bị trừ tiền 2 lần"
+t0130,finance,charged_but_failed,finance/charged_but_failed,1,mixed,"tt hoa order nuoc trong vi loi, bi tru tien 2 lan"
+t0137,mart,overcharged,mart/overcharged,1,clean,"Đặt đồ tạp hoá 230k mà ví bị trừ 278k, kiểm tra giúp"
+t0137,mart,overcharged,mart/overcharged,1,no_diacritics,"Dat do tap hoa 230k ma vi bi tru 278k, kiem tra giup"
+t0137,mart,overcharged,mart/overcharged,1,teencode,"đặt đồ tạp hoá 230k mà ví bị trừ 278k, kiểm tra giúp"
+t0137,mart,overcharged,mart/overcharged,1,telex,"Đặt đồ tapj hoá 230k mà ví bij trừ 278k, kiểm tra giúp"
+t0137,mart,overcharged,mart/overcharged,1,code_switch,"Đặt đồ tạp hoá 230k mà ví bị trừ 278k, check giúp"
+t0137,mart,overcharged,mart/overcharged,1,mixed,"dat do tap hoa 230k ma vi bi tru 278k, kiem tra giup"
+t0145,business,link_card_failed,business/link_card_failed,1,clean,Thẻ Mastercard doanh nghiệp bị từ chối khi xác thực
+t0145,business,link_card_failed,business/link_card_failed,1,no_diacritics,The Mastercard doanh nghiep bi tu choi khi xac thuc
+t0145,business,link_card_failed,business/link_card_failed,1,teencode,thẻ mastercard doanh nghiệp bị từ chối khi xác thực
+t0145,business,link_card_failed,business/link_card_failed,1,telex,ther Mastercard doanh nghiệp bị từ chối khi xacs thực
+t0145,business,link_card_failed,business/link_card_failed,1,code_switch,Thẻ Mastercard doanh nghiệp bị từ chối khi xác thực
+t0145,business,link_card_failed,business/link_card_failed,1,mixed,the mastercard doanh nghiep bi tu choi khi xac thuc
+t0160,membership,membership_cancel,membership/membership_cancel,1,clean,"Hết thời gian dùng thử thì gói hội viên tự trừ tiền, tôi muốn huỷ"
+t0160,membership,membership_cancel,membership/membership_cancel,1,no_diacritics,"Het thoi gian dung thu thi goi hoi vien tu tru tien, toi muon huy"
+t0160,membership,membership_cancel,membership/membership_cancel,1,teencode,"hết thời gian dùng thử thì gói hội viên tự trừ tiền, e mún huỷ"
+t0160,membership,membership_cancel,membership/membership_cancel,1,telex,"Hết thời gian dùng thử thì gói hooij viên tự trừ tiền, tooi muốn huỷ"
+t0160,membership,membership_cancel,membership/membership_cancel,1,code_switch,"Hết thời gian dùng thử thì gói hội viên tự trừ tiền, tôi muốn cancel"
+t0160,membership,membership_cancel,membership/membership_cancel,1,mixed,"het thoi gian dung thu thi goi hoi vien tu tru tien, e mun cancel"
+t0161,business,business_profile,business/business_profile,1,clean,Tạo hồ sơ doanh nghiệp mãi không được
+t0161,business,business_profile,business/business_profile,1,no_diacritics,Tao ho so doanh nghiep mai khong duoc
+t0161,business,business_profile,business/business_profile,1,teencode,tạo hồ sơ doanh nghiệp mãi không dc
+t0161,business,business_profile,business/business_profile,1,telex,Tạo hồ sow doanh nghieepj mãi không được
+t0161,business,business_profile,business/business_profile,1,code_switch,Tạo hồ sơ doanh nghiệp mãi không được
+t0161,business,business_profile,business/business_profile,1,mixed,tao ho so doanh nghiep mai ko dc
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,clean,"Giao nhầm bột giặt loại khác, không phải loại tôi chọn"
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,no_diacritics,"Giao nham bot giat loai khac, khong phai loai toi chon"
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,teencode,"giao nhầm bột giặt loại khác, ko phải loại tôi chọn"
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,telex,"Giao nhầm bootj giặt loại khac,s không phải loại tôi chọn"
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,code_switch,"Giao nhầm bột giặt loại khác, không phải loại tôi chọn"
+t0172,mart,order_missing_wrong,mart/order_missing_wrong,1,mixed,"giao nham bot giat loai khac, ko phai loai e chon"
+t0185,account,delete_history,account/delete_history,1,clean,"Em dùng chung điện thoại, muốn xoá lịch sử chuyến xe ạ"
+t0185,account,delete_history,account/delete_history,1,no_diacritics,"Em dung chung dien thoai, muon xoa lich su chuyen xe a"
+t0185,account,delete_history,account/delete_history,1,teencode,"em dùng chung điện thoại, mún xoá lịch sử chuyến xe ạ"
+t0185,account,delete_history,account/delete_history,1,telex,"Em dùng chung điện thoai,j muoons xoá lịch sử chuyến xe ạ"
+t0185,account,delete_history,account/delete_history,1,code_switch,"Em dùng chung điện thoại, muốn xoá lịch sử chuyến xe ạ"
+t0185,account,delete_history,account/delete_history,1,mixed,"em dung chung dien thoai, mun xoa lich su chuyen xe a"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,clean,"Giao dịch lỗi mà tiền vẫn bị trừ, đã 2 ngày chưa hoàn"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,no_diacritics,"Giao dich loi ma tien van bi tru, da 2 ngay chua hoan"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,teencode,"giao dịch lỗi mà tiền vẫn bị trừ, đã 2 ngày chưa hoàn"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,telex,"Giao dịch looix mà tiền vẫn bị truw,f đã 2 ngày chưa hoàn"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,code_switch,"Giao dịch lỗi mà tiền vẫn bị trừ, đã 2 ngày chưa hoàn"
+t0193,mart,charged_but_failed,mart/charged_but_failed,0,mixed,"giao dich loi ma tien van bi tru, da 2 ngay chua hoan"
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,clean,Combo ghi có khoai tây chiên mà không thấy đâu
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,no_diacritics,Combo ghi co khoai tay chien ma khong thay dau
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,teencode,combo ghi có khoai tây chiên mà ko thấy đâu
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,telex,Combo ghi cos khoai tây chiên maf không thấy đâu
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,code_switch,Combo ghi có khoai tây chiên mà không thấy đâu
+t0216,food,order_missing_wrong,food/order_missing_wrong,1,mixed,combo ghi co khoai tay chien ma ko thay dau
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,clean,"Mình chọn thanh toán bằng ví mà cứ báo lỗi, không đặt xe được"
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,no_diacritics,"Minh chon thanh toan bang vi ma cu bao loi, khong dat xe duoc"
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,teencode,"mình chọn tt bằng ví mà cứ báo lỗi, ko đặt xe dc"
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,telex,"minhf chọn thanh toans bằng ví mà cứ báo lỗi, không đặt xe được"
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,code_switch,"Mình chọn payment bằng ví mà cứ báo lỗi, không đặt xe được"
+t0219,transport,payment_method_failed,transport/payment_method_failed,1,mixed,"mk chon thanh toan bang vi ma cu bao loi, ko dat xe duoc"
+t0225,transport,driver_no_show,transport/driver_no_show,1,clean,Em chờ tài xế ở cổng bệnh viện gần nửa tiếng mà không thấy đến
+t0225,transport,driver_no_show,transport/driver_no_show,1,no_diacritics,Em cho tai xe o cong benh vien gan nua tieng ma khong thay den
+t0225,transport,driver_no_show,transport/driver_no_show,1,teencode,em chờ tài xế ở cổng bệnh viện gần nửa tiếng mà ko thấy đến
+t0225,transport,driver_no_show,transport/driver_no_show,1,telex,Em chờ tài xế ở cổng bệnh vieenj gần nửa tiếng mà không thấy ddeens
+t0225,transport,driver_no_show,transport/driver_no_show,1,code_switch,Em chờ tài xế ở cổng bệnh viện gần nửa tiếng mà không thấy đến
+t0225,transport,driver_no_show,transport/driver_no_show,1,mixed,em cho tai xe o cong benh vien gan nua tieng ma ko thay den
+t0232,transport,overcharged,transport/overcharged,1,clean,Chuyến xe ngày 14/11 lúc 18h bị trừ 210.000đ trong khi giá đặt chỉ 150.000đ
+t0232,transport,overcharged,transport/overcharged,1,no_diacritics,Chuyen xe ngay 14/11 luc 18h bi tru 210.000d trong khi gia dat chi 150.000d
+t0232,transport,overcharged,transport/overcharged,1,teencode,chuyến xe ngày 14/11 lúc 18h bị trừ 210.000đ trong khi giá đặt chỉ 150.000đ
+t0232,transport,overcharged,transport/overcharged,1,telex,Chuyến xe ngày 14/11 lúc 18h bị trừ 210.000đ trong khi giá ddawtj chir 150.000đ
+t0232,transport,overcharged,transport/overcharged,1,code_switch,Chuyến xe ngày 14/11 lúc 18h bị trừ 210.000đ trong khi giá đặt chỉ 150.000đ
+t0232,transport,overcharged,transport/overcharged,1,mixed,chuyen xe ngay 14/11 luc 18h bi tru 210.000d trong khi gia dat chi 150.000d
+t0238,account,update_contact,account/update_contact,1,clean,Cập nhật số điện thoại báo số này đã được dùng cho tài khoản khác
+t0238,account,update_contact,account/update_contact,1,no_diacritics,Cap nhat so dien thoai bao so nay da duoc dung cho tai khoan khac
+t0238,account,update_contact,account/update_contact,1,teencode,cập nhật số điện thoại báo số này đã dc dùng cho tk khác
+t0238,account,update_contact,account/update_contact,1,telex,Cập nhật số điện thoaij báo số này đã được dùng cho tài khoanr khác
+t0238,account,update_contact,account/update_contact,1,code_switch,Cập nhật số điện thoại báo số này đã được dùng cho tài khoản khác
+t0238,account,update_contact,account/update_contact,1,mixed,cap nhat so dien thoai bao so nay da duoc dung cho account khac
+t0253,transport,cannot_book,transport/cannot_book,1,clean,"Em đặt xe 7 chỗ không được, chỉ hiện thông báo không có xe phù hợp"
+t0253,transport,cannot_book,transport/cannot_book,1,no_diacritics,"Em dat xe 7 cho khong duoc, chi hien thong bao khong co xe phu hop"
+t0253,transport,cannot_book,transport/cannot_book,1,teencode,"em đặt xe 7 chỗ ko dc, chỉ hiện thông báo ko có xe phù hợp"
+t0253,transport,cannot_book,transport/cannot_book,1,telex,"Em đặt xe 7 chỗ không được, chỉ hieenj thông báo khoong có xe phù hợp"
+t0253,transport,cannot_book,transport/cannot_book,1,code_switch,"Em đặt xe 7 chỗ không được, chỉ hiện thông báo không có xe phù hợp"
+t0253,transport,cannot_book,transport/cannot_book,1,mixed,"em dat xe 7 cho ko dc, chi hien thong bao ko co xe phu hop"
+t0278,food,food_safety,food/food_safety,1,clean,Trong canh có mảnh vỡ thuỷ tinh
+t0278,food,food_safety,food/food_safety,1,no_diacritics,Trong canh co manh vo thuy tinh
+t0278,food,food_safety,food/food_safety,1,teencode,trong canh có mảnh vỡ thuỷ tinh
+t0278,food,food_safety,food/food_safety,1,telex,Trong canh cos mảnh vỡ thuyr tinh
+t0278,food,food_safety,food/food_safety,1,code_switch,Trong canh có mảnh vỡ thuỷ tinh
+t0278,food,food_safety,food/food_safety,1,mixed,trong canh co manh vo thuy tinh
+t0288,express,order_not_received,express/order_not_received,1,clean,Người nhận chờ ở nhà cả ngày mà tài xế không đến giao
+t0288,express,order_not_received,express/order_not_received,1,no_diacritics,Nguoi nhan cho o nha ca ngay ma tai xe khong den giao
+t0288,express,order_not_received,express/order_not_received,1,teencode,người nhận chờ ở nhà cả ngày mà tài xế ko đến giao
+t0288,express,order_not_received,express/order_not_received,1,telex,Người nhận chờ ở nhà cả ngày mà tài xees khoong đến giao
+t0288,express,order_not_received,express/order_not_received,1,code_switch,Người nhận chờ ở nhà cả ngày mà tài xế không đến giao
+t0288,express,order_not_received,express/order_not_received,1,mixed,nguoi nhan cho o nha ca ngay ma tai xe ko den giao
+t0289,food,charged_but_failed,food/charged_but_failed,1,clean,Mình không nhận được đơn nào mà ví ghi thanh toán đơn đồ ăn
+t0289,food,charged_but_failed,food/charged_but_failed,1,no_diacritics,Minh khong nhan duoc don nao ma vi ghi thanh toan don do an
+t0289,food,charged_but_failed,food/charged_but_failed,1,teencode,mk ko nhận dc đơn nào mà ví ghi tt đơn đồ ăn
+t0289,food,charged_but_failed,food/charged_but_failed,1,telex,Mình không nhaanj được ddown nào mà ví ghi thanh toán đơn đồ ăn
+t0289,food,charged_but_failed,food/charged_but_failed,1,code_switch,Mình không nhận được đơn nào mà ví ghi payment order đồ ăn
+t0289,food,charged_but_failed,food/charged_but_failed,1,mixed,mk khong nhan dc order nao ma vi ghi payment order do an
+t0294,business,refund_request,business/refund_request,1,clean,Mình gửi yêu cầu hoàn tiền chuyến xe công việc mà chưa có phản hồi
+t0294,business,refund_request,business/refund_request,1,no_diacritics,Minh gui yeu cau hoan tien chuyen xe cong viec ma chua co phan hoi
+t0294,business,refund_request,business/refund_request,1,teencode,mk gửi yêu cầu hoàn tiền chuyến xe công việc mà chưa có phản hồi
+t0294,business,refund_request,business/refund_request,1,telex,Mình gửi yeeu cầu hoàn tiền chuyến xe coong việc mà chưa có phản hồi
+t0294,business,refund_request,business/refund_request,1,code_switch,Mình gửi yêu cầu refund chuyến xe công việc mà chưa có phản hồi
+t0294,business,refund_request,business/refund_request,1,mixed,mk gui yeu cau refund chuyen xe cong viec ma chua co phan hoi
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,clean,Thanh toán đơn đi chợ bằng mã QR không được
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,no_diacritics,Thanh toan don di cho bang ma QR khong duoc
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,teencode,tt đơn đi chợ bằng mã qr ko dc
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,telex,Thanh toán ddown đi chợ bằng mã QR không dduwowcj
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,code_switch,payment đơn đi chợ bằng mã QR không được
+t0296,mart,payment_method_failed,mart/payment_method_failed,1,mixed,payment order di cho bang ma qr khong dc
+t0297,transport,overcharged,transport/overcharged,1,clean,"Giá xe lúc đặt là 120.000đ, hoá đơn gửi về email ghi 168.000đ"
+t0297,transport,overcharged,transport/overcharged,1,no_diacritics,"Gia xe luc dat la 120.000d, hoa don gui ve email ghi 168.000d"
+t0297,transport,overcharged,transport/overcharged,1,teencode,"giá xe lúc đặt là 120.000đ, hoá đơn gửi về email ghi 168.000đ"
+t0297,transport,overcharged,transport/overcharged,1,telex,"Giá xe lúc đặt là 120.000đ, hoas ddown gửi về email ghi 168.000đ"
+t0297,transport,overcharged,transport/overcharged,1,code_switch,"Giá xe lúc đặt là 120.000đ, hoá đơn gửi về email ghi 168.000đ"
+t0297,transport,overcharged,transport/overcharged,1,mixed,"gia xe luc dat la 120.000d, hoa don gui ve email ghi 168.000d"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,clean,"Tôi nạp 500k vào ví, ngân hàng trừ rồi mà ví không có tiền"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,no_diacritics,"Toi nap 500k vao vi, ngan hang tru roi ma vi khong co tien"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,teencode,"e nạp 500k vào ví, ngân hàng trừ rồi mà ví ko có tiền"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,telex,"Tôi nạp 500k vào ví, ngân hàng truwf rồi maf ví không có tiền"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,code_switch,"Tôi nạp 500k vào ví, ngân hàng trừ rồi mà ví không có tiền"
+t0302,finance,charged_but_failed,finance/charged_but_failed,1,mixed,"e nap 500k vao vi, ngan hang tru roi ma vi ko co tien"
+t0306,transport,driver_no_show,transport/driver_no_show,1,clean,"Tài xế cứ đứng ở chỗ khác rồi nhắn tôi tự ra, không chịu vào điểm đón"
+t0306,transport,driver_no_show,transport/driver_no_show,1,no_diacritics,"Tai xe cu dung o cho khac roi nhan toi tu ra, khong chiu vao diem don"
+t0306,transport,driver_no_show,transport/driver_no_show,1,teencode,"tài xế cứ đứng ở chỗ khác r nhắn tôi tự ra, ko chịu vào điểm đón"
+t0306,transport,driver_no_show,transport/driver_no_show,1,telex,"Tài xế cứ đứng ở chỗ khác rồi nhắn tôi tự ra, không chiuj vào điểm ddons"
+t0306,transport,driver_no_show,transport/driver_no_show,1,code_switch,"Tài xế cứ đứng ở chỗ khác rồi nhắn tôi tự ra, không chịu vào điểm đón"
+t0306,transport,driver_no_show,transport/driver_no_show,1,mixed,"tai xe cu dung o cho khac r nhan e tu ra, ko chiu vao diem don"
+t0310,express,payment_method_failed,express/payment_method_failed,1,clean,Gửi hàng liên tỉnh không trả được bằng thẻ Visa
+t0310,express,payment_method_failed,express/payment_method_failed,1,no_diacritics,Gui hang lien tinh khong tra duoc bang the Visa
+t0310,express,payment_method_failed,express/payment_method_failed,1,teencode,gửi hàng liên tỉnh ko trả dc bằng thẻ visa
+t0310,express,payment_method_failed,express/payment_method_failed,1,telex,Gửi hàng liên tinhr không trả được bawngf thẻ Visa
+t0310,express,payment_method_failed,express/payment_method_failed,1,code_switch,Gửi hàng liên tỉnh không trả được bằng thẻ Visa
+t0310,express,payment_method_failed,express/payment_method_failed,1,mixed,gui hang lien tinh ko tra dc bang the visa
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,clean,Chuyển tiền cho bạn qua ví không thành công mà vẫn bị trừ
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,no_diacritics,Chuyen tien cho ban qua vi khong thanh cong ma van bi tru
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,teencode,chuyển tiền cho b qua ví ko thành công mà vẫn bị trừ
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,telex,Chuyển tiền cho banj qua vis không thành công mà vẫn bị trừ
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,code_switch,Chuyển tiền cho bạn qua ví không thành công mà vẫn bị trừ
+t0312,finance,charged_but_failed,finance/charged_but_failed,1,mixed,chuyen tien cho b qua vi ko thanh cong ma van bi tru
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,clean,Tôi đặt bàn 7h tối qua app mà tới nơi quán nói không có
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,no_diacritics,Toi dat ban 7h toi qua app ma toi noi quan noi khong co
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,teencode,e đặt bàn 7h tối qua app mà tới nơi quán nói ko có
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,telex,tooi đặt bàn 7h tối qua app mà tới nơi quán nói khoong có
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,code_switch,Tôi đặt bàn 7h tối qua app mà tới nơi quán nói không có
+t0314,dine_out,reservation_issue,dine_out/reservation_issue,1,mixed,e dat ban 7h toi qua app ma toi noi quan noi khong co
+t0320,express,charged_but_failed,express/charged_but_failed,1,clean,Mình không gửi được đơn nào mà ví ghi thanh toán giao hàng
+t0320,express,charged_but_failed,express/charged_but_failed,1,no_diacritics,Minh khong gui duoc don nao ma vi ghi thanh toan giao hang
+t0320,express,charged_but_failed,express/charged_but_failed,1,teencode,mk ko gửi được đơn nào mà ví ghi thanh toán giao hàng
+t0320,express,charged_but_failed,express/charged_but_failed,1,telex,Mình khoong gửi được ddown nào mà ví ghi thanh toán giao hàng
+t0320,express,charged_but_failed,express/charged_but_failed,1,code_switch,Mình không gửi được order nào mà ví ghi payment ship
+t0320,express,charged_but_failed,express/charged_but_failed,1,mixed,mk ko gui dc order nao ma vi ghi payment ship
+t0324,finance,fraud_report,finance/fraud_report,1,clean,Bị lừa chuyển 5 triệu qua ví cho người bán hàng online
+t0324,finance,fraud_report,finance/fraud_report,1,no_diacritics,Bi lua chuyen 5 trieu qua vi cho nguoi ban hang online
+t0324,finance,fraud_report,finance/fraud_report,1,teencode,bị lừa chuyển 5 triệu qua ví cho người bán hàng online
+t0324,finance,fraud_report,finance/fraud_report,1,telex,bij lừa chuyển 5 triệu qua ví cho nguwowif bán hàng online
+t0324,finance,fraud_report,finance/fraud_report,1,code_switch,Bị lừa chuyển 5 triệu qua ví cho người bán hàng online
+t0324,finance,fraud_report,finance/fraud_report,1,mixed,bi lua chuyen 5 trieu qua vi cho nguoi ban hang online
+t0327,account,update_contact,account/update_contact,1,clean,"Mất điện thoại và sim, muốn chuyển tài khoản sang số mới"
+t0327,account,update_contact,account/update_contact,1,no_diacritics,"Mat dien thoai va sim, muon chuyen tai khoan sang so moi"
+t0327,account,update_contact,account/update_contact,1,teencode,"mất điện thoại và sim, mún chuyển tk sang số mới"
+t0327,account,update_contact,account/update_contact,1,telex,"maats điện thoại và sim, muoons chuyển tài khoản sang số mới"
+t0327,account,update_contact,account/update_contact,1,code_switch,"Mất điện thoại và sim, muốn chuyển account sang số mới"
+t0327,account,update_contact,account/update_contact,1,mixed,"mat dien thoai va sim, mun chuyen account sang so moi"
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,clean,Đặt gạo 5kg mà giao túi 2kg
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,no_diacritics,Dat gao 5kg ma giao tui 2kg
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,teencode,đặt gạo 5kg mà giao túi 2kg
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,telex,Đặt gạo 5kg maf giao tuis 2kg
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,code_switch,Đặt gạo 5kg mà giao túi 2kg
+t0329,mart,order_missing_wrong,mart/order_missing_wrong,1,mixed,dat gao 5kg ma giao tui 2kg
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,clean,"Thanh toán chuyến xe bằng thẻ ATM nội địa không được, báo lỗi ngân hàng"
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,no_diacritics,"Thanh toan chuyen xe bang the ATM noi dia khong duoc, bao loi ngan hang"
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,teencode,"tt chuyến xe bằng thẻ atm nội địa ko dc, báo lỗi ngân hàng"
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,telex,"Thanh toán chuyến xe bawngf ther ATM nội địa không được, báo lỗi ngân hàng"
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,code_switch,"payment chuyến xe bằng thẻ ATM nội địa không được, báo lỗi ngân hàng"
+t0338,transport,payment_method_failed,transport/payment_method_failed,1,mixed,"payment chuyen xe bang the atm noi dia ko duoc, bao loi ngan hang"
+t0339,finance,fraud_report,finance/fraud_report,1,clean,Hoạt động bất thường: ví liên tục gửi mã OTP dù tôi không đăng nhập
+t0339,finance,fraud_report,finance/fraud_report,1,no_diacritics,Hoat dong bat thuong: vi lien tuc gui ma OTP du toi khong dang nhap
+t0339,finance,fraud_report,finance/fraud_report,1,teencode,hoạt động bất thường: ví liên tục gửi mã otp dù e ko đăng nhập
+t0339,finance,fraud_report,finance/fraud_report,1,telex,Hoạt động bất thường: vis liên tục gửi mã OTP dù tooi không đăng nhập
+t0339,finance,fraud_report,finance/fraud_report,1,code_switch,Hoạt động bất thường: ví liên tục gửi mã OTP dù tôi không đăng nhập
+t0339,finance,fraud_report,finance/fraud_report,1,mixed,hoat dong bat thuong: vi lien tuc gui ma otp du e ko dang nhap
+t0340,mart,overcharged,mart/overcharged,1,clean,Mua đồ siêu thị giá giảm 20% mà vẫn bị tính giá gốc
+t0340,mart,overcharged,mart/overcharged,1,no_diacritics,Mua do sieu thi gia giam 20% ma van bi tinh gia goc
+t0340,mart,overcharged,mart/overcharged,1,teencode,mua đồ siêu thị giá giảm 20% mà vẫn bị tính giá gốc
+t0340,mart,overcharged,mart/overcharged,1,telex,Mua đồ sieeu thị giá giảm 20% mà vẫn bị tính giá goocs
+t0340,mart,overcharged,mart/overcharged,1,code_switch,Mua đồ siêu thị giá giảm 20% mà vẫn bị tính giá gốc
+t0340,mart,overcharged,mart/overcharged,1,mixed,mua do sieu thi gia giam 20% ma van bi tinh gia goc
+t0341,food,payment_method_failed,food/payment_method_failed,1,clean,"Đặt đồ ăn chọn ví mà báo lỗi thanh toán, không đặt được đơn"
+t0341,food,payment_method_failed,food/payment_method_failed,1,no_diacritics,"Dat do an chon vi ma bao loi thanh toan, khong dat duoc don"
+t0341,food,payment_method_failed,food/payment_method_failed,1,teencode,"đặt đồ ăn chọn ví mà báo lỗi tt, ko đặt dc đơn"
+t0341,food,payment_method_failed,food/payment_method_failed,1,telex,"Đặt đồ ăn chọn ví maf báo looix thanh toán, không đặt được đơn"
+t0341,food,payment_method_failed,food/payment_method_failed,1,code_switch,"Đặt đồ ăn chọn ví mà báo lỗi thanh toán, không đặt được order"
+t0341,food,payment_method_failed,food/payment_method_failed,1,mixed,"dat do an chon vi ma bao loi payment, ko dat dc don"
+t0342,business,business_profile,business/business_profile,1,clean,Không chuyển được chuyến xe đã đi từ hồ sơ cá nhân sang doanh nghiệp
+t0342,business,business_profile,business/business_profile,1,no_diacritics,Khong chuyen duoc chuyen xe da di tu ho so ca nhan sang doanh nghiep
+t0342,business,business_profile,business/business_profile,1,teencode,ko chuyển dc chuyến xe đã đi từ hồ sơ cá nhân sang doanh nghiệp
+t0342,business,business_profile,business/business_profile,1,telex,Không chuyeenr được chuyến xe đã ddi từ hồ sơ cá nhân sang doanh nghiệp
+t0342,business,business_profile,business/business_profile,1,code_switch,Không chuyển được chuyến xe đã đi từ hồ sơ cá nhân sang doanh nghiệp
+t0342,business,business_profile,business/business_profile,1,mixed,ko chuyen dc chuyen xe da di tu ho so ca nhan sang doanh nghiep
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,clean,Không thấy mục đăng ký gói hội viên trong app
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,no_diacritics,Khong thay muc dang ky goi hoi vien trong app
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,teencode,ko thấy mục đăng ký gói hội viên trong app
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,telex,khoong thấy mục đăng kys gói hội viên trong app
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,code_switch,Không thấy mục đăng ký gói hội viên trong app
+t0348,membership,membership_subscribe,membership/membership_subscribe,1,mixed,ko thay muc dang ky goi hoi vien trong app
+t0351,food,order_damaged,food/order_damaged,1,clean,"Gà rán giao tới bị nhũn, dầu thấm ra hộp"
+t0351,food,order_damaged,food/order_damaged,1,no_diacritics,"Ga ran giao toi bi nhun, dau tham ra hop"
+t0351,food,order_damaged,food/order_damaged,1,teencode,"gà rán giao tới bị nhũn, dầu thấm ra hộp"
+t0351,food,order_damaged,food/order_damaged,1,telex,"Gà rán giao tới bij nhũn, dầu thấm ra hoopj"
+t0351,food,order_damaged,food/order_damaged,1,code_switch,"Gà rán giao tới bị nhũn, dầu thấm ra hộp"
+t0351,food,order_damaged,food/order_damaged,1,mixed,"ga ran giao toi bi nhun, dau tham ra hop"
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,clean,Không chọn được khung giờ khi đặt bàn nhà hàng
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,no_diacritics,Khong chon duoc khung gio khi dat ban nha hang
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,teencode,ko chọn dc khung giờ khi đặt bàn nhà hàng
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,telex,khoong chọn được khung giờ khi ddawtj bàn nhà hàng
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,code_switch,Không chọn được khung giờ khi đặt bàn nhà hàng
+t0370,dine_out,reservation_issue,dine_out/reservation_issue,1,mixed,ko chon dc khung gio khi dat ban nha hang
+t0375,food,overcharged,food/overcharged,0,clean,Giá hiện 76.000đ nhưng tài khoản bị trừ 104.000đ
+t0375,food,overcharged,food/overcharged,0,no_diacritics,Gia hien 76.000d nhung tai khoan bi tru 104.000d
+t0375,food,overcharged,food/overcharged,0,teencode,giá hiện 76.000đ nhưng tk bị trừ 104.000đ
+t0375,food,overcharged,food/overcharged,0,telex,Giá hiện 76.000dd nhưng tài khoanr bị trừ 104.000đ
+t0375,food,overcharged,food/overcharged,0,code_switch,Giá hiện 76.000đ nhưng tài khoản bị trừ 104.000đ
+t0375,food,overcharged,food/overcharged,0,mixed,gia hien 76.000d nhung tk bi tru 104.000d
+t0380,mart,order_not_received,mart/order_not_received,1,clean,Tài xế bảo để hàng ở cổng nhưng tôi không thấy
+t0380,mart,order_not_received,mart/order_not_received,1,no_diacritics,Tai xe bao de hang o cong nhung toi khong thay
+t0380,mart,order_not_received,mart/order_not_received,1,teencode,tài xế bảo để hàng ở cổng nhưng e ko thấy
+t0380,mart,order_not_received,mart/order_not_received,1,telex,Tài xế baor để hàng ở cổng nhưng tôi không thaays
+t0380,mart,order_not_received,mart/order_not_received,1,code_switch,Tài xế bảo để hàng ở cổng nhưng tôi không thấy
+t0380,mart,order_not_received,mart/order_not_received,1,mixed,tai xe bao de hang o cong nhung toi khong thay
+t0384,business,link_card_failed,business/link_card_failed,1,clean,Không thể cài thẻ công ty làm phương thức thanh toán mặc định cho nhân viên
+t0384,business,link_card_failed,business/link_card_failed,1,no_diacritics,Khong the cai the cong ty lam phuong thuc thanh toan mac dinh cho nhan vien
+t0384,business,link_card_failed,business/link_card_failed,1,teencode,không thể cài thẻ công ty làm phương thức tt mặc định cho nhân viên
+t0384,business,link_card_failed,business/link_card_failed,1,telex,Không theer cài thẻ công ty làm phương thuwcs thanh toán mặc định cho nhân viên
+t0384,business,link_card_failed,business/link_card_failed,1,code_switch,Không thể cài thẻ công ty làm phương thức thanh toán mặc định cho nhân viên
+t0384,business,link_card_failed,business/link_card_failed,1,mixed,ko the cai the cong ty lm phuong thuc payment mac dinh cho admin
+t0386,food,overcharged,food/overcharged,1,clean,"Giá món trên app 45k mà tính tiền thành 59k, quán có tính thêm gì không"
+t0386,food,overcharged,food/overcharged,1,no_diacritics,"Gia mon tren app 45k ma tinh tien thanh 59k, quan co tinh them gi khong"
+t0386,food,overcharged,food/overcharged,1,teencode,"giá món trên app 45k mà tính tiền thành 59k, quán có tính thêm j ko"
+t0386,food,overcharged,food/overcharged,1,telex,"Giá món trên app 45k maf tính tiền thành 59k, quans có tính thêm gì không"
+t0386,food,overcharged,food/overcharged,1,code_switch,"Giá món trên app 45k mà tính tiền thành 59k, quán có tính thêm gì không"
+t0386,food,overcharged,food/overcharged,1,mixed,"gia mon tren app 45k ma tinh tien thanh 59k, quan co tinh them gi ko"
+t0388,transport,trip_howto,transport/trip_howto,1,clean,Làm sao thêm điểm dừng giữa đường khi đang đi?
+t0388,transport,trip_howto,transport/trip_howto,1,no_diacritics,Lam sao them diem dung giua duong khi dang di?
+t0388,transport,trip_howto,transport/trip_howto,1,teencode,lm sao thêm điểm dừng giữa đường khi đang đi
+t0388,transport,trip_howto,transport/trip_howto,1,telex,Làm sao theem điểm duwngf giữa đường khi đang đi?
+t0388,transport,trip_howto,transport/trip_howto,1,code_switch,Làm sao thêm điểm dừng giữa đường khi đang đi?
+t0388,transport,trip_howto,transport/trip_howto,1,mixed,lm sao them diem dung giua duong khi dang di
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,clean,Ví còn tiền mà đặt đồ siêu thị vẫn báo thanh toán thất bại
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,no_diacritics,Vi con tien ma dat do sieu thi van bao thanh toan that bai
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,teencode,ví còn tiền mà đặt đồ siêu thị vẫn báo tt thất bại
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,telex,Ví còn tiền mà đặt đồ siêu thị vẫn báo thanh toán thaats baij
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,code_switch,Ví còn tiền mà đặt đồ siêu thị vẫn báo payment thất bại
+t0398,mart,payment_method_failed,mart/payment_method_failed,1,mixed,vi con tien ma dat do sieu thi van bao payment that bai
+t0411,express,payment_method_failed,express/payment_method_failed,0,clean,"Ví điện tử báo lỗi khi thanh toán, không rõ vì sao"
+t0411,express,payment_method_failed,express/payment_method_failed,0,no_diacritics,"Vi dien tu bao loi khi thanh toan, khong ro vi sao"
+t0411,express,payment_method_failed,express/payment_method_failed,0,teencode,"ví điện tử báo lỗi khi thanh toán, ko rõ vì sao"
+t0411,express,payment_method_failed,express/payment_method_failed,0,telex,"Ví ddieenj tử báo looix khi thanh toán, không rõ vì sao"
+t0411,express,payment_method_failed,express/payment_method_failed,0,code_switch,"Ví điện tử báo lỗi khi payment, không rõ vì sao"
+t0411,express,payment_method_failed,express/payment_method_failed,0,mixed,"vi dien tu bao loi khi payment, ko ro vi sao"
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,clean,Hệ thống lỗi khi đặt đi chợ nhưng tôi vẫn bị trừ tiền
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,no_diacritics,He thong loi khi dat di cho nhung toi van bi tru tien
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,teencode,hệ thống lỗi khi đặt đi chợ nhưng e vẫn bị trừ tiền
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,telex,Hệ thống lỗi khi đặt đi chowj nhưng tôi vẫn bij trừ tiền
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,code_switch,Hệ thống lỗi khi đặt đi chợ nhưng tôi vẫn bị trừ tiền
+t0420,mart,charged_but_failed,mart/charged_but_failed,1,mixed,he thong loi khi dat di cho nhung e van bi tru tien
+t0430,business,link_card_failed,business/link_card_failed,1,clean,Thêm thẻ doanh nghiệp cứ báo vượt quá số lần thử
+t0430,business,link_card_failed,business/link_card_failed,1,no_diacritics,Them the doanh nghiep cu bao vuot qua so lan thu
+t0430,business,link_card_failed,business/link_card_failed,1,teencode,thêm thẻ doanh nghiệp cứ báo vượt quá số lần thử
+t0430,business,link_card_failed,business/link_card_failed,1,telex,theem thẻ doanh nghieepj cứ báo vượt quá số lần thử
+t0430,business,link_card_failed,business/link_card_failed,1,code_switch,Thêm thẻ doanh nghiệp cứ báo vượt quá số lần thử
+t0430,business,link_card_failed,business/link_card_failed,1,mixed,them the doanh nghiep cu bao vuot qua so lan thu
+t0432,food,order_cancelled,food/order_cancelled,1,clean,"Hệ thống tự huỷ đơn gà rán của tôi, có được đền bù không"
+t0432,food,order_cancelled,food/order_cancelled,1,no_diacritics,"He thong tu huy don ga ran cua toi, co duoc den bu khong"
+t0432,food,order_cancelled,food/order_cancelled,1,teencode,"hệ thống tự huỷ đơn gà rán của tôi, có được đền bù ko"
+t0432,food,order_cancelled,food/order_cancelled,1,telex,"heej thống tuwj huỷ đơn gà rán của tôi, có được đền bù không"
+t0432,food,order_cancelled,food/order_cancelled,1,code_switch,"Hệ thống tự cancel đơn gà rán của tôi, có được đền bù không"
+t0432,food,order_cancelled,food/order_cancelled,1,mixed,"he thong tu huy order ga ran cua e, co duoc den bu ko"
+t0434,transport,driver_no_show,transport/driver_no_show,1,clean,"Chờ mãi tài xế không đến điểm đón, gọi không nghe máy"
+t0434,transport,driver_no_show,transport/driver_no_show,1,no_diacritics,"Cho mai tai xe khong den diem don, goi khong nghe may"
+t0434,transport,driver_no_show,transport/driver_no_show,1,teencode,"chờ mãi tài xế ko đến điểm đón, gọi không nghe máy"
+t0434,transport,driver_no_show,transport/driver_no_show,1,telex,"Chờ maix taif xế không đến điểm đón, gọi không nghe máy"
+t0434,transport,driver_no_show,transport/driver_no_show,1,code_switch,"Chờ mãi tài xế không đến điểm đón, gọi không nghe máy"
+t0434,transport,driver_no_show,transport/driver_no_show,1,mixed,"cho mai tai xe khong den diem don, goi ko nghe may"
+t0438,food,order_not_received,food/order_not_received,1,clean,"Đơn trà sữa giao cho ai vậy, tôi chưa nhận được"
+t0438,food,order_not_received,food/order_not_received,1,no_diacritics,"Don tra sua giao cho ai vay, toi chua nhan duoc"
+t0438,food,order_not_received,food/order_not_received,1,teencode,"đơn trà sữa giao cho ai v, e chưa nhận dc"
+t0438,food,order_not_received,food/order_not_received,1,telex,"Đơn traf sữa giao cho ai vaay,j tôi chưa nhận được"
+t0438,food,order_not_received,food/order_not_received,1,code_switch,"order trà sữa giao cho ai vậy, tôi chưa nhận được"
+t0438,food,order_not_received,food/order_not_received,1,mixed,"don tra sua giao cho ai v, e chua nhan dc"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,clean,"Người nhận nói thùng hàng nhẹ hơn, thiếu đồ bên trong"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,no_diacritics,"Nguoi nhan noi thung hang nhe hon, thieu do ben trong"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,teencode,"người nhận nói thùng hàng nhẹ hơn, thiếu đồ bên trong"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,telex,"Người nhận nói thùng hangf nhẹ hơn, thieeus đồ bên trong"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,code_switch,"Người nhận nói thùng hàng nhẹ hơn, thiếu đồ bên trong"
+t0445,express,order_missing_wrong,express/order_missing_wrong,1,mixed,"nguoi nhan noi thung hang nhe hon, thieu do ben trong"
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,clean,Tôi đặt cơm không hành mà quán vẫn cho hành
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,no_diacritics,Toi dat com khong hanh ma quan van cho hanh
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,teencode,e đặt cơm không hành mà quán vẫn cho hành
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,telex,Tôi đặt cơm không hành mà quán vaanx cho hanhf
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,code_switch,Tôi đặt cơm không hành mà quán vẫn cho hành
+t0455,food,order_missing_wrong,food/order_missing_wrong,1,mixed,e dat com ko hanh ma quan van cho hanh
+t0456,food,charged_but_failed,food/charged_but_failed,1,clean,Đơn đồ ăn hiện thất bại mà ví bị trừ đúng số tiền đơn
+t0456,food,charged_but_failed,food/charged_but_failed,1,no_diacritics,Don do an hien that bai ma vi bi tru dung so tien don
+t0456,food,charged_but_failed,food/charged_but_failed,1,teencode,đơn đồ ăn hiện thất bại mà ví bị trừ đúng số tiền đơn
+t0456,food,charged_but_failed,food/charged_but_failed,1,telex,Đơn ddoof ăn hiện thaats bại mà ví bị trừ đúng số tiền đơn
+t0456,food,charged_but_failed,food/charged_but_failed,1,code_switch,order đồ ăn hiện thất bại mà ví bị trừ đúng số tiền đơn
+t0456,food,charged_but_failed,food/charged_but_failed,1,mixed,order do an hien that bai ma vi bi tru dung so tien order
+t0481,food,payment_method_failed,food/payment_method_failed,1,clean,Mã QR thanh toán đơn món ăn không quét được
+t0481,food,payment_method_failed,food/payment_method_failed,1,no_diacritics,Ma QR thanh toan don mon an khong quet duoc
+t0481,food,payment_method_failed,food/payment_method_failed,1,teencode,mã qr tt đơn món ăn không quét dc
+t0481,food,payment_method_failed,food/payment_method_failed,1,telex,Mã QR thanh toán ddown món awn không quét được
+t0481,food,payment_method_failed,food/payment_method_failed,1,code_switch,Mã QR payment order món ăn không quét được
+t0481,food,payment_method_failed,food/payment_method_failed,1,mixed,ma qr payment order mon an ko quet dc
+t0490,mart,order_cancelled,mart/order_cancelled,1,clean,Tài xế nhận đơn đi chợ rồi huỷ
+t0490,mart,order_cancelled,mart/order_cancelled,1,no_diacritics,Tai xe nhan don di cho roi huy
+t0490,mart,order_cancelled,mart/order_cancelled,1,teencode,tài xế nhận đơn đi chợ r huỷ
+t0490,mart,order_cancelled,mart/order_cancelled,1,telex,Tài xees nhận ddown đi chợ rồi huỷ
+t0490,mart,order_cancelled,mart/order_cancelled,1,code_switch,Tài xế nhận order đi chợ rồi huỷ
+t0490,mart,order_cancelled,mart/order_cancelled,1,mixed,tai xe nhan order di cho r huy
+t0507,express,payment_method_failed,express/payment_method_failed,1,clean,Đơn gửi bưu kiện không cho chọn thanh toán bằng ví
+t0507,express,payment_method_failed,express/payment_method_failed,1,no_diacritics,Don gui buu kien khong cho chon thanh toan bang vi
+t0507,express,payment_method_failed,express/payment_method_failed,1,teencode,đơn gửi bưu kiện ko cho chọn thanh toán bằng ví
+t0507,express,payment_method_failed,express/payment_method_failed,1,telex,Đơn guwir bưu kiện khoong cho chọn thanh toán bằng ví
+t0507,express,payment_method_failed,express/payment_method_failed,1,code_switch,order gửi bưu kiện không cho chọn payment bằng ví
+t0507,express,payment_method_failed,express/payment_method_failed,1,mixed,order gui buu kien ko cho chon payment bang vi
+t0510,account,login_failed,account/login_failed,1,clean,Đăng nhập báo phiên làm việc hết hạn liên tục
+t0510,account,login_failed,account/login_failed,1,no_diacritics,Dang nhap bao phien lam viec het han lien tuc
+t0510,account,login_failed,account/login_failed,1,teencode,đăng nhập báo phiên lm việc hết hạn liên tục
+t0510,account,login_failed,account/login_failed,1,telex,Đăng nhập báo phiên làm vieecj hết hanj liên tục
+t0510,account,login_failed,account/login_failed,1,code_switch,Đăng nhập báo phiên làm việc hết hạn liên tục
+t0510,account,login_failed,account/login_failed,1,mixed,dang nhap bao phien lm viec het han lien tuc
+t0519,business,business_profile,business/business_profile,1,clean,Không thể tạo hồ sơ doanh nghiệp cho chi nhánh mới
+t0519,business,business_profile,business/business_profile,1,no_diacritics,Khong the tao ho so doanh nghiep cho chi nhanh moi
+t0519,business,business_profile,business/business_profile,1,teencode,ko thể tạo hồ sơ doanh nghiệp cho chi nhánh mới
+t0519,business,business_profile,business/business_profile,1,telex,khoong thể taoj hồ sơ doanh nghiệp cho chi nhánh mới
+t0519,business,business_profile,business/business_profile,1,code_switch,Không thể tạo hồ sơ doanh nghiệp cho chi nhánh mới
+t0519,business,business_profile,business/business_profile,1,mixed,ko the tao ho so doanh nghiep cho chi nhanh moi
+t0533,food,payment_method_failed,food/payment_method_failed,1,clean,"Không chọn được ví khi đặt đồ ăn, nút bị mờ"
+t0533,food,payment_method_failed,food/payment_method_failed,1,no_diacritics,"Khong chon duoc vi khi dat do an, nut bi mo"
+t0533,food,payment_method_failed,food/payment_method_failed,1,teencode,"ko chọn được ví khi đặt đồ ăn, nút bị mờ"
+t0533,food,payment_method_failed,food/payment_method_failed,1,telex,"Không chọn được ví khi ddawtj đồ ăn, nút bij mờ"
+t0533,food,payment_method_failed,food/payment_method_failed,1,code_switch,"Không chọn được ví khi đặt đồ ăn, nút bị mờ"
+t0533,food,payment_method_failed,food/payment_method_failed,1,mixed,"ko chon dc vi khi dat do an, nut bi mo"
+t0536,account,delete_account,account/delete_account,1,clean,Tôi muốn khoá và xoá tài khoản vĩnh viễn
+t0536,account,delete_account,account/delete_account,1,no_diacritics,Toi muon khoa va xoa tai khoan vinh vien
+t0536,account,delete_account,account/delete_account,1,teencode,e mún khoá và xoá tk vĩnh viễn
+t0536,account,delete_account,account/delete_account,1,telex,tooi muốn khoá và xoá taif khoản vĩnh viễn
+t0536,account,delete_account,account/delete_account,1,code_switch,Tôi muốn khoá và xoá account vĩnh viễn
+t0536,account,delete_account,account/delete_account,1,mixed,e mun khoa va xoa account vinh vien
+t0547,mart,order_damaged,mart/order_damaged,1,clean,"Hoa quả nhập khẩu kém chất lượng, bị dập nhiều chỗ"
+t0547,mart,order_damaged,mart/order_damaged,1,no_diacritics,"Hoa qua nhap khau kem chat luong, bi dap nhieu cho"
+t0547,mart,order_damaged,mart/order_damaged,1,teencode,"hoa quả nhập khẩu kém chất lượng, bị dập nhiều chỗ"
+t0547,mart,order_damaged,mart/order_damaged,1,telex,"Hoa quả nhập khẩu kém chất luwowng,j bị dập nhieeuf chỗ"
+t0547,mart,order_damaged,mart/order_damaged,1,code_switch,"Hoa quả nhập khẩu kém chất lượng, bị dập nhiều chỗ"
+t0547,mart,order_damaged,mart/order_damaged,1,mixed,"hoa qua nhap khau kem chat luong, bi dap nhieu cho"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,clean,"Đặt ô tô bằng thẻ tín dụng mà cứ báo lỗi giao dịch, tiền chưa bị trừ"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,no_diacritics,"Dat o to bang the tin dung ma cu bao loi giao dich, tien chua bi tru"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,teencode,"đặt ô tô bằng thẻ tín dụng mà cứ báo lỗi giao dịch, tiền chưa bị trừ"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,telex,"Đặt ô too bằng ther tín dụng mà cứ báo lỗi giao dịch, tiền chưa bị trừ"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,code_switch,"Đặt ô tô bằng thẻ tín dụng mà cứ báo lỗi giao dịch, tiền chưa bị trừ"
+t0562,transport,payment_method_failed,transport/payment_method_failed,1,mixed,"dat o to bang the tin dung ma cu bao loi giao dich, tien chua bi tru"
+t0565,business,update_contact,business/update_contact,1,clean,Cần đổi email nhận hoá đơn của hồ sơ doanh nghiệp
+t0565,business,update_contact,business/update_contact,1,no_diacritics,Can doi email nhan hoa don cua ho so doanh nghiep
+t0565,business,update_contact,business/update_contact,1,teencode,cần đổi email nhận hoá đơn của hồ sơ doanh nghiệp
+t0565,business,update_contact,business/update_contact,1,telex,Cần đổi email nhận hoá ddown của hồ sow doanh nghiệp
+t0565,business,update_contact,business/update_contact,1,code_switch,Cần đổi email nhận hoá đơn của hồ sơ doanh nghiệp
+t0565,business,update_contact,business/update_contact,1,mixed,can doi email nhan hoa order cua ho so doanh nghiep
+t0567,account,forgot_credential,account/forgot_credential,1,clean,Tôi muốn khôi phục mật khẩu tài khoản
+t0567,account,forgot_credential,account/forgot_credential,1,no_diacritics,Toi muon khoi phuc mat khau tai khoan
+t0567,account,forgot_credential,account/forgot_credential,1,teencode,e mún khôi phục mật khẩu tk
+t0567,account,forgot_credential,account/forgot_credential,1,telex,tooi muốn khôi phục mật khẩu taif khoản
+t0567,account,forgot_credential,account/forgot_credential,1,code_switch,Tôi muốn khôi phục mật khẩu account
+t0567,account,forgot_credential,account/forgot_credential,1,mixed,toi mun khoi phuc password account
+t0580,mart,order_damaged,mart/order_damaged,1,clean,Kem giao tới bị chảy nước hoàn toàn
+t0580,mart,order_damaged,mart/order_damaged,1,no_diacritics,Kem giao toi bi chay nuoc hoan toan
+t0580,mart,order_damaged,mart/order_damaged,1,teencode,kem giao tới bị chảy nước hoàn toàn
+t0580,mart,order_damaged,mart/order_damaged,1,telex,Kem giao towis bị chảy nuwowcs hoàn toàn
+t0580,mart,order_damaged,mart/order_damaged,1,code_switch,Kem giao tới bị chảy nước hoàn toàn
+t0580,mart,order_damaged,mart/order_damaged,1,mixed,kem giao toi bi chay nuoc hoan toan
+t0581,account,delete_account,account/delete_account,1,clean,"Bố tôi mất rồi, gia đình muốn xoá tài khoản của bố"
+t0581,account,delete_account,account/delete_account,1,no_diacritics,"Bo toi mat roi, gia dinh muon xoa tai khoan cua bo"
+t0581,account,delete_account,account/delete_account,1,teencode,"bố e mất r, gia đình mún xoá tk của bố"
+t0581,account,delete_account,account/delete_account,1,telex,"Bố tôi mất rồi, gia ddinhf muốn xoá tài khoanr của bố"
+t0581,account,delete_account,account/delete_account,1,code_switch,"Bố tôi mất rồi, gia đình muốn xoá tài khoản của bố"
+t0581,account,delete_account,account/delete_account,1,mixed,"bo e mat roi, gia dinh mun xoa account cua bo"
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,clean,Đến nhà hàng đã đặt bàn thì bị từ chối vì quá giờ 5 phút
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,no_diacritics,Den nha hang da dat ban thi bi tu choi vi qua gio 5 phut
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,teencode,đến nhà hàng đã đặt bàn thì bị từ chối vì quá giờ 5 phút
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,telex,Đến nhaf hangf đã đặt bàn thì bị từ chối vì quá giờ 5 phút
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,code_switch,Đến nhà hàng đã đặt bàn thì bị từ chối vì quá giờ 5 phút
+t0584,dine_out,reservation_issue,dine_out/reservation_issue,1,mixed,den nha hang da dat ban thi bi tu choi vi qua gio 5 phut
+t0586,mart,order_cancelled,mart/order_cancelled,1,clean,Cứ đặt ở cửa hàng này là đơn đi chợ bị huỷ
+t0586,mart,order_cancelled,mart/order_cancelled,1,no_diacritics,Cu dat o cua hang nay la don di cho bi huy
+t0586,mart,order_cancelled,mart/order_cancelled,1,teencode,cứ đặt ở cửa hàng này là đơn đi chợ bị huỷ
+t0586,mart,order_cancelled,mart/order_cancelled,1,telex,Cứ đặt ở cửa hangf này là đơn đi chợ bij huỷ
+t0586,mart,order_cancelled,mart/order_cancelled,1,code_switch,Cứ đặt ở cửa hàng này là order đi chợ bị cancel
+t0586,mart,order_cancelled,mart/order_cancelled,1,mixed,cu dat o cua hang nay la order di cho bi huy
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,clean,Đơn hàng siêu thị không được tạo mà tiền đã mất
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,no_diacritics,Don hang sieu thi khong duoc tao ma tien da mat
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,teencode,đơn hàng siêu thị ko được tạo mà tiền đã mất
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,telex,Đơn hàng sieeu thị không dduwowcj tạo mà tiền đã mất
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,code_switch,order hàng siêu thị không được tạo mà tiền đã mất
+t0590,mart,charged_but_failed,mart/charged_but_failed,1,mixed,order sieu thi ko dc tao ma tien da mat
+t0595,finance,link_card_failed,finance/link_card_failed,1,clean,Em thêm thẻ mới mà cứ báo đã vượt quá số lần thử ạ
+t0595,finance,link_card_failed,finance/link_card_failed,1,no_diacritics,Em them the moi ma cu bao da vuot qua so lan thu a
+t0595,finance,link_card_failed,finance/link_card_failed,1,teencode,em thêm thẻ mới mà cứ báo đã vượt quá số lần thử ạ
+t0595,finance,link_card_failed,finance/link_card_failed,1,telex,Em thêm thẻ mới mà cứ báo đã vượt quas số lần thử aj
+t0595,finance,link_card_failed,finance/link_card_failed,1,code_switch,Em thêm thẻ mới mà cứ báo đã vượt quá số lần thử ạ
+t0595,finance,link_card_failed,finance/link_card_failed,1,mixed,em them the moi ma cu bao da vuot qua so lan thu a
+t0602,finance,link_card_failed,finance/link_card_failed,1,clean,Không liên kết được tài khoản Techcombank vào ví
+t0602,finance,link_card_failed,finance/link_card_failed,1,no_diacritics,Khong lien ket duoc tai khoan Techcombank vao vi
+t0602,finance,link_card_failed,finance/link_card_failed,1,teencode,ko liên kết được tk techcombank vào ví
+t0602,finance,link_card_failed,finance/link_card_failed,1,telex,Không liên kết dduwowcj taif khoản Techcombank vào ví
+t0602,finance,link_card_failed,finance/link_card_failed,1,code_switch,Không liên kết được account Techcombank vào ví
+t0602,finance,link_card_failed,finance/link_card_failed,1,mixed,ko lien ket duoc tk techcombank vao vi
+t0605,express,overcharged,express/overcharged,0,clean,"Giá báo 39.000đ, tài khoản trừ 61.000đ, mong hoàn phần chênh"
+t0605,express,overcharged,express/overcharged,0,no_diacritics,"Gia bao 39.000d, tai khoan tru 61.000d, mong hoan phan chenh"
+t0605,express,overcharged,express/overcharged,0,teencode,"giá báo 39.000đ, tk trừ 61.000đ, mong hoàn phần chênh"
+t0605,express,overcharged,express/overcharged,0,telex,"Giá báo 39.000đ, taif khoản trừ 61.000dd, mong hoàn phần chênh"
+t0605,express,overcharged,express/overcharged,0,code_switch,"Giá báo 39.000đ, tài khoản trừ 61.000đ, mong hoàn phần chênh"
+t0605,express,overcharged,express/overcharged,0,mixed,"gia bao 39.000d, tk tru 61.000d, mong hoan phan chenh"
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,clean,Voucher đã dùng rồi mà nhà hàng nói chưa nhận được
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,no_diacritics,Voucher da dung roi ma nha hang noi chua nhan duoc
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,teencode,voucher đã dùng r mà nhà hàng nói chưa nhận được
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,telex,Voucher ddax dùng rồi mà nhà hàng nói chưa nhận dduwowcj
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,code_switch,Voucher đã dùng rồi mà nhà hàng nói chưa nhận được
+t0608,dine_out,voucher_issue,dine_out/voucher_issue,1,mixed,voucher da dung roi ma nha hang noi chua nhan duoc
+t0609,membership,membership_cancel,membership/membership_cancel,1,clean,Gói hội viên tự gia hạn dù tôi đã tắt gia hạn
+t0609,membership,membership_cancel,membership/membership_cancel,1,no_diacritics,Goi hoi vien tu gia han du toi da tat gia han
+t0609,membership,membership_cancel,membership/membership_cancel,1,teencode,gói hội viên tự gia hạn dù tôi đã tắt gia hạn
+t0609,membership,membership_cancel,membership/membership_cancel,1,telex,Gói hội viên tuwj gia hạn dù tôi ddax tắt gia hạn
+t0609,membership,membership_cancel,membership/membership_cancel,1,code_switch,Gói hội viên tự gia hạn dù tôi đã tắt gia hạn
+t0609,membership,membership_cancel,membership/membership_cancel,1,mixed,goi hoi vien tu gia han du e da tat gia han
+t0611,express,order_not_received,express/order_not_received,1,clean,"Tôi không biết bưu kiện đang ở đâu, người nhận vẫn chưa có"
+t0611,express,order_not_received,express/order_not_received,1,no_diacritics,"Toi khong biet buu kien dang o dau, nguoi nhan van chua co"
+t0611,express,order_not_received,express/order_not_received,1,teencode,"e ko bít bưu kiện đang ở đâu, người nhận vẫn chưa có"
+t0611,express,order_not_received,express/order_not_received,1,telex,"Tôi không bieets bưu kiện đang ở đâu, người nhận vẫn chuwa có"
+t0611,express,order_not_received,express/order_not_received,1,code_switch,"Tôi không biết bưu kiện đang ở đâu, người nhận vẫn chưa có"
+t0611,express,order_not_received,express/order_not_received,1,mixed,"e ko biet buu kien dang o dau, nguoi nhan van chua co"
+t0612,business,update_contact,business/update_contact,1,clean,"Hoá đơn doanh nghiệp đang gửi về email cũ, nhờ đổi giúp"
+t0612,business,update_contact,business/update_contact,1,no_diacritics,"Hoa don doanh nghiep dang gui ve email cu, nho doi giup"
+t0612,business,update_contact,business/update_contact,1,teencode,"hoá đơn doanh nghiệp đang gửi về email cũ, nhờ đổi giúp"
+t0612,business,update_contact,business/update_contact,1,telex,"Hoá ddown doanh nghieepj đang gửi về email cũ, nhờ đổi giúp"
+t0612,business,update_contact,business/update_contact,1,code_switch,"Hoá order doanh nghiệp đang gửi về email cũ, nhờ đổi giúp"
+t0612,business,update_contact,business/update_contact,1,mixed,"hoa order doanh nghiep dang gui ve email cu, nho doi giup"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,clean,"Giao dịch lỗi nhưng tiền đã mất, tôi cần được hoàn lại"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,no_diacritics,"Giao dich loi nhung tien da mat, toi can duoc hoan lai"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,teencode,"giao dịch lỗi nhưng tiền đã mất, tôi cần dc hoàn lại"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,telex,"Giao dịch looix nhưng tiền đã mất, tôi cần được hoanf lại"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,code_switch,"Giao dịch lỗi nhưng tiền đã mất, tôi cần được hoàn lại"
+t0613,transport,charged_but_failed,transport/charged_but_failed,0,mixed,"giao dich loi nhung tien da mat, toi can dc hoan lai"
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,clean,Tôi chưa đi chuyến nào mà ví ghi nhận thanh toán chuyến xe 78.000đ
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,no_diacritics,Toi chua di chuyen nao ma vi ghi nhan thanh toan chuyen xe 78.000d
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,teencode,e chưa đi chuyến nào mà ví ghi nhận tt chuyến xe 78.000đ
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,telex,Tôi chuwa đi chuyến nào mà ví ghi nhận thanh toán chuyến xe 78.000dd
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,code_switch,Tôi chưa đi chuyến nào mà ví ghi nhận payment chuyến xe 78.000đ
+t0614,transport,charged_but_failed,transport/charged_but_failed,1,mixed,toi chua di chuyen nao ma vi ghi nhan payment chuyen xe 78.000d
+t0626,express,order_not_received,express/order_not_received,1,clean,Tài xế giao hàng không thành công rồi không hoàn lại cho tôi
+t0626,express,order_not_received,express/order_not_received,1,no_diacritics,Tai xe giao hang khong thanh cong roi khong hoan lai cho toi
+t0626,express,order_not_received,express/order_not_received,1,teencode,tài xế giao hàng ko thành công rồi ko hoàn lại cho e
+t0626,express,order_not_received,express/order_not_received,1,telex,Tài xees giao hangf không thành công rồi không hoàn lại cho tôi
+t0626,express,order_not_received,express/order_not_received,1,code_switch,Tài xế ship không thành công rồi không hoàn lại cho tôi
+t0626,express,order_not_received,express/order_not_received,1,mixed,tai xe ship ko thanh cong r ko hoan lai cho e
+t0637,food,order_damaged,food/order_damaged,1,clean,"Đồ ăn bị đổ lẫn vào nhau, không ăn nổi"
+t0637,food,order_damaged,food/order_damaged,1,no_diacritics,"Do an bi do lan vao nhau, khong an noi"
+t0637,food,order_damaged,food/order_damaged,1,teencode,"đồ ăn bị đổ lẫn vào nhau, ko ăn nổi"
+t0637,food,order_damaged,food/order_damaged,1,telex,"Đồ ăn bị ddoor lẫn vaof nhau, không ăn nổi"
+t0637,food,order_damaged,food/order_damaged,1,code_switch,"Đồ ăn bị đổ lẫn vào nhau, không ăn nổi"
+t0637,food,order_damaged,food/order_damaged,1,mixed,"do an bi do lan vao nhau, khong an noi"
+t0639,business,update_contact,business/update_contact,1,clean,Đổi số điện thoại admin công ty báo lỗi xác minh
+t0639,business,update_contact,business/update_contact,1,no_diacritics,Doi so dien thoai admin cong ty bao loi xac minh
+t0639,business,update_contact,business/update_contact,1,teencode,đổi số điện thoại admin công ty báo lỗi xác minh
+t0639,business,update_contact,business/update_contact,1,telex,ddooir số điện thoại admin công ty báo lỗi xacs minh
+t0639,business,update_contact,business/update_contact,1,code_switch,Đổi số điện thoại admin công ty báo lỗi xác minh
+t0639,business,update_contact,business/update_contact,1,mixed,doi so dien thoai admin cong ty bao loi xac minh
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,clean,Đăng ký gói hội viên bằng ví báo lỗi thanh toán gói
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,no_diacritics,Dang ky goi hoi vien bang vi bao loi thanh toan goi
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,teencode,đăng ký gói hội viên bằng ví báo lỗi thanh toán gói
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,telex,Đăng ký gói hội viên bawngf vis báo lỗi thanh toán gói
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,code_switch,Đăng ký gói hội viên bằng ví báo lỗi payment gói
+t0641,membership,membership_subscribe,membership/membership_subscribe,1,mixed,dang ky goi hoi vien bang vi bao loi payment goi
+t0659,transport,lost_item,transport/lost_item,1,clean,Em quên mũ bảo hiểm của mình trên xe tài xế
+t0659,transport,lost_item,transport/lost_item,1,no_diacritics,Em quen mu bao hiem cua minh tren xe tai xe
+t0659,transport,lost_item,transport/lost_item,1,teencode,em quên mũ bảo hiểm của mk trên xe tài xế
+t0659,transport,lost_item,transport/lost_item,1,telex,Em quên mũ bảo hiểm cuar mình trên xe taif xế
+t0659,transport,lost_item,transport/lost_item,1,code_switch,Em quên mũ bảo hiểm của mình trên xe tài xế
+t0659,transport,lost_item,transport/lost_item,1,mixed,em quen mu bao hiem cua mk tren xe tai xe
+t0660,account,login_failed,account/login_failed,1,clean,Nhập đúng số điện thoại mà app báo tài khoản không tồn tại
+t0660,account,login_failed,account/login_failed,1,no_diacritics,Nhap dung so dien thoai ma app bao tai khoan khong ton tai
+t0660,account,login_failed,account/login_failed,1,teencode,nhập đúng số điện thoại mà app báo tài khoản ko tồn tại
+t0660,account,login_failed,account/login_failed,1,telex,Nhập ddungs soos điện thoại mà app báo tài khoản không tồn tại
+t0660,account,login_failed,account/login_failed,1,code_switch,Nhập đúng số điện thoại mà app báo account không tồn tại
+t0660,account,login_failed,account/login_failed,1,mixed,nhap dung so dien thoai ma app bao tk ko ton tai
+t0667,business,refund_request,business/refund_request,1,clean,Thủ tục hoàn tiền cho chuyến xe doanh nghiệp mất bao lâu
+t0667,business,refund_request,business/refund_request,1,no_diacritics,Thu tuc hoan tien cho chuyen xe doanh nghiep mat bao lau
+t0667,business,refund_request,business/refund_request,1,teencode,thủ tục hoàn tiền cho chuyến xe doanh nghiệp mất bao lâu
+t0667,business,refund_request,business/refund_request,1,telex,Thủ tục hoàn tieenf cho chuyến xe doanh nghiệp mất bao laau
+t0667,business,refund_request,business/refund_request,1,code_switch,Thủ tục refund cho chuyến xe doanh nghiệp mất bao lâu
+t0667,business,refund_request,business/refund_request,1,mixed,thu tuc hoan tien cho chuyen xe doanh nghiep mat bao lau
+t0674,transport,lost_item,transport/lost_item,1,clean,Tôi không gọi được cho tài xế để lấy lại điện thoại bỏ quên
+t0674,transport,lost_item,transport/lost_item,1,no_diacritics,Toi khong goi duoc cho tai xe de lay lai dien thoai bo quen
+t0674,transport,lost_item,transport/lost_item,1,teencode,e ko gọi dc cho tài xế để lấy lại điện thoại bỏ quên
+t0674,transport,lost_item,transport/lost_item,1,telex,Tôi không gọi được cho tài xế để lấy lại điện thoaij bor quên
+t0674,transport,lost_item,transport/lost_item,1,code_switch,Tôi không gọi được cho tài xế để lấy lại điện thoại bỏ quên
+t0674,transport,lost_item,transport/lost_item,1,mixed,e ko goi dc cho tai xe de lay lai dien thoai bo quen
+t0676,food,charged_but_failed,food/charged_but_failed,1,clean,Đơn bánh ngọt không thành công mà vẫn bị trừ tiền thẻ
+t0676,food,charged_but_failed,food/charged_but_failed,1,no_diacritics,Don banh ngot khong thanh cong ma van bi tru tien the
+t0676,food,charged_but_failed,food/charged_but_failed,1,teencode,đơn bánh ngọt ko thành công mà vẫn bị trừ tiền thẻ
+t0676,food,charged_but_failed,food/charged_but_failed,1,telex,Đơn bánh ngọt không thành coong maf vẫn bị trừ tiền thẻ
+t0676,food,charged_but_failed,food/charged_but_failed,1,code_switch,order bánh ngọt không thành công mà vẫn bị trừ tiền thẻ
+t0676,food,charged_but_failed,food/charged_but_failed,1,mixed,order banh ngot ko thanh cong ma van bi tru tien the
+t0678,account,delete_history,account/delete_history,1,clean,Có cách nào ẩn hoặc xoá lịch sử chuyến xe không
+t0678,account,delete_history,account/delete_history,1,no_diacritics,Co cach nao an hoac xoa lich su chuyen xe khong
+t0678,account,delete_history,account/delete_history,1,teencode,có cách nào ẩn hoặc xoá lịch sử chuyến xe không
+t0678,account,delete_history,account/delete_history,1,telex,Có cách nào ẩn hoawcj xoá lịch suwr chuyến xe không
+t0678,account,delete_history,account/delete_history,1,code_switch,Có cách nào ẩn hoặc xoá lịch sử chuyến xe không
+t0678,account,delete_history,account/delete_history,1,mixed,co cach nao an hoac xoa lich su chuyen xe ko
+t0680,mart,overcharged,mart/overcharged,1,clean,Đơn đi chợ cuối tuần bị tính phí dịch vụ cao bất thường
+t0680,mart,overcharged,mart/overcharged,1,no_diacritics,Don di cho cuoi tuan bi tinh phi dich vu cao bat thuong
+t0680,mart,overcharged,mart/overcharged,1,teencode,đơn đi chợ cuối tuần bị tính phí dịch vụ cao bất thường
+t0680,mart,overcharged,mart/overcharged,1,telex,ddown đi chợ cuối tuần bị tính phí dichj vụ cao bất thường
+t0680,mart,overcharged,mart/overcharged,1,code_switch,order đi chợ cuối tuần bị tính phí dịch vụ cao bất thường
+t0680,mart,overcharged,mart/overcharged,1,mixed,order di cho cuoi tuan bi tinh phi dich vu cao bat thuong
+t0686,mart,order_cancelled,mart/order_cancelled,1,clean,"Đơn rau củ bị huỷ sát giờ giao, nhà không có gì nấu"
+t0686,mart,order_cancelled,mart/order_cancelled,1,no_diacritics,"Don rau cu bi huy sat gio giao, nha khong co gi nau"
+t0686,mart,order_cancelled,mart/order_cancelled,1,teencode,"đơn rau củ bị huỷ sát giờ giao, nhà ko có j nấu"
+t0686,mart,order_cancelled,mart/order_cancelled,1,telex,"Đơn rau củ bị huyr sát giowf giao, nhà không có gì nấu"
+t0686,mart,order_cancelled,mart/order_cancelled,1,code_switch,"Đơn rau củ bị cancel sát giờ giao, nhà không có gì nấu"
+t0686,mart,order_cancelled,mart/order_cancelled,1,mixed,"order rau cu bi cancel sat gio giao, nha ko co j nau"
+t0703,mart,order_not_received,mart/order_not_received,1,clean,Đơn đi chợ báo đã giao mà tôi chưa nhận được
+t0703,mart,order_not_received,mart/order_not_received,1,no_diacritics,Don di cho bao da giao ma toi chua nhan duoc
+t0703,mart,order_not_received,mart/order_not_received,1,teencode,đơn đi chợ báo đã giao mà e chưa nhận dc
+t0703,mart,order_not_received,mart/order_not_received,1,telex,Đơn đi chợ báo đã giao mà tooi chuwa nhận được
+t0703,mart,order_not_received,mart/order_not_received,1,code_switch,order đi chợ báo đã giao mà tôi chưa nhận được
+t0703,mart,order_not_received,mart/order_not_received,1,mixed,don di cho bao da giao ma e chua nhan dc
+t0704,food,food_safety,food/food_safety,1,clean,"Hộp đồ ăn dính vết bẩn và có mùi hôi, rất mất vệ sinh"
+t0704,food,food_safety,food/food_safety,1,no_diacritics,"Hop do an dinh vet ban va co mui hoi, rat mat ve sinh"
+t0704,food,food_safety,food/food_safety,1,teencode,"hộp đồ ăn dính vết bẩn và có mùi hôi, rất mất vệ sinh"
+t0704,food,food_safety,food/food_safety,1,telex,"hoopj ddoof ăn dính vết bẩn và có mùi hôi, rất mất vệ sinh"
+t0704,food,food_safety,food/food_safety,1,code_switch,"Hộp đồ ăn dính vết bẩn và có mùi hôi, rất mất vệ sinh"
+t0704,food,food_safety,food/food_safety,1,mixed,"hop do an dinh vet ban va co mui hoi, rat mat ve sinh"
+t0721,mart,order_not_received,mart/order_not_received,1,clean,Đơn hàng tạp hoá trễ hẹn giao và chưa có thông tin
+t0721,mart,order_not_received,mart/order_not_received,1,no_diacritics,Don hang tap hoa tre hen giao va chua co thong tin
+t0721,mart,order_not_received,mart/order_not_received,1,teencode,đơn hàng tạp hoá trễ hẹn giao và chưa có thông tin
+t0721,mart,order_not_received,mart/order_not_received,1,telex,Đơn hàng tạp hoas trễ hẹn giao và chưa có thoong tin
+t0721,mart,order_not_received,mart/order_not_received,1,code_switch,order tạp hoá trễ hẹn giao và chưa có thông tin
+t0721,mart,order_not_received,mart/order_not_received,1,mixed,order hang tap hoa tre hen giao va chua co thong tin
+t0723,express,overcharged,express/overcharged,1,clean,Đơn giao hàng bị cộng phụ phí cồng kềnh dù gói hàng nhỏ
+t0723,express,overcharged,express/overcharged,1,no_diacritics,Don giao hang bi cong phu phi cong kenh du goi hang nho
+t0723,express,overcharged,express/overcharged,1,teencode,đơn giao hàng bị cộng phụ phí cồng kềnh dù gói hàng nhỏ
+t0723,express,overcharged,express/overcharged,1,telex,Đơn giao hàng bị cộng phụ phí cồng kềnh dù gois hàng nhor
+t0723,express,overcharged,express/overcharged,1,code_switch,order giao hàng bị cộng phụ phí cồng kềnh dù gói hàng nhỏ
+t0723,express,overcharged,express/overcharged,1,mixed,order ship bi cong phu phi cong kenh du goi hang nho
+t0734,express,order_damaged,express/order_damaged,1,clean,Máy sấy tóc gửi đi bị vỡ vỏ
+t0734,express,order_damaged,express/order_damaged,1,no_diacritics,May say toc gui di bi vo vo
+t0734,express,order_damaged,express/order_damaged,1,teencode,máy sấy tóc gửi đi bị vỡ vỏ
+t0734,express,order_damaged,express/order_damaged,1,telex,Máy saays tóc gửi ddi bị vỡ vỏ
+t0734,express,order_damaged,express/order_damaged,1,code_switch,Máy sấy tóc gửi đi bị vỡ vỏ
+t0734,express,order_damaged,express/order_damaged,1,mixed,may say toc gui di bi vo vo
+t0736,express,overcharged,express/overcharged,1,clean,"Đơn giao hàng xe tải nhỏ báo 350k, bị trừ 470k"
+t0736,express,overcharged,express/overcharged,1,no_diacritics,"Don giao hang xe tai nho bao 350k, bi tru 470k"
+t0736,express,overcharged,express/overcharged,1,teencode,"đơn giao hàng xe tải nhỏ báo 350k, bị trừ 470k"
+t0736,express,overcharged,express/overcharged,1,telex,"Đơn giao hangf xe tải nhỏ báo 350k, bij trừ 470k"
+t0736,express,overcharged,express/overcharged,1,code_switch,"Đơn ship xe tải nhỏ báo 350k, bị trừ 470k"
+t0736,express,overcharged,express/overcharged,1,mixed,"order giao hang xe tai nho bao 350k, bi tru 470k"
+t0741,transport,overcharged,transport/overcharged,1,clean,"Đặt xe máy giá 25.000đ, tài xế chạy đúng đường mà vẫn bị tính 40.000đ"
+t0741,transport,overcharged,transport/overcharged,1,no_diacritics,"Dat xe may gia 25.000d, tai xe chay dung duong ma van bi tinh 40.000d"
+t0741,transport,overcharged,transport/overcharged,1,teencode,"đặt xe máy giá 25.000đ, tài xế chạy đúng đường mà vẫn bị tính 40.000đ"
+t0741,transport,overcharged,transport/overcharged,1,telex,"Đặt xe máy giá 25.000đ, tài xế chạy đúng đường mà vẫn bij tính 40.000dd"
+t0741,transport,overcharged,transport/overcharged,1,code_switch,"Đặt xe máy giá 25.000đ, tài xế chạy đúng đường mà vẫn bị tính 40.000đ"
+t0741,transport,overcharged,transport/overcharged,1,mixed,"dat xe may gia 25.000d, tai xe chay dung duong ma van bi tinh 40.000d"
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,clean,Em đặt phở bò mà quán giao phở gà ạ
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,no_diacritics,Em dat pho bo ma quan giao pho ga a
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,teencode,em đặt phở bò mà quán giao phở gà ạ
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,telex,Em ddawtj phở bò maf quán giao phở gà ạ
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,code_switch,Em đặt phở bò mà quán giao phở gà ạ
+t0742,food,order_missing_wrong,food/order_missing_wrong,1,mixed,em dat pho bo ma quan giao pho ga a
+t0752,express,charged_but_failed,express/charged_but_failed,1,clean,Thanh toán phí gửi hàng báo lỗi nhưng tiền vẫn mất
+t0752,express,charged_but_failed,express/charged_but_failed,1,no_diacritics,Thanh toan phi gui hang bao loi nhung tien van mat
+t0752,express,charged_but_failed,express/charged_but_failed,1,teencode,tt phí gửi hàng báo lỗi nhưng tiền vẫn mất
+t0752,express,charged_but_failed,express/charged_but_failed,1,telex,Thanh toán phí gửi hàng baos looix nhưng tiền vẫn mất
+t0752,express,charged_but_failed,express/charged_but_failed,1,code_switch,payment phí gửi hàng báo lỗi nhưng tiền vẫn mất
+t0752,express,charged_but_failed,express/charged_but_failed,1,mixed,tt phi gui hang bao loi nhung tien van mat
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,clean,"Hàng gửi cho khách bị tráo, nhận được món rẻ tiền hơn"
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,no_diacritics,"Hang gui cho khach bi trao, nhan duoc mon re tien hon"
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,teencode,"hàng gửi cho khách bị tráo, nhận được món rẻ tiền hơn"
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,telex,"Hàng gửi cho khách bị trao,s nhận được món rẻ tiền hown"
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,code_switch,"Hàng gửi cho khách bị tráo, nhận được món rẻ tiền hơn"
+t0753,express,order_missing_wrong,express/order_missing_wrong,1,mixed,"hang gui cho khach bi trao, nhan duoc mon re tien hon"
+t0756,finance,fraud_report,finance/fraud_report,1,clean,"Có người giả nhân viên gọi xin mã OTP, tôi lỡ đưa rồi"
+t0756,finance,fraud_report,finance/fraud_report,1,no_diacritics,"Co nguoi gia nhan vien goi xin ma OTP, toi lo dua roi"
+t0756,finance,fraud_report,finance/fraud_report,1,teencode,"có người giả nv gọi xin mã otp, e lỡ đưa r"
+t0756,finance,fraud_report,finance/fraud_report,1,telex,"Có người giả nhân viên gọi xin mã OTP, tooi lowx đưa rồi"
+t0756,finance,fraud_report,finance/fraud_report,1,code_switch,"Có người giả admin gọi xin mã OTP, tôi lỡ đưa rồi"
+t0756,finance,fraud_report,finance/fraud_report,1,mixed,"co nguoi gia admin goi xin ma otp, e lo dua r"
+t0773,food,order_damaged,food/order_damaged,1,clean,Bánh kem giao tới bị chảy và vỡ nát
+t0773,food,order_damaged,food/order_damaged,1,no_diacritics,Banh kem giao toi bi chay va vo nat
+t0773,food,order_damaged,food/order_damaged,1,teencode,bánh kem giao tới bị chảy và vỡ nát
+t0773,food,order_damaged,food/order_damaged,1,telex,Bánh kem giao tới bị chảy và vowx nats
+t0773,food,order_damaged,food/order_damaged,1,code_switch,Bánh kem giao tới bị chảy và vỡ nát
+t0773,food,order_damaged,food/order_damaged,1,mixed,banh kem giao toi bi chay va vo nat
+t0775,account,login_failed,account/login_failed,1,clean,"Mình không đăng nhập được từ sáng, báo lỗi máy chủ"
+t0775,account,login_failed,account/login_failed,1,no_diacritics,"Minh khong dang nhap duoc tu sang, bao loi may chu"
+t0775,account,login_failed,account/login_failed,1,teencode,"mk ko đăng nhập được từ sáng, báo lỗi máy chủ"
+t0775,account,login_failed,account/login_failed,1,telex,"Mình không ddawng nhập được từ sáng, baos lỗi máy chủ"
+t0775,account,login_failed,account/login_failed,1,code_switch,"Mình không đăng nhập được từ sáng, báo lỗi máy chủ"
+t0775,account,login_failed,account/login_failed,1,mixed,"mk khong dang nhap dc tu sang, bao loi may chu"
+t0782,food,overcharged,food/overcharged,0,clean,"Tôi bị tính phí cao hơn giá hiển thị lúc đặt, mong được hoàn phần chênh lệch"
+t0782,food,overcharged,food/overcharged,0,no_diacritics,"Toi bi tinh phi cao hon gia hien thi luc dat, mong duoc hoan phan chenh lech"
+t0782,food,overcharged,food/overcharged,0,teencode,"e bị tính phí cao hơn giá hiển thị lúc đặt, mong dc hoàn phần chênh lệch"
+t0782,food,overcharged,food/overcharged,0,telex,"Tôi bị tính phí cao hown giá hiển thị lúc đặt, mong được hoanf phần chênh lệch"
+t0782,food,overcharged,food/overcharged,0,code_switch,"Tôi bị tính phí cao hơn giá hiển thị lúc đặt, mong được hoàn phần chênh lệch"
+t0782,food,overcharged,food/overcharged,0,mixed,"e bi tinh phi cao hon gia hien thi luc dat, mong dc hoan phan chenh lech"
+t0793,account,delete_history,account/delete_history,1,clean,Không tìm thấy chỗ xoá lịch sử chuyến đi
+t0793,account,delete_history,account/delete_history,1,no_diacritics,Khong tim thay cho xoa lich su chuyen di
+t0793,account,delete_history,account/delete_history,1,teencode,không tìm thấy chỗ xoá lịch sử chuyến đi
+t0793,account,delete_history,account/delete_history,1,telex,Không tìm thấy chỗ xoá lichj suwr chuyến đi
+t0793,account,delete_history,account/delete_history,1,code_switch,Không tìm thấy chỗ xoá lịch sử chuyến đi
+t0793,account,delete_history,account/delete_history,1,mixed,ko tim thay cho xoa lich su chuyen di
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,clean,Quét mã voucher tại nhà hàng báo không hợp lệ
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,no_diacritics,Quet ma voucher tai nha hang bao khong hop le
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,teencode,quét mã voucher tại nhà hàng báo ko hợp lệ
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,telex,Quét max voucher tại nhà hangf báo không hợp lệ
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,code_switch,Quét mã voucher tại nhà hàng báo không hợp lệ
+t0804,dine_out,voucher_issue,dine_out/voucher_issue,1,mixed,quet ma voucher tai nha hang bao ko hop le
+t0815,food,order_not_received,food/order_not_received,1,clean,Tôi chờ đơn cơm ở sảnh toà nhà mà tài xế không đến giao
+t0815,food,order_not_received,food/order_not_received,1,no_diacritics,Toi cho don com o sanh toa nha ma tai xe khong den giao
+t0815,food,order_not_received,food/order_not_received,1,teencode,e chờ đơn cơm ở sảnh toà nhà mà tài xế ko đến giao
+t0815,food,order_not_received,food/order_not_received,1,telex,tooi chờ đơn cowm ở sảnh toà nhà mà tài xế không đến giao
+t0815,food,order_not_received,food/order_not_received,1,code_switch,Tôi chờ đơn cơm ở sảnh toà nhà mà tài xế không đến giao
+t0815,food,order_not_received,food/order_not_received,1,mixed,e cho order com o sanh toa nha ma tai xe ko den giao
+t0819,transport,cannot_book,transport/cannot_book,1,clean,Tôi nhập điểm đến thì app báo không tìm thấy địa chỉ nên không đặt được xe
+t0819,transport,cannot_book,transport/cannot_book,1,no_diacritics,Toi nhap diem den thi app bao khong tim thay dia chi nen khong dat duoc xe
+t0819,transport,cannot_book,transport/cannot_book,1,teencode,e nhập điểm đến thì app báo ko tìm thấy địa chỉ nên ko đặt dc xe
+t0819,transport,cannot_book,transport/cannot_book,1,telex,Tôi nhập điểm đến thì app báo không tìm thấy địa chir neen không đặt được xe
+t0819,transport,cannot_book,transport/cannot_book,1,code_switch,Tôi nhập điểm đến thì app báo không tìm thấy address nên không đặt được xe
+t0819,transport,cannot_book,transport/cannot_book,1,mixed,e nhap diem den thi app bao ko tim thay address nen khong dat dc xe
+t0820,express,order_damaged,express/order_damaged,1,clean,Thùng hàng bị ướt sũng do tài xế để ngoài mưa
+t0820,express,order_damaged,express/order_damaged,1,no_diacritics,Thung hang bi uot sung do tai xe de ngoai mua
+t0820,express,order_damaged,express/order_damaged,1,teencode,thùng hàng bị ướt sũng do tài xế để ngoài mưa
+t0820,express,order_damaged,express/order_damaged,1,telex,Thùng hàng bị ướt sungx do tài xế để ngoaif mưa
+t0820,express,order_damaged,express/order_damaged,1,code_switch,Thùng hàng bị ướt sũng do tài xế để ngoài mưa
+t0820,express,order_damaged,express/order_damaged,1,mixed,thung hang bi uot sung do tai xe de ngoai mua
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,clean,Không đặt được xe mà sao tài khoản tôi bị trừ 45k
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,no_diacritics,Khong dat duoc xe ma sao tai khoan toi bi tru 45k
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,teencode,ko đặt được xe mà sao tk e bị trừ 45k
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,telex,khoong đặt dduwowcj xe mà sao tài khoản tôi bị trừ 45k
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,code_switch,Không đặt được xe mà sao account tôi bị trừ 45k
+t0824,transport,charged_but_failed,transport/charged_but_failed,1,mixed,ko dat dc xe ma sao tk e bi tru 45k
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,clean,Dùng voucher mà nhà hàng bắt gọi thêm món mới cho áp dụng
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,no_diacritics,Dung voucher ma nha hang bat goi them mon moi cho ap dung
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,teencode,dùng voucher mà nhà hàng bắt gọi thêm món mới cho áp dụng
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,telex,Dùng voucher mà nhà hangf bắt gọi thêm món mới cho aps dụng
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,code_switch,Dùng voucher mà nhà hàng bắt gọi thêm món mới cho áp dụng
+t0833,dine_out,voucher_issue,dine_out/voucher_issue,1,mixed,dung voucher ma nha hang bat goi them mon moi cho ap dung
+t0840,mart,order_damaged,mart/order_damaged,1,clean,Bánh mì gói giao tới đã mốc
+t0840,mart,order_damaged,mart/order_damaged,1,no_diacritics,Banh mi goi giao toi da moc
+t0840,mart,order_damaged,mart/order_damaged,1,teencode,bánh mì gói giao tới đã mốc
+t0840,mart,order_damaged,mart/order_damaged,1,telex,Bánh mì gói giao towis ddax mốc
+t0840,mart,order_damaged,mart/order_damaged,1,code_switch,Bánh mì gói giao tới đã mốc
+t0840,mart,order_damaged,mart/order_damaged,1,mixed,banh mi goi giao toi da moc
+t0847,food,order_cancelled,food/order_cancelled,1,clean,Tài xế gọi bảo tôi huỷ đơn đồ ăn vì quán đông quá
+t0847,food,order_cancelled,food/order_cancelled,1,no_diacritics,Tai xe goi bao toi huy don do an vi quan dong qua
+t0847,food,order_cancelled,food/order_cancelled,1,teencode,tài xế gọi bảo e huỷ đơn đồ ăn vì quán đông quá
+t0847,food,order_cancelled,food/order_cancelled,1,telex,Tài xế gọi bảo tôi huỷ ddown đồ ăn vì quán ddoong quá
+t0847,food,order_cancelled,food/order_cancelled,1,code_switch,Tài xế gọi bảo tôi cancel order đồ ăn vì quán đông quá
+t0847,food,order_cancelled,food/order_cancelled,1,mixed,tai xe goi bao e cancel order do an vi quan dong qua
+t0859,transport,trip_howto,transport/trip_howto,1,clean,Cách chọn hồ sơ thanh toán công việc khi đặt xe là gì
+t0859,transport,trip_howto,transport/trip_howto,1,no_diacritics,Cach chon ho so thanh toan cong viec khi dat xe la gi
+t0859,transport,trip_howto,transport/trip_howto,1,teencode,cách chọn hồ sơ tt công việc khi đặt xe là j
+t0859,transport,trip_howto,transport/trip_howto,1,telex,Cách chọn hồ sơ thanh toans công việc khi đặt xe là gif
+t0859,transport,trip_howto,transport/trip_howto,1,code_switch,Cách chọn hồ sơ payment công việc khi đặt xe là gì
+t0859,transport,trip_howto,transport/trip_howto,1,mixed,cach chon ho so payment cong viec khi dat xe la j
+t0871,transport,trip_howto,transport/trip_howto,1,clean,Xoá một địa điểm đã lưu thì làm ở đâu
+t0871,transport,trip_howto,transport/trip_howto,1,no_diacritics,Xoa mot dia diem da luu thi lam o dau
+t0871,transport,trip_howto,transport/trip_howto,1,teencode,xoá một địa điểm đã lưu thì lm ở đâu
+t0871,transport,trip_howto,transport/trip_howto,1,telex,Xoá một địa ddieemr đã lưu thì lamf ở đâu
+t0871,transport,trip_howto,transport/trip_howto,1,code_switch,Xoá một địa điểm đã lưu thì làm ở đâu
+t0871,transport,trip_howto,transport/trip_howto,1,mixed,xoa mot dia diem da luu thi lm o dau
+t0876,membership,membership_cancel,membership/membership_cancel,1,clean,Gói hội viên vẫn trừ tiền thẻ sau khi tôi bấm huỷ
+t0876,membership,membership_cancel,membership/membership_cancel,1,no_diacritics,Goi hoi vien van tru tien the sau khi toi bam huy
+t0876,membership,membership_cancel,membership/membership_cancel,1,teencode,gói hội viên vẫn trừ tiền thẻ sau khi e bấm huỷ
+t0876,membership,membership_cancel,membership/membership_cancel,1,telex,Gói hooij viên vaanx trừ tiền thẻ sau khi tôi bấm huỷ
+t0876,membership,membership_cancel,membership/membership_cancel,1,code_switch,Gói hội viên vẫn trừ tiền thẻ sau khi tôi bấm huỷ
+t0876,membership,membership_cancel,membership/membership_cancel,1,mixed,goi hoi vien van tru tien the sau khi toi bam cancel
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,clean,Em nhận được bưu kiện nhưng bên trong không phải đồ của em
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,no_diacritics,Em nhan duoc buu kien nhung ben trong khong phai do cua em
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,teencode,em nhận dc bưu kiện nhưng bên trong không phải đồ của em
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,telex,Em nhận được bưu kiện nhưng bên trong không phải ddoof cuar em
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,code_switch,Em nhận được bưu kiện nhưng bên trong không phải đồ của em
+t0887,express,order_missing_wrong,express/order_missing_wrong,1,mixed,em nhan dc buu kien nhung ben trong khong phai do cua em
+t0890,account,forgot_credential,account/forgot_credential,1,clean,Đặt lại mật khẩu xong vẫn báo sai mật khẩu
+t0890,account,forgot_credential,account/forgot_credential,1,no_diacritics,Dat lai mat khau xong van bao sai mat khau
+t0890,account,forgot_credential,account/forgot_credential,1,teencode,đặt lại mật khẩu xong vẫn báo sai mật khẩu
+t0890,account,forgot_credential,account/forgot_credential,1,telex,Đặt lại mật khẩu xong vaanx baos sai mật khẩu
+t0890,account,forgot_credential,account/forgot_credential,1,code_switch,Đặt lại password xong vẫn báo sai password
+t0890,account,forgot_credential,account/forgot_credential,1,mixed,dat lai mat khau xong van bao sai password
+t0899,express,order_damaged,express/order_damaged,1,clean,Kiện hàng thất lạc 3 ngày không tìm thấy
+t0899,express,order_damaged,express/order_damaged,1,no_diacritics,Kien hang that lac 3 ngay khong tim thay
+t0899,express,order_damaged,express/order_damaged,1,teencode,kiện hàng thất lạc 3 ngày ko tìm thấy
+t0899,express,order_damaged,express/order_damaged,1,telex,kieenj hàng thaats lạc 3 ngày không tìm thấy
+t0899,express,order_damaged,express/order_damaged,1,code_switch,Kiện hàng thất lạc 3 ngày không tìm thấy
+t0899,express,order_damaged,express/order_damaged,1,mixed,kien hang that lac 3 ngay ko tim thay

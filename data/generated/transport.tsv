@@ -1,0 +1,161 @@
+service	issue	explicit	text
+transport	overcharged	1	Lúc đặt xe báo 45.000đ mà xuống xe bị trừ 68.000đ là sao vậy
+transport	overcharged	1	Giá chuyến xe hiển thị 32k nhưng ví bị trừ 51k, mong kiểm tra giúp
+transport	overcharged	1	Tôi đi từ Hải Châu về Sơn Trà, app báo 76.000đ, cuối chuyến tính 110.000đ
+transport	overcharged	1	Chuyến xe sáng nay bị tính cao hơn giá lúc đặt gần gấp đôi
+transport	overcharged	1	Đặt xe máy giá 25.000đ, tài xế chạy đúng đường mà vẫn bị tính 40.000đ
+transport	overcharged	1	Tại sao giá cuối chuyến khác giá cố định lúc tôi đặt xe?
+transport	overcharged	1	Em đặt ô tô 4 chỗ giá hiện 189k, sau chuyến bị trừ 245k ạ
+transport	overcharged	1	Chuyến đi ra sân bay bị tính thêm phụ phí mà lúc đặt không hề thấy
+transport	overcharged	1	Mình bị tính tiền chuyến xe cao hơn số tiền hiển thị, cần hoàn lại phần chênh
+transport	overcharged	1	Tài xế không đổi điểm đến mà giá chuyến lại tăng từ 58k lên 83k
+transport	overcharged	1	Giá xe lúc đặt là 120.000đ, hoá đơn gửi về email ghi 168.000đ
+transport	overcharged	1	Tôi thấy chuyến xe tối qua bị tính sai tiền, cao hơn giá đã báo
+transport	overcharged	1	Đặt xe xong giá 64k, đến nơi app đòi 92k, vậy có đúng không
+transport	overcharged	1	Chuyến xe ngày 14/11 lúc 18h bị trừ 210.000đ trong khi giá đặt chỉ 150.000đ
+transport	overcharged	1	Sao đi xe ôm công nghệ mà giá cuối cao hơn giá cố định vậy
+transport	overcharged	1	Em bị tính phí chờ dù tài xế đến trễ chứ không phải em, tổng tiền cao hơn giá báo
+transport	overcharged	0	Số tiền bị trừ cao hơn giá hiển thị lúc đặt, đề nghị kiểm tra
+transport	overcharged	0	Giá báo một đằng, trừ tiền một nẻo, tôi bị tính dư 30.000đ
+transport	overcharged	0	Tôi bị tính phí cao hơn giá app hiện, mong được hoàn tiền chênh lệch
+transport	overcharged	1	Đặt xe từ quận 1 về Thủ Đức 98k, cuối chuyến bị trừ 136k
+transport	payment_method_failed	1	Mình chọn thanh toán bằng ví mà cứ báo lỗi, không đặt xe được
+transport	payment_method_failed	1	Đặt xe chọn thẻ ngân hàng thì báo thanh toán bị từ chối
+transport	payment_method_failed	1	Tôi không thể trả tiền chuyến xe bằng ví điện tử, phải đưa tiền mặt cho tài xế
+transport	payment_method_failed	1	Thẻ Visa đã liên kết rồi nhưng đặt xe thì báo không hỗ trợ phương thức này
+transport	payment_method_failed	1	Sao em không chọn được thanh toán qua ngân hàng khi đặt xe ạ
+transport	payment_method_failed	1	Cuối chuyến app báo thanh toán ví thất bại, tài xế bắt trả tiền mặt
+transport	payment_method_failed	1	Đặt ô tô bằng thẻ tín dụng mà cứ báo lỗi giao dịch, tiền chưa bị trừ
+transport	payment_method_failed	1	Ví còn tiền mà vẫn không thanh toán được chuyến xe
+transport	payment_method_failed	1	Mỗi lần đặt xe chọn ví là app báo phương thức thanh toán không khả dụng
+transport	payment_method_failed	1	Thanh toán chuyến xe bằng thẻ ATM nội địa không được, báo lỗi ngân hàng
+transport	payment_method_failed	1	Tôi muốn trả tiền xe bằng ví nhưng nút thanh toán bị mờ
+transport	payment_method_failed	1	Thanh toán chuyến xe qua ngân hàng báo hết thời gian chờ, chưa trừ tiền
+transport	payment_method_failed	1	Tài xế đến rồi mà ví không thanh toán được, tôi không mang tiền mặt
+transport	payment_method_failed	1	Đổi sang thẻ khác để trả tiền xe vẫn báo bị từ chối
+transport	payment_method_failed	0	Ví điện tử của tôi bị lỗi khi thanh toán, tiền vẫn còn nguyên
+transport	payment_method_failed	0	Không thanh toán được bằng thẻ ngân hàng, cứ báo giao dịch không thành công
+transport	payment_method_failed	0	Tại sao tôi không chọn được phương thức thanh toán bằng ví?
+transport	payment_method_failed	1	Chuyến xe chiều nay không trả bằng ví được, app bắt chuyển sang tiền mặt
+transport	payment_method_failed	1	Em đặt xe cho mẹ, chọn thẻ thì báo lỗi xác thực
+transport	payment_method_failed	1	Thẻ tín dụng bị từ chối khi tôi đặt xe đi sân bay dù thẻ còn hạn mức
+transport	charged_but_failed	1	Đặt xe báo thất bại mà ví vẫn bị trừ 56.000đ
+transport	charged_but_failed	1	Không tìm được tài xế, chuyến bị huỷ nhưng tiền đã bị trừ
+transport	charged_but_failed	1	Tôi bị trừ tiền chuyến xe dù không có chuyến nào được tạo
+transport	charged_but_failed	1	Chuyến xe lỗi không thành công mà ngân hàng vẫn trừ 87.000đ
+transport	charged_but_failed	1	Đặt xe 3 lần đều báo lỗi, tài khoản bị trừ tiền cả 3 lần
+transport	charged_but_failed	1	App báo đặt xe không thành công nhưng tôi nhận tin nhắn trừ tiền từ ngân hàng
+transport	charged_but_failed	1	Tài xế huỷ chuyến rồi mà tiền thanh toán trước vẫn chưa hoàn
+transport	charged_but_failed	1	Em đặt ô tô bị lỗi giữa chừng, tiền mất mà xe không có
+transport	charged_but_failed	1	Chuyến xe sáng nay báo thất bại, ví bị trừ 132.000đ, khi nào được trả lại
+transport	charged_but_failed	1	Thanh toán chuyến xe báo lỗi nhưng thẻ vẫn bị trừ tiền
+transport	charged_but_failed	1	Bị trừ tiền 2 lần cho cùng một lần đặt xe không thành công
+transport	charged_but_failed	1	Không đặt được xe mà sao tài khoản tôi bị trừ 45k
+transport	charged_but_failed	1	Chuyến xe bị huỷ do hệ thống nhưng tiền đã trừ chưa được hoàn sau 2 ngày
+transport	charged_but_failed	1	Tôi chưa đi chuyến nào mà ví ghi nhận thanh toán chuyến xe 78.000đ
+transport	charged_but_failed	0	Bị trừ tiền dù giao dịch báo không thành công, đề nghị hoàn tiền
+transport	charged_but_failed	0	Thanh toán thất bại mà tài khoản ngân hàng vẫn bị trừ, giải quyết giúp tôi
+transport	charged_but_failed	0	Giao dịch lỗi nhưng tiền đã mất, tôi cần được hoàn lại
+transport	charged_but_failed	1	Đặt xe báo hết tài xế, tiền trả trước 64.000đ chưa về ví
+transport	charged_but_failed	1	App treo lúc đặt xe, sau đó báo thất bại nhưng tôi đã bị trừ tiền
+transport	charged_but_failed	1	Chuyến đi lúc 7h bị lỗi không tạo được, sao vẫn trừ tiền của tôi
+transport	safety_incident	1	Tài xế chạy quá nhanh rồi va vào xe khác, tôi bị trầy chân
+transport	safety_incident	1	Tài xế nói năng thô tục và có hành vi quấy rối tôi trong chuyến xe
+transport	safety_incident	1	Tôi muốn báo cáo một vụ tai nạn xảy ra trong chuyến đi tối qua
+transport	safety_incident	1	Tài xế vừa lái vừa dùng điện thoại, vượt đèn đỏ liên tục, rất nguy hiểm
+transport	safety_incident	1	Xe bị ngã khi đi qua đoạn đường trơn, tôi bị thương ở tay
+transport	safety_incident	1	Tài xế có mùi rượu bia và lái xe lạng lách
+transport	safety_incident	1	Trong chuyến xe tài xế cứ hỏi chuyện riêng tư, xin số điện thoại, tôi rất sợ
+transport	safety_incident	1	Tài xế chở tôi đi sai hướng vào đường vắng, tôi phải xin xuống giữa chừng
+transport	safety_incident	1	Ô tô bị một xe khác tông từ phía sau, tôi cần hỗ trợ bảo hiểm
+transport	safety_incident	1	Báo cáo sự cố: tài xế lớn tiếng đe doạ khi tôi nhắc đi chậm lại
+transport	safety_incident	1	Xe máy của tài xế bị hỏng phanh giữa đường, suýt nữa gây tai nạn
+transport	safety_incident	1	Em bị té xe trong chuyến đi lúc 9h sáng, đầu gối chảy máu
+transport	safety_incident	1	Tài xế không cho tôi đội mũ bảo hiểm và chạy rất ẩu
+transport	safety_incident	1	Con tôi đi xe một mình và bị tài xế có lời lẽ không phù hợp
+transport	safety_incident	1	Tôi bị tài xế động chạm cơ thể trong lúc ngồi sau xe
+transport	safety_incident	1	Va chạm với xe buýt trong chuyến đi, cả tôi và tài xế đều bị thương nhẹ
+transport	safety_incident	1	Tài xế cãi nhau với người đi đường rồi rượt đuổi trong lúc chở khách
+transport	safety_incident	1	Cửa ô tô không đóng được mà tài xế vẫn chạy trên cao tốc
+transport	safety_incident	1	Tôi cần báo một sự cố an toàn, tài xế ngủ gật khi lái xe
+transport	safety_incident	1	Tài xế bỏ tôi xuống giữa cầu lúc nửa đêm sau khi cãi nhau
+transport	driver_no_show	1	Tài xế nhận chuyến rồi đứng im một chỗ 20 phút không tới
+transport	driver_no_show	1	Chờ mãi tài xế không đến điểm đón, gọi không nghe máy
+transport	driver_no_show	1	Tài xế báo đã đến nhưng tôi đứng ở điểm đón không thấy ai
+transport	driver_no_show	1	Tài xế gọi bảo tôi tự huỷ chuyến vì không muốn chạy
+transport	driver_no_show	1	Đã 15 phút mà tài xế vẫn chưa tới, bản đồ cho thấy đang đi hướng ngược lại
+transport	driver_no_show	1	Tài xế đến sai điểm đón rồi đánh dấu là khách không xuất hiện
+transport	driver_no_show	1	Tôi bị tính phí huỷ chuyến dù tài xế không hề đến
+transport	driver_no_show	1	Tài xế nhận chuyến xong tắt máy, tôi lỡ giờ bay
+transport	driver_no_show	1	Mình đặt xe đi làm, tài xế nhắn đang tới nhưng 30 phút vẫn không thấy
+transport	driver_no_show	1	Tài xế không đến đón mà chuyến xe lại hiển thị đã hoàn thành
+transport	driver_no_show	1	Tài xế bắt tôi đi bộ ra đầu đường mới chịu đón, tôi không đồng ý thì bỏ đi
+transport	driver_no_show	1	Xe được ghép rồi nhưng tài xế không đến, cũng không huỷ chuyến
+transport	driver_no_show	1	Tài xế cứ đứng ở chỗ khác rồi nhắn tôi tự ra, không chịu vào điểm đón
+transport	driver_no_show	1	Em chờ tài xế ở cổng bệnh viện gần nửa tiếng mà không thấy đến
+transport	driver_no_show	1	Tài xế báo kẹt xe rồi biến mất, không liên lạc được
+transport	driver_no_show	1	Tài xế không đến điểm đón và đòi tôi trả phí chờ
+transport	driver_no_show	1	Đặt xe cho bố mẹ, tài xế không đến nơi đón mà còn báo bố mẹ tôi vắng mặt
+transport	driver_no_show	1	Tài xế nhận cuốc rồi chạy vòng vòng quanh khu, không chịu ghé đón
+transport	driver_no_show	1	Mình đứng đúng điểm đón trên app mà tài xế bảo không tìm thấy rồi huỷ
+transport	driver_no_show	1	Tài xế không xuất hiện, tôi phải đặt lại chuyến khác và bị trễ họp
+transport	cannot_book	1	Bấm đặt xe hoài mà không có tài xế nào nhận
+transport	cannot_book	1	App báo lỗi hệ thống mỗi lần tôi đặt xe
+transport	cannot_book	1	Tôi không đặt được ô tô từ sáng tới giờ, cứ quay vòng tìm tài xế rồi thất bại
+transport	cannot_book	1	Nút đặt xe không bấm được dù đã nhập điểm đón và điểm đến
+transport	cannot_book	1	Sao khu vực nhà tôi không đặt được xe máy nữa vậy
+transport	cannot_book	1	Đặt xe báo dịch vụ tạm thời không khả dụng
+transport	cannot_book	1	Mình cần đi gấp mà không đặt được xe, app cứ báo thử lại sau
+transport	cannot_book	1	Ứng dụng bị treo ở màn hình tìm tài xế rồi tự thoát
+transport	cannot_book	1	Không đặt được chuyến xe đi sân bay lúc 4h sáng
+transport	cannot_book	1	Tôi nhập điểm đến thì app báo không tìm thấy địa chỉ nên không đặt được xe
+transport	cannot_book	1	Đặt xe cứ báo lỗi kết nối dù mạng điện thoại bình thường
+transport	cannot_book	1	Em đặt xe 7 chỗ không được, chỉ hiện thông báo không có xe phù hợp
+transport	cannot_book	1	App không cho tôi đặt xe, báo tài khoản đang có chuyến chưa hoàn tất
+transport	cannot_book	1	Giờ cao điểm đặt xe 10 lần đều không có ai nhận
+transport	cannot_book	1	Tôi không đặt trước xe được, mục hẹn giờ báo lỗi
+transport	cannot_book	1	Đặt xe ghép không được, cứ báo không ghép được chuyến
+transport	cannot_book	1	Vừa cập nhật app xong là không đặt được xe nữa
+transport	cannot_book	1	Không thể đặt xe cho người khác, nhập số điện thoại thì báo lỗi
+transport	cannot_book	1	Đặt xe máy ở trung tâm thành phố mà cứ báo không có tài xế xung quanh
+transport	cannot_book	1	Mình không đặt được xe từ tối qua, gỡ app cài lại vẫn vậy
+transport	lost_item	1	Em để quên điện thoại trên xe lúc 8h sáng nay, giúp em liên hệ tài xế
+transport	lost_item	1	Tôi bỏ quên túi xách trên xe, làm sao lấy lại
+transport	lost_item	1	Mình để quên ví tiền trên ô tô chuyến đi tối qua
+transport	lost_item	1	Tôi quên chiếc ô màu xanh trên xe máy, có cách nào liên lạc tài xế không
+transport	lost_item	1	Để quên laptop trong cốp ô tô sau chuyến đi sân bay, rất gấp
+transport	lost_item	1	Con tôi để quên balo đi học trên xe lúc 6h30
+transport	lost_item	1	Tôi đánh rơi chìa khoá nhà trên xe, tài xế không nghe máy
+transport	lost_item	1	Làm sao báo mất đồ khi chuyến xe đã kết thúc?
+transport	lost_item	1	Em quên mũ bảo hiểm của mình trên xe tài xế
+transport	lost_item	1	Tôi để quên giấy tờ quan trọng trong xe, cần lấy lại trong hôm nay
+transport	lost_item	1	Để quên tai nghe trên xe chuyến từ Hoàn Kiếm về Cầu Giấy
+transport	lost_item	1	Mình quên hộp bánh sinh nhật trên ghế sau ô tô
+transport	lost_item	1	Tôi không gọi được cho tài xế để lấy lại điện thoại bỏ quên
+transport	lost_item	1	Để quên vali nhỏ trong cốp xe 7 chỗ, nhờ hỗ trợ liên hệ tài xế
+transport	lost_item	1	Em làm rơi thẻ căn cước trên xe máy, tài xế có nhặt được không
+transport	lost_item	1	Tôi bỏ quên kính mắt trên xe, chuyến đi lúc 14h ngày 15/11
+transport	lost_item	1	Có phí trả đồ thất lạc không, tôi để quên túi đồ trên xe
+transport	lost_item	1	Tài xế nói không thấy đồ nhưng tôi chắc chắn để quên điện thoại trên xe
+transport	lost_item	1	Mình để quên áo khoác trên xe, muốn nhờ tài xế mang qua
+transport	lost_item	1	Báo mất đồ: quên máy tính bảng trên ô tô chuyến đi sáng nay
+transport	trip_howto	1	Làm sao thêm điểm dừng giữa đường khi đang đi?
+transport	trip_howto	1	Đổi điểm đến khi tài xế đã nhận chuyến được không
+transport	trip_howto	1	Làm thế nào để theo dõi vị trí tài xế trên bản đồ
+transport	trip_howto	1	Tôi muốn lưu địa chỉ nhà và công ty để đặt xe nhanh hơn
+transport	trip_howto	1	Cách chọn hồ sơ thanh toán công việc khi đặt xe là gì
+transport	trip_howto	1	Có thể thêm 2 điểm dừng trong một chuyến xe không
+transport	trip_howto	1	Làm sao chia sẻ hành trình chuyến xe cho người nhà theo dõi
+transport	trip_howto	1	Xoá một địa điểm đã lưu thì làm ở đâu
+transport	trip_howto	1	Đang đi giữa chừng muốn đổi điểm đến thì có bị tính thêm tiền không
+transport	trip_howto	1	Hướng dẫn mình chuyển từ hồ sơ cá nhân sang hồ sơ doanh nghiệp khi đặt xe
+transport	trip_howto	1	Sao tôi không thấy tài xế di chuyển trên bản đồ, xem ở đâu vậy
+transport	trip_howto	1	Làm sao đặt tên cho địa điểm đã lưu như nhà mẹ, phòng gym
+transport	trip_howto	1	Tôi có thể đổi phương thức thanh toán sau khi đã đặt xe không
+transport	trip_howto	1	Thêm điểm dừng đón thêm bạn thì giá tính thế nào
+transport	trip_howto	1	Cách sửa địa chỉ đã lưu bị sai vị trí trên bản đồ
+transport	trip_howto	1	Em muốn biết tài xế còn bao xa thì xem ở đâu ạ
+transport	trip_howto	1	Có cách nào đặt xe nhanh bằng địa điểm yêu thích không
+transport	trip_howto	1	Hỏi cách đổi điểm đến sau khi đặt xe máy
+transport	trip_howto	1	Làm sao chọn hồ sơ thanh toán mặc định cho các chuyến xe
+transport	trip_howto	1	Tôi muốn thêm điểm dừng mua đồ rồi đi tiếp, thao tác thế nào
