@@ -6,6 +6,9 @@ Bản thu nhỏ (mini pipeline) để tự đi hết quy trình nghiên cứu tr
 
 ```
 labels/label_schema.json        # nhãn 2 tầng: 9 service, 26 issue, 45 cặp hợp lệ, định nghĩa + ví dụ
+labels/original_intents.json    # danh mục gốc 9 category, 54 intent → ánh xạ sang nhãn 2 tầng
+docs/SUPERAPP_INTENTS.md                 # tài liệu intent đọc được (sinh từ 2 file JSON trên)
+scripts/make_intents_doc.py     # sinh lại docs/SUPERAPP_INTENTS.md
 data/generated/*.tsv            # câu sinh bằng LLM (Claude): service, issue, explicit, text
 data/superapp/dataset_all.csv   # 1 dòng/câu, 6 biến thể, cột split
 data/superapp/{train,val,test}.csv  # dạng dài: id, service, issue, label, explicit, variant, text

@@ -1,0 +1,332 @@
+{
+  "version": "v0",
+  "date": "2026-11-16",
+  "source": "Danh mục do Tuấn Anh lập (tham khảo trang trợ giúp công khai của các super-app), trước khi gộp thành nhãn 2 tầng.",
+  "note": "label = nhãn 2 tầng service/issue tương ứng trong label_schema.json (v1).",
+  "categories": [
+    {
+      "category": "Di chuyển (Transportation)",
+      "service": "transport",
+      "intents": [
+        {
+          "group": "Vấn đề liên quan đến an toàn",
+          "intent": "Báo cáo tai nạn",
+          "label": "transport/safety_incident"
+        },
+        {
+          "group": "Vấn đề liên quan đến an toàn",
+          "intent": "Báo cáo sự cố",
+          "label": "transport/safety_incident"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị tính phí cao hơn giá hiển thị",
+          "label": "transport/overcharged"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Không thể thanh toán bằng ví điện tử hoặc ngân hàng",
+          "label": "transport/payment_method_failed"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị trừ tiền dù giao dịch không thành công",
+          "label": "transport/charged_but_failed"
+        },
+        {
+          "group": "Vấn đề về chuyến xe",
+          "intent": "Tài xế không đến điểm đón",
+          "label": "transport/driver_no_show"
+        },
+        {
+          "group": "Vấn đề về chuyến xe",
+          "intent": "Không đặt được xe",
+          "label": "transport/cannot_book"
+        },
+        {
+          "group": "Vấn đề về chuyến xe",
+          "intent": "Để quên đồ hoặc điện thoại trên xe",
+          "label": "transport/lost_item"
+        },
+        {
+          "group": "Câu hỏi thường gặp",
+          "intent": "Theo dõi tài xế",
+          "label": "transport/trip_howto"
+        },
+        {
+          "group": "Câu hỏi thường gặp",
+          "intent": "Thay đổi điểm đến",
+          "label": "transport/trip_howto"
+        },
+        {
+          "group": "Câu hỏi thường gặp",
+          "intent": "Chọn hồ sơ thanh toán",
+          "label": "transport/trip_howto"
+        },
+        {
+          "group": "Câu hỏi thường gặp",
+          "intent": "Quản lý địa điểm đã lưu",
+          "label": "transport/trip_howto"
+        },
+        {
+          "group": "Câu hỏi thường gặp",
+          "intent": "Thêm điểm dừng",
+          "label": "transport/trip_howto"
+        }
+      ]
+    },
+    {
+      "category": "Đồ ăn (Food)",
+      "service": "food",
+      "intents": [
+        {
+          "group": "Vấn đề vệ sinh an toàn thực phẩm",
+          "intent": "Vấn đề vệ sinh an toàn thực phẩm",
+          "label": "food/food_safety"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị tính phí cao hơn giá hiển thị",
+          "label": "food/overcharged"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Không thể thanh toán bằng ví điện tử hoặc ngân hàng",
+          "label": "food/payment_method_failed"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị trừ tiền dù giao dịch không thành công",
+          "label": "food/charged_but_failed"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng bị huỷ",
+          "label": "food/order_cancelled"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng không được giao",
+          "label": "food/order_not_received"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng bị thiếu hoặc sai món ăn",
+          "label": "food/order_missing_wrong"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Thức ăn bị đổ",
+          "label": "food/order_damaged"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Thức ăn bị hư hỏng",
+          "label": "food/order_damaged"
+        }
+      ]
+    },
+    {
+      "category": "Đi chợ (Mart)",
+      "service": "mart",
+      "intents": [
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng bị huỷ",
+          "label": "mart/order_cancelled"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng không được giao",
+          "label": "mart/order_not_received"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng bị thiếu hoặc sai sản phẩm",
+          "label": "mart/order_missing_wrong"
+        },
+        {
+          "group": "Vấn đề về đơn hàng",
+          "intent": "Đơn hàng kém chất lượng",
+          "label": "mart/order_damaged"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị tính phí cao hơn giá hiển thị",
+          "label": "mart/overcharged"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Không thể thanh toán bằng ví điện tử hoặc ngân hàng",
+          "label": "mart/payment_method_failed"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị trừ tiền dù giao dịch không thành công",
+          "label": "mart/charged_but_failed"
+        }
+      ]
+    },
+    {
+      "category": "Giao hàng (Express)",
+      "service": "express",
+      "intents": [
+        {
+          "group": "Vấn đề về hàng hoá và giao nhận",
+          "intent": "Bưu gửi bị thất lạc hoặc hư hại",
+          "label": "express/order_damaged"
+        },
+        {
+          "group": "Vấn đề về hàng hoá và giao nhận",
+          "intent": "Nhận sai đơn hàng",
+          "label": "express/order_missing_wrong"
+        },
+        {
+          "group": "Vấn đề về hàng hoá và giao nhận",
+          "intent": "Người nhận chưa nhận được đơn hàng",
+          "label": "express/order_not_received"
+        },
+        {
+          "group": "Vấn đề về hàng hoá và giao nhận",
+          "intent": "Tài xế giao hàng không thành công",
+          "label": "express/order_not_received"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị tính phí cao hơn giá hiển thị",
+          "label": "express/overcharged"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Không thể thanh toán bằng ví điện tử hoặc ngân hàng",
+          "label": "express/payment_method_failed"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Bị trừ tiền dù giao dịch không thành công",
+          "label": "express/charged_but_failed"
+        }
+      ]
+    },
+    {
+      "category": "Tài chính",
+      "service": "finance",
+      "intents": [
+        {
+          "group": "",
+          "intent": "Báo cáo hoạt động bất thường, gian lận, hoặc lừa đảo trong tài khoản",
+          "label": "finance/fraud_report"
+        },
+        {
+          "group": "",
+          "intent": "Bị trừ tiền cho giao dịch không thành công",
+          "label": "finance/charged_but_failed"
+        },
+        {
+          "group": "",
+          "intent": "Không thể liên kết thẻ ngân hàng, ví điện tử vào tài khoản",
+          "label": "finance/link_card_failed"
+        }
+      ]
+    },
+    {
+      "category": "Doanh nghiệp",
+      "service": "business",
+      "intents": [
+        {
+          "group": "Vấn đề về hồ sơ doanh nghiệp",
+          "intent": "Không thể tạo hồ sơ doanh nghiệp",
+          "label": "business/business_profile"
+        },
+        {
+          "group": "Vấn đề về hồ sơ doanh nghiệp",
+          "intent": "Thay đổi thông tin liên lạc như email hoặc số điện thoại",
+          "label": "business/update_contact"
+        },
+        {
+          "group": "Vấn đề về hồ sơ doanh nghiệp",
+          "intent": "Chuyến xe công việc bị tính vào hồ sơ cá nhân",
+          "label": "business/business_profile"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Không thêm được thẻ tín dụng doanh nghiệp",
+          "label": "business/link_card_failed"
+        },
+        {
+          "group": "Vấn đề về thanh toán",
+          "intent": "Yêu cầu hoàn tiền cho chuyến xe hoặc đơn hàng",
+          "label": "business/refund_request"
+        }
+      ]
+    },
+    {
+      "category": "Gói hội viên",
+      "service": "membership",
+      "intents": [
+        {
+          "group": "Vấn đề về gói hội viên",
+          "intent": "Không thể huỷ gói hội viên",
+          "label": "membership/membership_cancel"
+        },
+        {
+          "group": "Vấn đề về gói hội viên",
+          "intent": "Không thể đăng kí gói hội viên",
+          "label": "membership/membership_subscribe"
+        }
+      ]
+    },
+    {
+      "category": "Đi ăn nhà hàng",
+      "service": "dine_out",
+      "intents": [
+        {
+          "group": "",
+          "intent": "Vấn đề với dịch vụ đặt bàn nhà hàng",
+          "label": "dine_out/reservation_issue"
+        },
+        {
+          "group": "",
+          "intent": "Vấn đề với voucher nhà hàng",
+          "label": "dine_out/voucher_issue"
+        }
+      ]
+    },
+    {
+      "category": "Tài khoản",
+      "service": "account",
+      "intents": [
+        {
+          "group": "Xác minh tài khoản",
+          "intent": "Cập nhật số điện thoại mới",
+          "label": "account/update_contact"
+        },
+        {
+          "group": "Vấn đề với tài khoản",
+          "intent": "Không thể đăng nhập",
+          "label": "account/login_failed"
+        },
+        {
+          "group": "Vấn đề với tài khoản",
+          "intent": "Quên mật khẩu",
+          "label": "account/forgot_credential"
+        },
+        {
+          "group": "Vấn đề với tài khoản",
+          "intent": "Quên mã PIN",
+          "label": "account/forgot_credential"
+        },
+        {
+          "group": "",
+          "intent": "Xoá lịch sử chuyến xe",
+          "label": "account/delete_history"
+        },
+        {
+          "group": "",
+          "intent": "Xoá vĩnh viễn tài khoản của tôi",
+          "label": "account/delete_account"
+        }
+      ]
+    }
+  ]
+}
