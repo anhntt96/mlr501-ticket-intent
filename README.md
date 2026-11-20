@@ -15,9 +15,12 @@ data/superapp/{train,val,test}.csv  # dạng dài: id, service, issue, label, ex
 data/superapp/stats.txt
 scripts/noise.py                # hàm tạo biến thể không chuẩn + khoá phát hiện câu trùng
 scripts/03_build_superapp.py    # dựng bộ dữ liệu
-scripts/make_notebook_b.py      # sinh notebooks/B_phobert.ipynb
+scripts/make_notebook_{b,c,d,e}.py  # sinh các notebook bên dưới
 notebooks/B_phobert.ipynb       # bước B: PhoBERT (chạy trên Colab)
-dist/mlr501_data.zip            # dữ liệu để tải lên Colab
+notebooks/C_qwen_lora.ipynb     # bước C: Qwen2.5-1.5B / 3B + LoRA (Colab T4)
+notebooks/D_gpt4o.ipynb         # bước D: GPT-4o zero-shot / few-shot (OpenAI API)
+notebooks/E_compare.ipynb       # bước E: gộp kết quả, bảng, biểu đồ, bootstrap
+dist/mlr501_data.zip            # dữ liệu để tải lên Colab (dùng chung cho B, C, D)
 ```
 
 Chạy lại (chỉ cần Python 3, thư viện chuẩn; seed = 42 nên ra đúng kết quả cũ):
@@ -59,7 +62,7 @@ python3 scripts/03_build_superapp.py
 - Huấn luyện trên câu chuẩn (`train_variants=["clean"]`), đánh giá test trên 6 biến thể; 3 seed (42, 43, 44).
 - Chỉ số: accuracy, macro-F1 nhãn đầy đủ, macro-F1 service, macro-F1 issue; phân tích cặp nhầm và độ chính xác service theo `explicit`.
 - Chạy: mở notebook trên Colab (T4 GPU) → tải `dist/mlr501_data.zip` lên → chạy hết → tải `results_B_phobert.zip` về, giải nén vào `results/`.
-- Đóng gói lại dữ liệu sau khi sửa: `rm -f dist/mlr501_data.zip && zip -q dist/mlr501_data.zip data/superapp/{train,val,test}.csv labels/label_schema.json`
+- Đóng gói lại dữ liệu sau khi sửa: `rm -f dist/mlr501_data.zip && zip -q dist/mlr501_data.zip data/superapp/{train,val,test,dataset_all}.csv labels/label_schema.json docs/SUPERAPP_INTENTS.md`
 
 ### Kết quả B (macro-F1 nhãn đầy đủ, trung bình ± độ lệch 3 seed; test 135 câu/biến thể)
 
@@ -79,6 +82,42 @@ python3 scripts/03_build_superapp.py
 - **Chưa hội tụ:** val F1 vẫn tăng ở epoch 9–10, loss còn ~2,1 → nên tăng epoch (20) hoặc lr (3e-5–5e-5).
 - Mỗi lần chạy ~52 s trên MPS; tổng ~6 phút. Kết quả: `results/B_phobert_*` và notebook đã chạy `results/B_phobert.executed.ipynb`.
 - Môi trường máy: `.venv/` (Python 3.9, torch 2.8, transformers 4.57, underthesea 9.0); kernel Jupyter "MLR501 (.venv)".
+
+## Bước C, D, E – So sánh với LLM (notebook viết 18/11/2026; C đã chạy, D chưa chạy)
+
+Cùng điều kiện với B: train chỉ câu chuẩn, test 135 câu × 6 biến thể, cùng chỉ số (cách tính đã đối chiếu: ra đúng số của B).
+
+| Bước | Notebook | Hệ thống | Chạy ở đâu | Thời gian ước tính |
+| --- | --- | --- | --- | --- |
+| C | `C_qwen_lora.ipynb` | Qwen2.5-1.5B-Instruct + LoRA, Qwen2.5-3B-Instruct + LoRA | Colab T4 | ~15–25 / ~30–50 phút (3 seed) |
+| D | `D_gpt4o.ipynb` | GPT-4o zero-shot, few-shot (2 câu/nhãn từ train) | Colab CPU + OpenAI API key | vài phút; chi phí: chạy thử `limit=10` để xem |
+| E | `E_compare.ipynb` | gộp tất cả | Colab CPU hoặc máy | < 1 phút |
+
+- **C:** sinh nhãn `service/issue`, LoRA r=16 trên mọi lớp tuyến tính, lr 2e-4, 5 epoch (chọn theo val), giải mã ràng buộc trong 45 nhãn. Chạy 1.5B xong đổi `model_name` sang 3B. Kết quả lưu sau từng seed; `USE_DRIVE=True` để không mất khi Colab ngắt.
+- **D:** prompt = phần 2–3 của `docs/SUPERAPP_INTENTS.md` + 45 nhãn; `temperature=0`; Structured Outputs ép đầu ra về 45 nhãn. **Bỏ các dòng "Ví dụ" của tài liệu nhãn** vì 6/52 câu ví dụ trùng nguyên văn câu test (lộ đề). Key đọc từ Colab Secrets `OPENAI_API_KEY`.
+- **E:** bảng F1 (TB ± độ lệch), mức giảm, cơ cấu lỗi (sai service / sai issue), `explicit`, cặp nhầm, câu mọi hệ thống đều sai, bootstrap 95% so với PhoBERT hier → `results/E_summary.md`, `E_fig1_*.png`, `E_fig2_*.png`.
+- Trình tự: chạy C (2 lần) và D → giải nén các `results_*.zip` vào `results/` → chạy E.
+
+### Kết quả C (Colab T4, bf16, 18–19/11/2026) so với B
+
+macro-F1 nhãn đầy đủ, TB ± độ lệch 3 seed (42, 43, 44); test 135 câu/biến thể. Bảng đầy đủ: `results/E_summary.md`.
+
+| Biến thể | PhoBERT flat | PhoBERT hier | Qwen2.5-1.5B + LoRA | Qwen2.5-3B + LoRA |
+| --- | --- | --- | --- | --- |
+| clean | 0,791 ± 0,011 | 0,810 ± 0,014 | 0,870 ± 0,010 | **0,901 ± 0,011** |
+| no_diacritics | 0,160 | 0,161 | 0,347 ± 0,056 | **0,563 ± 0,014** |
+| teencode | 0,782 | 0,786 | 0,860 | **0,880** |
+| telex | 0,632 | 0,642 | 0,733 | **0,823** |
+| code_switch | 0,742 | 0,746 | 0,878 | **0,900** |
+| mixed | 0,193 | 0,166 | 0,321 | **0,613** |
+| TB 5 biến thể nhiễu | 0,502 | 0,500 | 0,628 | **0,756** |
+
+- Qwen hơn PhoBERT hier ở **mọi biến thể**, bootstrap 95% không chứa 0. Câu chuẩn: +0,07 (1.5B), +0,10 (3B).
+- **Bỏ dấu vẫn là điểm yếu chung** nhưng mô hình lớn chịu tốt hơn nhiều: giữ lại 20% (PhoBERT) → 40% (1.5B) → 63% (3B) điểm câu chuẩn. Telex: 79% → 84% → 91%. Teencode và trộn tiếng Anh gần như không ảnh hưởng Qwen.
+- Qwen giảm cả lỗi service lẫn issue; trên câu chuẩn F1 service 0,946 / issue 0,938 (3B) so với 0,915 / 0,844 (PhoBERT hier).
+- Câu không nêu rõ dịch vụ (5 câu test): đúng service 0% (PhoBERT), 7% (1.5B), 13% (3B) – gần như không đoán được. 4/6 câu mà mọi mô hình đều sai là loại này (vd "Bị trừ tiền dù giao dịch báo không thành công" → `mart/...`): **nhãn không suy ra được từ câu**, nên xem là giới hạn của dữ liệu.
+- Cặp nhầm còn lại: food ↔ mart, `transport/trip_howto` → `business/business_profile` (câu nhắc "hồ sơ doanh nghiệp").
+- **Lưu ý khi so sánh:** PhoBERT chưa hội tụ (epoch tốt nhất 9–10/10), Qwen 1.5B cũng chọn epoch 4–5/5; một phần khoảng cách có thể do ngân sách huấn luyện. Nên chạy lại PhoBERT 20 epoch trước khi kết luận trong paper.
 
 ## Lịch sử
 - 16/11/2026: làm thử bước A trên Bitext (400 câu tiếng Anh dịch sang tiếng Việt) để học quy trình; sau khi đổi sang bối cảnh super-app đã bỏ toàn bộ dữ liệu và script Bitext.

@@ -1,0 +1,36 @@
+{
+  "model_name": "Qwen/Qwen2.5-3B-Instruct",
+  "dtype": "auto",
+  "load_4bit": false,
+  "grad_ckpt": false,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "lr": 0.0002,
+  "epochs": 5,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_ratio": 0.1,
+  "eval_batch_size": 32,
+  "constrained": true,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "train_variants": [
+    "clean"
+  ],
+  "dtype_used": "torch.bfloat16",
+  "gpu": "Tesla T4",
+  "system_prompt": "Bạn phân loại ticket chăm sóc khách hàng của một super-app Việt Nam (gọi xe, đồ ăn, đi chợ, giao hàng, ví/tài chính, doanh nghiệp, gói hội viên, đặt bàn nhà hàng, tài khoản). Trả lời đúng một nhãn dạng service/issue."
+}
