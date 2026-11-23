@@ -1,0 +1,575 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}   % clean tables (\toprule, \midrule, \bottomrule)
+\usepackage{multirow}
+\usepackage{url}
+
+% If the paper needs Vietnamese text with diacritics (e.g. example tickets
+% in the error-analysis table), test this line on Overleaf first:
+% \usepackage[T5,T1]{fontenc}
+
+% ---- Drafting helper: red notes. Delete all \TODO{...} before submission.
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\pmstd}[2]{#1{\scriptsize$\pm$#2}}
+
+\begin{document}
+
+% =====================================================================
+% TITLE & AUTHORS
+% =====================================================================
+% Alternative title that matches the current data more closely:
+% "Fine-Tuned Small Language Models for Robust Intent Classification of
+%  Noisy Vietnamese Super-App Support Tickets"
+\title{Fine-Tuning Small Language Models for Intent Classification of Vietnamese Customer Support Tickets}
+
+\author{
+\IEEEauthorblockN{\TODO{Member 1 full name}}
+\IEEEauthorblockA{\textit{\TODO{Department}} \\
+\textit{\TODO{University}}\\
+\TODO{City}, Vietnam \\
+\TODO{email}}
+\and
+\IEEEauthorblockN{\TODO{Member 2 full name}}
+\IEEEauthorblockA{\textit{\TODO{Department}} \\
+\textit{\TODO{University}}\\
+\TODO{City}, Vietnam \\
+\TODO{email}}
+\and
+\IEEEauthorblockN{\TODO{Member 3 full name}}
+\IEEEauthorblockA{\textit{\TODO{Department}} \\
+\textit{\TODO{University}}\\
+\TODO{City}, Vietnam \\
+\TODO{email}}
+}
+
+\maketitle
+
+% =====================================================================
+% ABSTRACT  (150-250 words, no citations / math / symbols)
+% =====================================================================
+\begin{abstract}
+Vietnamese super-apps that combine ride-hailing, food and grocery delivery,
+parcel delivery, e-wallets and membership services receive large volumes of
+customer-support tickets that must be routed to the right team. Public
+Vietnamese datasets for this task are scarce, and real tickets are often
+written without diacritics, with chat abbreviations or with English terms.
+We build a two-level intent taxonomy of 9 services and 26 issue types,
+giving 45 valid labels, and a dataset of 900 synthetic tickets with six
+test-time variants: clean text, diacritic removal, teencode, Telex typing
+errors, code-switching and a mix of the three. We fine-tune PhoBERT-base and
+Qwen2.5-Instruct models with 1.5 and 3 billion parameters using low-rank
+adaptation, train only on clean text, and evaluate on every variant over
+three random seeds. The 3-billion-parameter model reaches a macro-F1 of
+90.1 percent on clean tickets against 81.0 percent for PhoBERT, and the gap
+is significant on every variant. Diacritic removal is the most damaging
+perturbation for all models, but PhoBERT keeps only about one fifth of its
+clean-text score while the 3-billion-parameter model keeps nearly two
+thirds. Tickets that do not name the service remain unsolved by all models.
+The results suggest that small fine-tuned language models are a strong and
+locally deployable option for routing noisy Vietnamese support tickets.
+\TODO{Add one sentence on latency/cost once measured (Section~V-B).}
+\end{abstract}
+
+\begin{IEEEkeywords}
+intent classification, small language models, LoRA, Vietnamese, customer support, noisy text, low-resource language
+\end{IEEEkeywords}
+
+% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+% =====================================================================
+
+Vietnamese super-apps combine ride-hailing, food and grocery delivery,
+parcel delivery, e-wallets and paid memberships in one application, so a
+single support channel receives tickets about very different services.
+Automatic intent classification routes each ticket to the responsible team
+and shortens response time; customer service is one of the most common
+deployment areas of AI \cite{fodor2026beyond}.
+
+Three properties make this task hard in Vietnamese. First, tickets are
+often non-standard: customers type without diacritics, use chat
+abbreviations (teencode), leave Telex keystrokes in the text when the input
+method is off, or mix in English terms such as \textit{refund} or
+\textit{order}. Second, public Vietnamese intent datasets target chatbots
+or flight booking rather than customer-support tickets
+\cite{tran2020understanding}. Third, large API models are billed per call
+and require sending tickets, which contain personal data, to an external
+provider \TODO{cite Vietnam Personal Data Protection Law No.~91/2025/QH15 --
+add to .bib}; small models that can be fine-tuned and served locally are
+therefore attractive.
+
+We study the following research questions:
+\textbf{RQ1:} Do small generative language models fine-tuned with LoRA
+outperform a fine-tuned Vietnamese encoder (PhoBERT) on super-app ticket
+intents?
+\textbf{RQ2:} How robust are these models to non-standard Vietnamese input
+when they are trained on clean text only?
+\textbf{RQ3:} What errors remain, and are they caused by the models or by
+the data?
+\TODO{Optional RQ4 on the accuracy--latency--cost trade-off, only if latency
+is measured (Section~\ref{sec:results}-B).}
+
+Our contributions are as follows:
+\begin{itemize}
+\item A two-level intent taxonomy for Vietnamese super-app support
+(9 services $\times$ 26 issues, 45 valid labels) derived from public help
+pages, and a 900-ticket synthetic dataset with six test-time variants of
+non-standard Vietnamese.
+\item A controlled comparison of PhoBERT-base (flat and hierarchical heads)
+with Qwen2.5-1.5B and Qwen2.5-3B fine-tuned with LoRA and constrained
+decoding, over three seeds and with paired bootstrap confidence intervals.
+\item A robustness and error analysis showing that diacritic removal is the
+dominant failure mode, that model scale mitigates it substantially, and
+that tickets which do not name the service are not recoverable from the
+text alone.
+\end{itemize}
+
+The rest of this paper is organized as follows. Section~\ref{sec:related}
+reviews related work. Section~\ref{sec:dataset} describes dataset
+construction. Section~\ref{sec:method} presents the models and experimental
+setup. Section~\ref{sec:results} reports the results, and
+Section~\ref{sec:discussion} discusses limitations. Section~\ref{sec:conclusion}
+concludes the paper.
+
+% =====================================================================
+\section{Related Work}
+\label{sec:related}
+% =====================================================================
+% Each sentence below is based on the team's Excel notes -- verify every
+% claim against the original paper.
+
+\subsection{Intent Detection for Vietnamese}
+Tran and Luong \cite{tran2020understanding} built annotated Vietnamese
+corpora for intent detection and context extraction in chatbots. Later work
+studied joint intent detection and slot filling on PhoATIS, a Vietnamese
+version of ATIS, under low-resource settings \cite{nguyen2022intent} and
+with PhoBERT-based joint models \cite{nguyen2022advanced}. PhoBERT
+\cite{nguyen2020phobert}, pre-trained on word-segmented Vietnamese text, is
+the standard encoder baseline for such tasks. These studies target flight
+booking or general chatbots; they do not address multi-service
+customer-support tickets, small generative language models, or
+non-standard input such as missing diacritics.
+
+\subsection{Intent and Ticket Classification in Customer Service}
+Machine-learning classifiers have been applied to customer-support
+e-mails \cite{borg2021email}, banking chat requests
+\cite{bonechi2024enhancing}, contact-centre conversations
+\cite{pawlik2022method}, university administrative services
+\cite{rizou2023efficient}, and cloud support tickets
+\cite{nowakbrzezinska2025hybrid}. Other studies address discovering new
+intents over time \cite{rebelo2022automatic}, refining intent sets with
+linguistic analysis \cite{ferrera2025linguistics}, few-shot detection with
+Siamese networks \cite{muhammad2025similarity}, explainability
+\cite{licina2026helpagent}, multi-agent routing \cite{arslan2026application},
+and how recognition errors affect users \cite{martijn2026answered}.
+\TODO{One sentence on the common finding.} Most of this work concerns
+English or European languages, and robustness to informal spelling is
+rarely evaluated.
+
+\subsection{Large and Small Language Models for Intent Classification}
+LLMs have been used to generate training data for intent classifiers
+\cite{benayas2024enhancing, madrueno2025novel} and compared with
+weak supervision \cite{alexander2025few} and fine-tuned encoders
+\cite{ouaddi2025assessing}. Fine-tuned small language models of 1.5B--4B
+parameters have been evaluated for industrial customer-service tasks with
+attention to efficiency \cite{pai2026finetuning}. Low-rank adaptation (LoRA)
+\cite{hu2022lora} makes such fine-tuning feasible on a single consumer GPU,
+and the Qwen2.5 family \cite{qwen2024qwen25} provides multilingual
+instruction-tuned models at these sizes. To our knowledge, no study compares
+LoRA-fine-tuned small language models with PhoBERT on Vietnamese
+customer-support intents under controlled non-standard input.
+
+% =====================================================================
+\section{Dataset Construction}
+\label{sec:dataset}
+% =====================================================================
+
+\subsection{Intent Taxonomy}
+We first compiled a catalogue of 54 support intents in 9 categories from
+the public help pages of Vietnamese super-apps; no internal company
+documents were used. Many intents recur across services (e.g., being
+charged more than the displayed price applies to rides, food, grocery and
+parcel orders), so we factor each intent into a \emph{service} and an
+\emph{issue}. The resulting two-level taxonomy has 9 services
+(transport, food, mart, express, finance, business, membership, dine-out,
+account) and 26 issue types; only 45 service--issue pairs are valid, and
+the full label is the pair, e.g., \texttt{food/charged\_but\_failed}. Every
+original intent maps to exactly one pair. For each issue, the annotation
+guideline gives a definition, a ``not this'' rule that separates it from the
+closest issue (e.g., \texttt{overcharged} vs.\ \texttt{charged\_but\_failed}),
+the services it applies to, and example tickets. Two general rules apply:
+a ticket with several problems receives the label of the main problem, and
+a ticket that does not name the service is still assigned the most likely
+service from context. The taxonomy and guideline are released with the
+code \TODO{repository URL}.
+
+\subsection{Ticket Generation}
+Because public Vietnamese support tickets are not available, tickets were
+written by an LLM (Claude \TODO{exact model version and date}) following the
+guideline. The prompts asked for 20 tickets per label with varied forms of
+self-address (\textit{t\^oi}, \textit{em}, \textit{m\`inh}), concrete details
+(order codes, amounts, times, bank names) and both polite and frustrated
+tones. Each ticket carries a flag \texttt{explicit} that is 0 when the
+service is not stated (e.g., ``I was charged although the transaction
+failed''). After whitespace normalization and duplicate removal (no
+duplicates were found), the dataset contains 900 tickets, 20 per label.
+\TODO{Manual check: who reviewed, how many tickets, rejection rate,
+agreement (Cohen's kappa) -- currently not done; otherwise state it as a
+limitation.}
+
+\subsection{Splits}
+We split the data 70/15/15, stratified by label, giving 14/3/3 tickets per
+label for training, validation and test (Table~\ref{tab:data}). All
+generation and splitting steps use a fixed seed (42).
+
+\subsection{Noisy Variants}
+Every ticket is rendered in six variants, generated by deterministic
+rules: \textbf{clean} (original text); \textbf{no diacritics} (all tone and
+vowel marks removed, and d-with-stroke replaced by d); \textbf{teencode}
+(lower-casing and about twenty common chat abbreviations, e.g.,
+\textit{kh\^ong}$\rightarrow$\textit{ko} ``not'',
+\textit{m\`inh}$\rightarrow$\textit{mk} ``I'', and \textit{tk} for
+``account''); \textbf{Telex typos}
+(one or two words written as raw Telex keystrokes, as when the Vietnamese
+input method is switched off); \textbf{code-switching} (support terms
+replaced by their English equivalents such as \textit{refund},
+\textit{cancel}, \textit{order}, \textit{payment}); and \textbf{mixed}
+(code-switching, then teencode, then diacritic removal). Code-switching
+changes only the 345 tickets (38\%) that contain a listed term; the other
+variants change every ticket. Models are trained on clean text only and
+evaluated on all six variants of the test set.
+
+\subsection{Dataset Statistics}
+Table~\ref{tab:data} summarizes the dataset. The number of tickets per
+service ranges from 40 (membership, dine-out) to 160 (transport, food),
+following the number of valid issues per service.
+
+\begin{table}[htbp]
+\caption{Dataset Statistics}
+\label{tab:data}
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Split} & \textbf{Tickets} & \textbf{Labels} & \textbf{Avg. words} & \textbf{Implicit} \\
+\midrule
+Train       & 630 & 45 & 12.2 & 23 \\
+Validation  & 135 & 45 & 12.1 & 8 \\
+Test        & 135 & 45 & 12.5 & 5 \\
+\midrule
+Total       & 900 & 45 & 12.2 & 36 \\
+\bottomrule
+\multicolumn{5}{p{0.92\columnwidth}}{\footnotesize Implicit: tickets that
+do not name the service (\texttt{explicit}\,=\,0). The test set is
+evaluated in six variants, i.e., $6\times135=810$ predictions per run.}
+\end{tabular}
+\end{table}
+
+% =====================================================================
+\section{Methodology}
+\label{sec:method}
+% =====================================================================
+
+\subsection{Models}
+\textbf{PhoBERT-base} (\texttt{vinai/phobert-base-v2})
+\cite{nguyen2020phobert} is fully fine-tuned on word-segmented input
+(segmentation with underthesea \cite{underthesea}). We use the first-token
+representation with two head types: a \emph{flat} head over the 45 labels,
+and a \emph{hierarchical} head with separate service (9) and issue (26)
+outputs trained with the sum of two cross-entropy losses; at inference the
+hierarchical model selects the valid pair $(s,i)$ that maximizes
+$\log p(s)+\log p(i)$.
+
+\textbf{Qwen2.5-1.5B-Instruct} and \textbf{Qwen2.5-3B-Instruct}
+\cite{qwen2024qwen25} are fine-tuned with LoRA \cite{hu2022lora} as
+instruction-to-label generators. The input is the model's chat template
+with a short system prompt (``classify the support ticket of a Vietnamese
+super-app; answer with one service/issue label'') and the ticket; the
+target is the label string followed by the end-of-turn token. The loss is
+computed on the label tokens only. At inference we use greedy decoding
+constrained by a prefix tree over the tokenized 45 labels, so every output
+is a valid label.
+
+\TODO{Prompt-only LLM baseline (GPT-4o zero-/few-shot or an open model such
+as Qwen2.5-7B-Instruct): add here if run. Note for a prompt-based baseline:
+six example tickets in the annotation guideline appear verbatim in the test
+set, so guideline examples must be removed from the prompt.}
+
+\subsection{Training Configuration}
+Table~\ref{tab:config} lists the hyper-parameters. Both model families use
+an effective batch size of 16, linear decay with 10\% warm-up, gradient
+clipping at 1.0, and model selection by macro-F1 on the clean validation
+set after each epoch. Every configuration is run with seeds 42, 43 and 44.
+
+\begin{table}[htbp]
+\caption{Fine-Tuning Configuration}
+\label{tab:config}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lll}
+\toprule
+ & \textbf{PhoBERT-base} & \textbf{Qwen2.5 + LoRA} \\
+\midrule
+Trainable params & 135M (all)  & 18.5M (1.5B), 29.9M (3B) \\
+LoRA             & --          & $r=16$, $\alpha=32$, dropout 0.05 \\
+LoRA targets     & --          & q, k, v, o, gate, up, down \\
+Optimizer        & AdamW, wd 0.01 & AdamW, wd 0 \\
+Learning rate    & $2\times10^{-5}$ & $2\times10^{-4}$ \\
+Epochs           & 10          & 5 \\
+Batch size       & 16          & 8 $\times$ 2 (grad.\ accum.) \\
+Max length       & 64 tokens   & full prompt (no truncation) \\
+Precision        & fp32        & bf16, no quantization \\
+\bottomrule
+\end{tabular}
+\end{table}
+% Trainable LoRA parameters computed from the Qwen2.5 configs
+% (r=16 on all linear projections); check against
+% model.print_trainable_parameters() in notebooks/C_qwen_lora.ipynb.
+
+\subsection{Evaluation Metrics}
+We report macro-F1 over the 45 full labels as the primary metric because it
+weights all labels equally, together with accuracy and macro-F1 of the
+service and issue parts. For generative models we also report the
+invalid-output rate, i.e., the share of outputs that do not match any label;
+with constrained decoding it is 0 for every run. Results are the mean
+$\pm$ standard deviation over three seeds. Because the test set has only
+three tickets per label, we compare each model with PhoBERT (hierarchical)
+using a paired bootstrap over test tickets \cite{efron1993bootstrap}
+(2{,}000 resamples, 95\% percentile intervals); for multi-seed models the
+F1 on each resample is averaged over seeds.
+\TODO{Latency (median and p95, ms per ticket), peak GPU memory, cost per
+1{,}000 tickets -- not measured yet.}
+
+\subsection{Implementation Details}
+PhoBERT was trained on an Apple M4 Pro GPU (MPS backend) with PyTorch 2.8
+and Transformers 4.57 (about 52\,s per run). The Qwen2.5 models were trained
+on a single NVIDIA T4 GPU (Google Colab) with Transformers and PEFT
+\TODO{versions; training time per run}. Decoding is greedy. Code, data and
+predictions are available at \TODO{repository URL}.
+
+% =====================================================================
+\section{Results}
+\label{sec:results}
+% =====================================================================
+
+\subsection{Main Results}
+Table~\ref{tab:main} reports results on the clean test set. Both Qwen2.5
+models outperform both PhoBERT variants on every metric. Qwen2.5-3B reaches
+90.1\% macro-F1, 9.1 points above hierarchical PhoBERT, and Qwen2.5-1.5B
+reaches 87.0\%. The bootstrap intervals of the gain over hierarchical
+PhoBERT exclude zero for both Qwen models (Table~\ref{tab:boot}), whereas
+the difference between the flat and hierarchical PhoBERT heads is not
+significant ($-1.9$ points, CI $[-7.6, 3.2]$). The hierarchical head
+improves service F1 for PhoBERT (91.5 vs.\ 88.9) but lowers issue F1
+(84.4 vs.\ 87.6); the Qwen models improve both, with Qwen2.5-3B at 94.6 and
+93.8.
+
+\begin{table}[htbp]
+\caption{Results on the Clean Test Set (\%, mean over 3 seeds)}
+\label{tab:main}
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrcccc}
+\toprule
+\textbf{Model} & \textbf{Params} & \textbf{Acc.} & \textbf{Macro-F1} & \textbf{F1$_\text{svc}$} & \textbf{F1$_\text{issue}$} \\
+\midrule
+PhoBERT-base (flat)  & 135M & 80.0 & \pmstd{79.1}{1.1} & 88.9 & 87.6 \\
+PhoBERT-base (hier.) & 135M & 82.2 & \pmstd{81.0}{1.4} & 91.5 & 84.4 \\
+Qwen2.5-1.5B + LoRA  & 1.5B & 88.1 & \pmstd{87.0}{1.0} & 93.4 & 91.0 \\
+Qwen2.5-3B + LoRA    & 3.1B & \textbf{90.6} & \textbf{\pmstd{90.1}{1.1}} & \textbf{94.6} & \textbf{93.8} \\
+% GPT-4o zero-shot   & --   & -- & -- & -- & -- \\
+% GPT-4o few-shot    & --   & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Latency and Cost}
+\TODO{Not measured yet. Measure on one GPU for all models: median/p95 ms per
+ticket at batch size 1, peak memory, cost per 1{,}000 tickets. Remove this
+subsection (and RQ4) if it will not be measured.}
+% \begin{table}[htbp]
+% \caption{Latency, Memory and Cost}
+% \label{tab:cost}
+% \centering
+% \setlength{\tabcolsep}{4pt}
+% \begin{tabular}{lccc}
+% \toprule
+% \textbf{Model} & \textbf{Latency (ms)} & \textbf{Memory (GB)} & \textbf{Cost / 1k tickets} \\
+% \midrule
+% PhoBERT-base         & -- & -- & -- \\
+% Qwen2.5-1.5B + LoRA  & -- & -- & -- \\
+% Qwen2.5-3B + LoRA    & -- & -- & -- \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+\subsection{Robustness to Non-Standard Input}
+Table~\ref{tab:noise} and Fig.~\ref{fig:variants} show macro-F1 on all six
+test variants. Teencode costs every model at most 2.4 points.
+Code-switching costs PhoBERT 4.9--6.4 points but leaves both Qwen models
+unchanged ($+0.7$ and $-0.1$), presumably because their pre-training covers
+English. Telex typos cost PhoBERT 16--17 points but Qwen2.5-3B only 7.8. Diacritic removal
+is the most damaging perturbation for all models: PhoBERT falls to 16\%
+macro-F1, keeping about 20\% of its clean score, while Qwen2.5-1.5B keeps
+40\% and Qwen2.5-3B keeps 63\% (56.3\%). The mixed variant, which includes
+diacritic removal, behaves similarly (PhoBERT 17--19\%, Qwen2.5-3B 61.3\%).
+Averaged over the five noisy variants, the drop from clean text is 31.0
+points for hierarchical PhoBERT and 14.5 points for Qwen2.5-3B. All gains of
+both Qwen models over PhoBERT are significant on every variant
+(Table~\ref{tab:boot}). A plausible explanation is that PhoBERT relies on
+word segmentation and on a vocabulary learned from standard, segmented text,
+both of which break when diacritics are removed, whereas the byte-level
+tokenizer and web-scale pre-training of Qwen2.5 expose it to unaccented
+Vietnamese; the larger model benefits more.
+
+\begin{table*}[t]
+\caption{Macro-F1 (\%) on the Six Test Variants (mean $\pm$ std over 3 seeds). $\Delta$ = noisy average $-$ clean.}
+\label{tab:noise}
+\centering
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Model} & \textbf{Clean} & \textbf{No diac.} & \textbf{Teencode} & \textbf{Telex} & \textbf{Code-switch} & \textbf{Mixed} & \textbf{Noisy avg.} & $\boldsymbol{\Delta}$ \\
+\midrule
+PhoBERT-base (flat)  & \pmstd{79.1}{1.1} & \pmstd{16.0}{3.1} & \pmstd{78.2}{3.1} & \pmstd{63.2}{3.4} & \pmstd{74.2}{1.6} & \pmstd{19.3}{1.3} & \pmstd{50.2}{1.2} & $-28.9$ \\
+PhoBERT-base (hier.) & \pmstd{81.0}{1.4} & \pmstd{16.1}{3.0} & \pmstd{78.6}{1.7} & \pmstd{64.2}{3.1} & \pmstd{74.6}{1.6} & \pmstd{16.6}{0.9} & \pmstd{50.0}{1.6} & $-31.0$ \\
+Qwen2.5-1.5B + LoRA  & \pmstd{87.0}{1.0} & \pmstd{34.7}{5.6} & \pmstd{86.0}{0.8} & \pmstd{73.3}{1.5} & \pmstd{87.8}{0.7} & \pmstd{32.1}{2.2} & \pmstd{62.8}{1.4} & $-24.2$ \\
+Qwen2.5-3B + LoRA    & \textbf{\pmstd{90.1}{1.1}} & \textbf{\pmstd{56.3}{1.4}} & \textbf{\pmstd{88.0}{2.1}} & \textbf{\pmstd{82.3}{0.7}} & \textbf{\pmstd{90.0}{1.2}} & \textbf{\pmstd{61.3}{1.2}} & \textbf{\pmstd{75.6}{0.4}} & $\mathbf{-14.5}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_f1_by_variant.pdf}
+\caption{Macro-F1 on each test variant (training on clean text only).
+Bars show $\pm$1 standard deviation over three seeds.}
+\label{fig:variants}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{Macro-F1 Gain over PhoBERT-base (hier.) in Points, with 95\% Paired Bootstrap Intervals}
+\label{tab:boot}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Variant} & \textbf{Qwen2.5-1.5B + LoRA} & \textbf{Qwen2.5-3B + LoRA} \\
+\midrule
+Clean          & +6.1 [1.2, 13.0]   & +9.1 [4.6, 16.1] \\
+No diacritics  & +18.6 [12.0, 22.4] & +40.3 [30.9, 44.1] \\
+Teencode       & +7.5 [2.3, 13.8]   & +9.4 [4.3, 15.7] \\
+Telex typos    & +9.1 [2.2, 17.3]   & +18.1 [12.4, 25.5] \\
+Code-switching & +13.2 [8.2, 20.4]  & +15.4 [11.0, 22.7] \\
+Mixed          & +15.5 [8.8, 19.7]  & +44.8 [35.8, 48.2] \\
+\bottomrule
+\end{tabular}
+\end{table}
+% Point estimate = observed difference of seed-mean macro-F1 (Table IV);
+% interval = 2.5/97.5 percentiles of the paired bootstrap distribution
+% (results/E_summary.md, Table 9, which lists bootstrap means instead).
+
+\subsection{Error Analysis}
+We classify each prediction as correct, wrong issue (service correct),
+wrong service (issue correct), or both wrong (Fig.~\ref{fig:errors}). On
+clean text the remaining errors of Qwen2.5-3B are few and spread across
+types (2.5\% wrong issue, 4.4\% wrong service, 2.5\% both), whereas
+hierarchical PhoBERT makes 7.7\% issue and 7.4\% service errors. Without
+diacritics, 41\% of hierarchical PhoBERT predictions are wrong on both
+levels, against 13\% for Qwen2.5-3B, i.e., PhoBERT loses the meaning of the
+ticket rather than confusing neighbouring labels.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_error_types.pdf}
+\caption{Error types on the clean and no-diacritics test variants, pooled
+over three seeds.}
+\label{fig:errors}
+\end{figure}
+
+The most frequent confusions on clean text are between food and mart
+(missing or wrong items, undelivered and cancelled orders), payment issues
+of other services predicted as \texttt{finance/charged\_but\_failed} by
+PhoBERT, and \texttt{transport/trip\_howto} predicted as
+\texttt{business/business\_profile} by both Qwen models. Six test tickets
+are misclassified by all four systems; four of them are implicit tickets,
+for example ``I was charged although the transaction reported failure''
+(gold \texttt{mart/charged\_but\_failed}) and ``I cannot pay with my bank
+card; no money was deducted'' (gold \texttt{mart/payment\_method\_failed}).
+Nothing in these texts identifies the service, so the gold label cannot be
+inferred. Accordingly, service accuracy on the five implicit test tickets
+is 0\% for both PhoBERT variants, 6.7\% for Qwen2.5-1.5B and 13.3\% for
+Qwen2.5-3B, against 89.7--96.2\% on explicit tickets. The two remaining
+tickets contain misleading cues: ``Guide me to switch from my personal to
+my business profile when booking a ride'' (gold
+\texttt{transport/trip\_howto}) mentions the business profile, and ``Why
+can't I see the driver moving on the map?'' (gold
+\texttt{transport/trip\_howto}) is predicted as \texttt{driver\_no\_show}.
+\TODO{If \texttt{[T5]\{fontenc\}} works on Overleaf, add the Vietnamese
+originals of these examples.}
+
+% =====================================================================
+\section{Discussion and Limitations}
+\label{sec:discussion}
+% =====================================================================
+
+\textbf{RQ1.} LoRA-fine-tuned Qwen2.5 models outperform PhoBERT on clean
+super-app tickets, by 6.1 (1.5B) and 9.1 (3B) macro-F1 points over the
+hierarchical head, while training only 18.5M--29.9M adapter parameters.
+\textbf{RQ2.} When trained on clean text, all models are robust to
+teencode and code-switching but not to diacritic removal; scale is the
+main mitigating factor, since Qwen2.5-3B retains 63\% of its clean score
+without diacritics against about 20\% for PhoBERT. For deployment, this
+suggests either a model of at least 3B parameters or noise-aware training
+\TODO{or diacritic restoration} when customers often type without
+diacritics. \textbf{RQ3.} The residual errors on clean text are dominated by
+tickets that do not name the service; such tickets should be resolved with
+conversation context (e.g., the order the customer is viewing) or handed
+to a human agent rather than by a larger classifier.
+
+\textbf{Limitations.} (i) All tickets were written by a single LLM from
+the annotation guideline, so their style is more uniform than real tickets,
+and training and test data share the same generator; scores are likely
+optimistic, and a human-written or real test set is needed. (ii) The tickets
+have not yet been reviewed by human annotators \TODO{update if a review is
+done}. (iii) Noisy variants are rule-based and may not match how customers
+actually write; the test set and the noise rules come from the same
+process. (iv) The test set has only three tickets per label and five
+implicit tickets, so per-label scores are unreliable; we therefore report
+only aggregate scores with bootstrap intervals. (v) Training budgets are not
+fully matched: PhoBERT selected epoch 9--10 of 10 and Qwen2.5-1.5B epoch
+4--5 of 5, so both may be under-trained, and the two families were trained
+on different hardware. (vi) We consider single-label, single-turn tickets
+only. (vii) Latency, memory and cost have not been measured yet, and no
+prompt-only LLM baseline is included \TODO{update}.
+
+% =====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% =====================================================================
+We built a two-level intent taxonomy and a 900-ticket synthetic dataset for
+Vietnamese super-app customer support with six variants of non-standard
+input, and compared PhoBERT with Qwen2.5-1.5B and Qwen2.5-3B fine-tuned with
+LoRA. Qwen2.5-3B achieved 90.1\% macro-F1 on clean tickets and 75.6\% on
+average over noisy variants, against 81.0\% and 50.0\% for PhoBERT, with the
+largest gains on tickets without diacritics. Future work includes
+evaluating on real or human-written tickets, noise-aware training and
+diacritic restoration, measuring latency for deployment, multi-label
+intents, confidence-based hand-off to human agents, and multi-turn context
+for tickets that do not name the service.
+
+% =====================================================================
+\section*{Acknowledgment}
+% =====================================================================
+\TODO{Thank the supervisor. Delete this section if not needed.}
+
+% =====================================================================
+% REFERENCES -- uses references.bib (upload it to the Overleaf project)
+% =====================================================================
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

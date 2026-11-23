@@ -119,5 +119,20 @@ macro-F1 nhãn đầy đủ, TB ± độ lệch 3 seed (42, 43, 44); test 135 c�
 - Cặp nhầm còn lại: food ↔ mart, `transport/trip_howto` → `business/business_profile` (câu nhắc "hồ sơ doanh nghiệp").
 - **Lưu ý khi so sánh:** PhoBERT chưa hội tụ (epoch tốt nhất 9–10/10), Qwen 1.5B cũng chọn epoch 4–5/5; một phần khoảng cách có thể do ngân sách huấn luyện. Nên chạy lại PhoBERT 20 epoch trước khi kết luận trong paper.
 
+## RQ2 – Tăng cường câu bỏ dấu (theo góp ý của thầy, 23/11/2026; chưa chạy)
+
+Hướng dẫn đầy đủ (bảng lộ trình, cài đặt, cách đọc kết quả): **`docs/RQ2_GUIDE.md`**.
+
+```
+data/human_test/HUONG_DAN_VIET.md   # hướng dẫn cho người viết ticket
+data/human_test/assignment.csv      # bảng phân công 180 ticket (45 nhãn x 4, 3 người viết, 60/người)
+scripts/human_test.py               # template / blind / check (kappa) / pack
+notebooks/F_rq2_encoders.ipynb      # PhoBERT + XLM-R, chế độ clean vs aug (50% câu bỏ dấu, cùng số bước)
+notebooks/G_rq2_qwen.ipynb          # Qwen2.5-3B (1.5B) + LoRA, clean vs aug
+notebooks/H_rq2_analysis.ipynb      # mức tăng trên câu không dấu, thay đổi trên câu có dấu, bootstrap
+```
+
+Kết quả RQ2 có tiền tố `R2_` trong `results/`; notebook E và `make_paper_figures.py` bỏ qua các file này.
+
 ## Lịch sử
 - 16/11/2026: làm thử bước A trên Bitext (400 câu tiếng Anh dịch sang tiếng Việt) để học quy trình; sau khi đổi sang bối cảnh super-app đã bỏ toàn bộ dữ liệu và script Bitext.
