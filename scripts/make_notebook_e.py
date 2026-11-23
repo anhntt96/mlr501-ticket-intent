@@ -72,7 +72,7 @@ def system(model, mode):
 
 mets, preds = [], []
 for f in sorted(glob.glob(f"{RESULTS_DIR}/*_metrics.csv")):
-    if "_trial_" in f:
+    if "_trial_" in f or os.path.basename(f).startswith("R2_"):   # R2_*: thí nghiệm RQ2, phân tích ở notebook H
         continue
     m = pd.read_csv(f)
     mets.append(m)
@@ -84,6 +84,7 @@ for f in sorted(glob.glob(f"{RESULTS_DIR}/*_metrics.csv")):
         preds.append(p)
 res = pd.concat(mets, ignore_index=True)
 pred = pd.concat(preds, ignore_index=True)
+res, pred = res[res.variant.isin(VARIANTS)], pred[pred.variant.isin(VARIANTS)]
 for df in (res, pred):
     df["system"] = [system(a, b) for a, b in zip(df.model, df["mode"])]
 if "invalid" not in res:
