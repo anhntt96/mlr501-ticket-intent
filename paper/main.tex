@@ -1,0 +1,241 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+
+% ---- Drafting helper: red notes. Delete all \TODO{...} before submission.
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
+
+% Short version. The full version is kept in main_long.tex.
+
+\begin{document}
+
+\title{Fine-Tuning Small Language Models for Intent Classification of Vietnamese Customer Support Tickets}
+
+\author{
+\IEEEauthorblockN{\TODO{Member 1}}
+\IEEEauthorblockA{\TODO{University}, Vietnam \\ \TODO{email}}
+\and
+\IEEEauthorblockN{\TODO{Member 2}}
+\IEEEauthorblockA{\TODO{University}, Vietnam \\ \TODO{email}}
+\and
+\IEEEauthorblockN{\TODO{Member 3}}
+\IEEEauthorblockA{\TODO{University}, Vietnam \\ \TODO{email}}
+}
+
+\maketitle
+
+\begin{abstract}
+Support tickets sent to Vietnamese super-apps are often written without
+diacritics, with chat abbreviations or with English terms. We define 45
+labels that combine 9 services and 26 issues, create 900 synthetic
+tickets, and test each in six forms of clean and non-standard text.
+PhoBERT-base and Qwen2.5 models with 1.5 and 3 billion parameters are
+fine-tuned on clean text only. The 3-billion-parameter model reaches 90.1
+percent macro-F1 on clean tickets against 81.0 percent for PhoBERT, and its
+gains are significant on every form. Without diacritics, PhoBERT keeps
+about one fifth of its clean score and the larger model nearly two thirds.
+\end{abstract}
+
+\begin{IEEEkeywords}
+intent classification, small language models, LoRA, Vietnamese, noisy text
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:intro}
+Vietnamese super-apps handle rides, food, groceries, parcels, e-wallets
+and memberships in one app, so one support channel must route tickets about
+many services to the right team \cite{fodor2026beyond}. Tickets are often
+non-standard (missing diacritics, teencode, Telex typing errors, English
+terms), public Vietnamese datasets target chatbots
+\cite{tran2020understanding}, and API models send personal data to outside
+providers \TODO{cite Law No.~91/2025/QH15}. We ask whether small language
+models fine-tuned with LoRA beat a fine-tuned Vietnamese encoder (RQ1), how
+much scores drop on non-standard text when training uses clean text only
+(RQ2), and which errors remain (RQ3).
+
+\section{Related Work}
+\label{sec:related}
+Vietnamese intent detection has mostly targeted chatbots and flight
+booking \cite{tran2020understanding,nguyen2022intent,nguyen2022advanced},
+usually with PhoBERT \cite{nguyen2020phobert}. Customer-service studies
+classify e-mails, chats and tickets
+\cite{borg2021email,bonechi2024enhancing,pawlik2022method,rizou2023efficient,nowakbrzezinska2025hybrid,rebelo2022automatic,ferrera2025linguistics},
+and LLMs have been used to create training data or compared with smaller
+classifiers \cite{benayas2024enhancing,madrueno2025novel,alexander2025few,ouaddi2025assessing,pai2026finetuning}.
+None of them compares small models tuned with LoRA
+\cite{hu2022lora,qwen2024qwen25} with PhoBERT on noisy Vietnamese tickets.
+
+\section{Dataset}
+\label{sec:dataset}
+From public help pages of Vietnamese super-apps we compiled 54 support
+intents and split each into a service (9 in total) and an issue (26 in
+total). Not every issue applies to every service, so only 45 of the
+$9\times26$ pairs are valid labels, e.g., \texttt{food/charged\_but\_failed}.
+An LLM (Claude Opus 5.5) wrote 20 tickets per label:
+$45\times20=900$ tickets of 12.2
+words on average, without duplicates; 36 do not name the service. For each
+label, 14 tickets go to training, 3 to validation and 3 to test, giving
+630/135/135 tickets. Each test ticket is evaluated in six rule-based
+variants: clean, no diacritics, teencode (chat abbreviations), Telex typos
+(raw keystrokes in one or two words), English terms (support words replaced
+by English; this changes 345 of 900 tickets) and mixed (the last three
+combined).
+
+\section{Method}
+\label{sec:method}
+\subsection{Models}
+\textbf{PhoBERT-base-v2} \cite{nguyen2020phobert} reads the word-segmented
+ticket $x$ (segmented with underthesea) and turns it into one vector; all its weights
+are trained. The \emph{flat} head turns this vector into 45 probabilities
+and picks the highest. The \emph{hierarchical} head gives two sets of
+probabilities, $p(s\mid x)$ over the 9 services and $p(i\mid x)$ over the 26
+issues, and is trained with the sum of the two cross-entropy losses. It
+predicts the valid pair with the highest combined score:
+\begin{equation}
+\hat{y}=\arg\max_{(s,i)\in V}\big[\log p(s\mid x)+\log p(i\mid x)\big],
+\label{eq:hier}
+\end{equation}
+where $V$ is the set of 45 valid pairs. Adding the logarithms is the same
+as multiplying the two probabilities.
+
+\textbf{Qwen2.5-1.5B- and 3B-Instruct} \cite{qwen2024qwen25} read a short
+instruction and the ticket and write the label as text. With LoRA
+\cite{hu2022lora}, each weight matrix $W$ of size $d\times k$ stays fixed
+and only a small correction is learned:
+\begin{equation}
+W' = W + \frac{\alpha}{r}\,BA,\qquad B\in\mathbb{R}^{d\times r},\;A\in\mathbb{R}^{r\times k},
+\label{eq:lora}
+\end{equation}
+with $r=16$ and $\alpha=32$. Each matrix therefore gains $r(d+k)$ trainable
+values; for example, a $1536\times1536$ attention matrix of the 1.5B model
+gains $16\times3072=49{,}152$. Adding this over the seven matrices of every
+layer gives 18.5M trainable values for the 1.5B model and 29.9M for the 3B
+model, about 1\% of each model. Training minimizes
+\begin{equation}
+\mathcal{L}=-\sum_{t}\log p(y_t\mid x,y_{<t})
+\label{eq:loss}
+\end{equation}
+over the label tokens $y_t$ only, so the model learns to answer rather
+than to copy the ticket. When predicting, the model takes the most likely
+token at each step, but only among tokens that continue one of the 45
+labels, so every output is a valid label.
+
+\subsection{Training}
+PhoBERT uses a learning rate of $2\times10^{-5}$ for 10 epochs. Qwen uses
+$2\times10^{-4}$ for 5 epochs, a larger rate because LoRA trains few values
+that start from zero; it runs in bf16 on one T4 GPU. Both use 16 tickets
+per update; for Qwen this is two batches of 8 added together, because of
+GPU memory. These are common default values and were not tuned. After each
+epoch we compute macro-F1 on the validation set and keep the best epoch;
+the test set is never used for any choice. All models are trained on clean
+text only. Each setting is run three times (seeds 42, 43, 44), and we
+report the mean of the three runs.
+
+\subsection{Evaluation}
+For each label $c$,
+\begin{equation}
+F1_c=\frac{2\,TP_c}{2\,TP_c+FP_c+FN_c},\qquad
+\text{Macro-F1}=\frac{1}{45}\sum_{c=1}^{45}F1_c,
+\label{eq:f1}
+\end{equation}
+where $TP_c$ counts tickets of $c$ predicted as $c$, $FP_c$ tickets of other
+labels predicted as $c$, and $FN_c$ tickets of $c$ predicted as something
+else. Every label counts equally, whatever its size. Service F1 and issue F1
+apply (\ref{eq:f1}) to the part before or after the slash.
+
+The test set has only 135 tickets, so a difference between two models may
+be due to chance. We check this with a paired bootstrap
+\cite{efron1993bootstrap}: draw 135 test tickets with replacement, compute
+the macro-F1 of both models on the same draw and take the difference;
+repeat 2{,}000 times; the 2.5th and 97.5th percentiles of the 2{,}000
+differences form a 95\% interval. If the interval does not contain 0, we
+call the difference significant.
+
+\section{Results}
+\label{sec:results}
+Table~\ref{tab:main} gives macro-F1 for each test variant; ``Noisy'' is the
+mean of the five non-clean columns, e.g.,
+$(56.3+88.0+82.3+90.0+61.3)/5=75.6$ for Qwen 3B.
+
+\begin{table}[t]
+\caption{Macro-F1 (\%) by Test Variant, Mean of Three Runs}
+\label{tab:main}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Model} & \textbf{Clean} & \textbf{No diac.} & \textbf{Teen.} & \textbf{Telex} & \textbf{English} & \textbf{Mixed} & \textbf{Noisy} \\
+\midrule
+PhoBERT flat  & 79.1 & 16.0 & 78.2 & 63.2 & 74.2 & 19.3 & 50.2 \\
+PhoBERT hier. & 81.0 & 16.1 & 78.6 & 64.2 & 74.6 & 16.6 & 50.0 \\
+Qwen 1.5B     & 87.0 & 34.7 & 86.0 & 73.3 & 87.8 & 32.1 & 62.8 \\
+Qwen 3B       & \textbf{90.1} & \textbf{56.3} & \textbf{88.0} & \textbf{82.3} & \textbf{90.0} & \textbf{61.3} & \textbf{75.6} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Clean text.} Qwen 3B is $90.1-81.0=9.1$ points above hierarchical
+PhoBERT (95\% interval $[4.6, 16.1]$) and Qwen 1.5B is 6.1 points above
+($[1.2, 13.0]$); both intervals exclude 0. Flat and hierarchical PhoBERT
+differ by 1.9 points, but their interval $[-7.6, 3.2]$ contains 0, so
+neither head is clearly better. Qwen 3B also raises service F1 from 91.5 to
+94.6 and issue F1 from 84.4 to 93.8.
+
+\textbf{Non-standard text.} Teencode lowers every model by at most 2.4
+points (hierarchical PhoBERT: $81.0\rightarrow78.6$). English terms lower
+PhoBERT by 4.9--6.4 points and Qwen by less than 1. Telex typos lower
+PhoBERT by 16--17 points ($81.0\rightarrow64.2$) and Qwen 3B by 7.8
+($90.1\rightarrow82.3$). Missing diacritics hurt most: PhoBERT keeps
+$16.1/81.0=20\%$ of its clean score, Qwen 1.5B $34.7/87.0=40\%$ and Qwen 3B
+$56.3/90.1=62\%$. The Qwen gains over PhoBERT are significant on all six
+variants. A likely reason is that PhoBERT splits words using diacritics and
+was trained on accented text, while Qwen saw unaccented Vietnamese during
+pre-training.
+
+\textbf{Errors.} We sort each prediction into four groups: correct, wrong
+issue only, wrong service only, or both wrong (Fig.~\ref{fig:errors}).
+Without diacritics, 41\% of hierarchical PhoBERT predictions are wrong on
+both parts, against 13\% for Qwen 3B. Six test tickets are wrong for all
+four models; four of them do not name the service, e.g., ``I was charged
+although the transaction failed'' (gold \texttt{mart}). The test set has
+five such tickets, i.e., 15 predictions over three runs: Qwen 3B finds the
+right service in 2 (13\%), PhoBERT in none.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_error_types.pdf}
+\caption{Share of predictions in each error group on clean and
+no-diacritics tickets, over all three runs.}
+\label{fig:errors}
+\end{figure}
+
+\section{Discussion}
+\label{sec:discussion}
+Fine-tuned small language models beat PhoBERT (RQ1). Their scores drop much
+less without diacritics, and the larger model drops least (RQ2). Most
+remaining errors come from tickets that do not name the service; these need
+conversation context or a human agent (RQ3). Limitations: tickets are
+synthetic and not yet checked by people; noise comes from rules; the test
+set has three tickets per label; PhoBERT and Qwen 1.5B chose epochs near the
+end of training, so they may need more epochs; speed and prompt-only LLMs
+were not measured.
+
+\section{Conclusion}
+\label{sec:conclusion}
+On a new two-level dataset of Vietnamese super-app tickets, Qwen2.5-3B with
+LoRA reached 90.1\% macro-F1 on clean text and 75.6\% on average over the
+five noisy variants, against 81.0\% and 50.0\% for PhoBERT. Future work
+includes real tickets, training with noisy text, speed measurement and
+multi-turn context.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
