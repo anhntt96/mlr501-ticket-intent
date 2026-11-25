@@ -1,0 +1,29 @@
+{
+  "models": [
+    {
+      "name": "XLM-R-base",
+      "hf": "FacebookAI/xlm-roberta-base",
+      "segment": false,
+      "lr": 3e-05
+    }
+  ],
+  "modes": [
+    "hier"
+  ],
+  "train_modes": [
+    "clean",
+    "aug"
+  ],
+  "aug_ratio": 0.5,
+  "epochs": 20,
+  "batch_size": 16,
+  "max_len": 96,
+  "warmup_ratio": 0.1,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "device": "cuda",
+  "human_test": true
+}
