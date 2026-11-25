@@ -1,7 +1,5 @@
 # MLR501 – Phân loại intent ticket CSKH super-app tiếng Việt (bản thử)
 
-Bản thu nhỏ (mini pipeline) để tự đi hết quy trình nghiên cứu trước khi chia việc cho nhóm.
-
 ## Cấu trúc
 
 ```
