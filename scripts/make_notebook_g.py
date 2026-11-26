@@ -40,16 +40,37 @@ code("""
 
 md("## 2. Tải dữ liệu lên")
 code("""
-import os, zipfile
-if os.path.basename(os.getcwd()) == "notebooks":
+import os, glob, shutil, zipfile
+if os.path.basename(os.getcwd()) == "notebooks":   # chạy trên máy: về thư mục gốc dự án
     os.chdir("..")
+try:
+    import google.colab            # Colab cũng có thư mục /kaggle/input, nên phải kiểm tra Colab trước
+    IN_COLAB = True
+except ImportError:
+    IN_COLAB = False
+KAGGLE = not IN_COLAB and "KAGGLE_KERNEL_RUN_TYPE" in os.environ
+print("Môi trường:", "Colab" if IN_COLAB else ("Kaggle" if KAGGLE else "máy cá nhân"))
 if not os.path.exists("data/superapp/dataset_all.csv"):
-    try:
-        from google.colab import files
-        up = files.upload()                      # chọn mlr501_data.zip
-        zipfile.ZipFile(next(iter(up))).extractall(".")
-    except ImportError:
-        raise SystemExit("Không phải Colab: chạy notebook từ thư mục gốc dự án.")
+    if KAGGLE:   # Kaggle: thêm mlr501_data.zip làm Dataset (Add Input); Kaggle tự giải nén
+        found = glob.glob("/kaggle/input/**/data/superapp/dataset_all.csv", recursive=True)
+        zips = glob.glob("/kaggle/input/**/mlr501_data.zip", recursive=True)
+        if found:
+            root = found[0].split("/data/superapp/")[0]
+            for d in ["data", "labels", "docs"]:
+                if os.path.isdir(f"{root}/{d}"):
+                    shutil.copytree(f"{root}/{d}", d, dirs_exist_ok=True)
+        elif zips:
+            zipfile.ZipFile(zips[0]).extractall(".")
+        else:
+            raise SystemExit("Kaggle: chưa thêm dataset chứa mlr501_data.zip (Add Input).")
+    else:
+        try:
+            from google.colab import files
+            up = files.upload()   # chọn mlr501_data.zip; chạy tiếp thì chọn thêm results_R2_*.zip của lần trước
+            for name in up:
+                zipfile.ZipFile(name).extractall(".")
+        except ImportError:
+            raise SystemExit("Không phải Colab/Kaggle: chạy notebook từ thư mục gốc dự án.")
 HUMAN = "data/human_test/human_test.csv"
 print("Có tập test do người viết:", os.path.exists(HUMAN))
 """)
@@ -63,12 +84,26 @@ if USE_DRIVE:
     drive.mount("/content/drive")
     RESULTS_DIR = "/content/drive/MyDrive/mlr501_results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
+
+# Chạy tiếp từ kết quả cũ (đổi tài khoản Colab hoặc chuyển sang Kaggle): nạp các file R2_* đã có
+os.makedirs("results", exist_ok=True)
+for z in glob.glob("results_R2_*.zip") + glob.glob("/kaggle/input/**/results_R2_*.zip", recursive=True):
+    zipfile.ZipFile(z).extractall(".")
+for f in glob.glob("/kaggle/input/**/R2_*.csv", recursive=True):
+    if not os.path.exists(f"results/{os.path.basename(f)}"):
+        shutil.copy(f, "results/")
+if RESULTS_DIR != "results":
+    for f in glob.glob("results/R2_*.csv"):
+        if not os.path.exists(f"{RESULTS_DIR}/{os.path.basename(f)}"):
+            shutil.copy(f, RESULTS_DIR)
 print("Lưu kết quả vào:", RESULTS_DIR)
+print("Kết quả cũ đã có:", sorted(os.path.basename(f) for f in glob.glob(f"{RESULTS_DIR}/R2_*_metrics.csv")) or "không")
 """)
 
 md("## 4. Cấu hình")
 code("""
 import gc, json, math, random, time
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")  # giảm phân mảnh bộ nhớ GPU
 import numpy as np, pandas as pd, torch
 from sklearn.metrics import accuracy_score, f1_score
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, get_linear_schedule_with_warmup
@@ -87,6 +122,9 @@ CFG = dict(
     target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
     lr=2e-4, epochs=5, batch_size=8, grad_accum=2, warmup_ratio=0.1, eval_batch_size=32,
     seeds=[42, 43, 44],
+    # Chia việc cho nhiều tài khoản Colab: chỉ chạy các lần liệt kê ở đây ([] = chạy hết những lần còn thiếu).
+    # Ví dụ tài khoản 1: [("aug50", 43)]   tài khoản 2: [("aug50", 44)]
+    only=[],
 )
 MODEL_LABEL, TAG = MODELS.get(CFG["model_name"], (CFG["model_name"].split("/")[-1] + "+LoRA",
                                                     "R2_" + CFG["model_name"].split("/")[-1].lower()))
@@ -256,6 +294,9 @@ def load_model(seed):
 
 
 def train_one(train_mode, seed):
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
     model = load_model(seed)
     params = [p for p in model.parameters() if p.requires_grad]
     opt = torch.optim.AdamW(params, lr=CFG["lr"], weight_decay=0.0)
@@ -311,9 +352,22 @@ for tm in CFG["train_modes"]:
     for seed in CFG["seeds"]:
         if (TRAIN_TAG[tm], seed) in done:
             print("bỏ qua (đã có):", TRAIN_TAG[tm], seed); continue
+        if CFG["only"] and (TRAIN_TAG[tm], seed) not in {tuple(x) for x in CFG["only"]}:
+            print("bỏ qua (tài khoản khác chạy):", TRAIN_TAG[tm], seed); continue
         print("==", MODEL_LABEL, TRAIN_TAG[tm], "seed", seed)
         t0 = time.time()
-        model, best_ep = train_one(tm, seed)
+        oom = False
+        try:
+            model, best_ep = train_one(tm, seed)
+        except torch.OutOfMemoryError:
+            oom = True
+        if oom:
+            # hết bộ nhớ GPU: dọn sạch (ngoài khối except để giải phóng hẳn) rồi chạy lại lần này với
+            # gradient checkpointing: gradient giống hệt, chỉ chậm hơn ~30%; số bước, batch, seed không đổi
+            print("   hết bộ nhớ GPU -> chạy lại với gradient checkpointing")
+            gc.collect(); torch.cuda.empty_cache()
+            CFG["grad_ckpt"] = True
+            model, best_ep = train_one(tm, seed)
         rows, preds = [], []
         for v, d in EVAL.items():
             p = predict(model, list(d.text))
@@ -346,7 +400,7 @@ code("""
 json.dump({**CFG, "dtype_used": str(DTYPE), "device": torch.cuda.get_device_name(0) if device == "cuda" else device,
            "system_prompt": SYSTEM, "human_test": os.path.exists(HUMAN)},
           open(f"{RESULTS_DIR}/{TAG}_config.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
-zname = f"results_{TAG}.zip"
+zname = f"results_{TAG}" + "".join(f"_{t}-{s}" for t, s in CFG["only"]) + ".zip"   # tên riêng mỗi tài khoản
 with zipfile.ZipFile(zname, "w") as z:
     for f in os.listdir(RESULTS_DIR):
         if f.startswith(TAG + "_"):
@@ -355,7 +409,7 @@ try:
     from google.colab import files
     files.download(zname)
 except ImportError:
-    print("Đã lưu vào", RESULTS_DIR)
+    print("Đã lưu vào", RESULTS_DIR, "và", zname, "(Kaggle: tải ở mục Output bên phải)")
 """)
 
 nb = {"cells": cells, "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},

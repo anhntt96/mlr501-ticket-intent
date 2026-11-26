@@ -80,6 +80,16 @@ Vì 3 người viết cũng là thành viên nhóm (đã thấy dữ liệu tổ
 - Bật `USE_DRIVE = True` (ô 3): kết quả lưu vào Google Drive sau mỗi lần huấn luyện; Colab ngắt thì Run all lại, lần đã xong sẽ được bỏ qua.
 - Thời gian là ước tính, chưa đo trên T4. Lỗi thường gặp xử lý như bước C (bảng trong README: `torchao`, hết bộ nhớ, `loss = nan`).
 
+### Khi Colab hết hạn mức GPU
+
+| Cách | Làm thế nào |
+| --- | --- |
+| Đổi tài khoản Google (thành viên khác) | Mở notebook bằng tài khoản mới → Run all → ở ô 2 chọn **cùng lúc** `mlr501_data.zip` và `results_R2_*.zip` của lần chạy trước. Ô 3 in "Kết quả cũ đã có: …" và ô huấn luyện in "bỏ qua (đã có)" cho các lần đã xong |
+| Kaggle (khoảng 30 giờ GPU/tuần, kiểm tra lại) | kaggle.com → Create → Notebook → File → Import Notebook (chọn file `.ipynb`) → Settings: Accelerator **GPU T4**, Internet **On** (cần xác minh số điện thoại) → Add Input → Upload dataset: `mlr501_data.zip` (và `results_R2_*.zip` nếu chạy tiếp) → Run all. Kết quả tải ở mục **Output** |
+| Chờ | Hạn mức Colab miễn phí hồi lại sau vài giờ đến một ngày |
+
+Kết quả luôn lưu sau **từng lần huấn luyện**, nên chuyển máy giữa chừng chỉ mất lần đang chạy dở.
+
 ## 7. Đọc kết quả
 
 | Kết quả trên câu không dấu (`gain`) | Kết quả trên câu có dấu | Kết luận cho RQ2 |

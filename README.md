@@ -117,20 +117,43 @@ macro-F1 nhãn đầy đủ, TB ± độ lệch 3 seed (42, 43, 44); test 135 c�
 - Cặp nhầm còn lại: food ↔ mart, `transport/trip_howto` → `business/business_profile` (câu nhắc "hồ sơ doanh nghiệp").
 - **Lưu ý khi so sánh:** PhoBERT chưa hội tụ (epoch tốt nhất 9–10/10), Qwen 1.5B cũng chọn epoch 4–5/5; một phần khoảng cách có thể do ngân sách huấn luyện. Nên chạy lại PhoBERT 20 epoch trước khi kết luận trong paper.
 
-## RQ2 – Tăng cường câu bỏ dấu (theo góp ý của thầy, 23/11/2026; chưa chạy)
+## RQ2 – Tăng cường câu bỏ dấu (theo góp ý của thầy, 23/11/2026; đã chạy xong 26/11/2026)
 
-Hướng dẫn đầy đủ (bảng lộ trình, cài đặt, cách đọc kết quả): **`docs/RQ2_GUIDE.md`**.
+Hướng dẫn đầy đủ (bảng lộ trình, cài đặt, cách đọc kết quả, cách chạy khi hết hạn mức GPU): **`docs/RQ2_GUIDE.md`**.
 
 ```
 data/human_test/HUONG_DAN_VIET.md   # hướng dẫn cho người viết ticket
 data/human_test/assignment.csv      # bảng phân công 180 ticket (45 nhãn x 4, 3 người viết, 60/người)
+data/human_test/human_test.csv      # tập test do người viết: text, text_nodiac (người gõ không dấu), text_nodiac_rule
+data/human_test/review_blind.csv    # nhãn gán mù của người duyệt
+data/human_test/disagreements.csv   # 29 câu nhãn gán mù khác nhãn gốc
 scripts/human_test.py               # template / blind / check (kappa) / pack
+scripts/make_notebook_{f,g,h}.py    # sinh 3 notebook bên dưới
 notebooks/F_rq2_encoders.ipynb      # PhoBERT + XLM-R, chế độ clean vs aug (50% câu bỏ dấu, cùng số bước)
-notebooks/G_rq2_qwen.ipynb          # Qwen2.5-3B (1.5B) + LoRA, clean vs aug
+notebooks/G_rq2_qwen.ipynb          # Qwen2.5-3B (1.5B) + LoRA, clean vs aug; CFG["only"] chia lần chạy cho nhiều tài khoản Colab
 notebooks/H_rq2_analysis.ipynb      # mức tăng trên câu không dấu, thay đổi trên câu có dấu, bootstrap
+results/R2_{phobert,xlmr,qwen3b}_*  # kết quả F và G (6 lần chạy mỗi mô hình: clean/aug50 x seed 42-44)
+results/R2_summary.md, R2_fig_gain.png  # kết quả notebook H
 ```
 
 Kết quả RQ2 có tiền tố `R2_` trong `results/`; notebook E và `make_paper_figures.py` bỏ qua các file này.
+
+### Tập test do người viết
+- 180 ticket (45 nhãn × 4), 3 thành viên nhóm viết; mỗi câu có bản có dấu, bản người gõ không dấu và bản bỏ dấu bằng quy tắc.
+- Gán nhãn mù (do AI) để kiểm tra: κ = 0,835; 29 câu khác nhãn (`disagreements.csv`). **Giữ nguyên nhãn gốc.**
+- 26/11/2026: sửa 7 câu `text_nodiac` còn sót dấu (h0011, h0038, h0065, h0077, h0101, h0107, h0143; ghi chú ở `assignment.csv`). **PhoBERT và XLM-R chạy trên bản trước khi sửa, Qwen chạy trên bản đã sửa**, nên cột "gõ không dấu" lệch 7/180 câu giữa các mô hình. Tính lại trên 173 câu chung chỉ đổi ≤ 1,3 điểm, kết luận không đổi. Cột "bỏ dấu bằng quy tắc" giống nhau ở mọi mô hình → dùng cột này khi so sánh giữa các mô hình.
+
+### Kết quả RQ2 (macro-F1 %, TB 3 seed; clean → aug50, mức tăng có CI bootstrap 95%)
+
+| Mô hình | Tổng hợp không dấu | Tổng hợp có dấu | Người viết, không dấu (quy tắc) | Người viết, có dấu |
+| --- | --- | --- | --- | --- |
+| PhoBERT-base (hier) | 18,6 → 59,9 (**+41,3**) | 86,3 → 79,5 (**−6,8**) | 17,6 → 50,9 (+33,3) | 72,6 → 66,6 (−6,0) |
+| XLM-R-base (hier) | 10,0 → 63,8 (**+53,8**) | 84,6 → 74,2 (**−10,4**) | 7,2 → 45,0 (+37,8) | 69,8 → 61,3 (−8,5) |
+| Qwen2.5-3B + LoRA | 56,3 → 78,9 (**+22,6**) | 90,1 → 90,9 (+0,7, không ý nghĩa) | 60,2 → 70,8 (+10,5) | 78,0 → 78,3 (+0,3, không ý nghĩa) |
+
+- Trộn 50% câu bỏ dấu (cùng số bước) tăng mạnh điểm trên câu không dấu ở cả 3 mô hình, và **mức tăng giữ được trên câu người viết**.
+- Encoder phải đánh đổi: giảm 6–10 điểm trên câu có dấu (CI không chứa 0). Qwen 3B không mất gì trên câu có dấu.
+- XLM-R aug50 dao động lớn giữa các seed (độ lệch ~5 điểm). Bảng đầy đủ (mọi biến thể, RQ3 theo `explicit`): `results/R2_summary.md`.
 
 ## Lịch sử
 - 16/11/2026: làm thử bước A trên Bitext (400 câu tiếng Anh dịch sang tiếng Việt) để học quy trình; sau khi đổi sang bối cảnh super-app đã bỏ toàn bộ dữ liệu và script Bitext.
