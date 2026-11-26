@@ -1,0 +1,181 @@
+﻿reviewer,hid,text,label_reviewer
+W1,h0030,Tôi muốn hoàn tiền cho chuyến xe đã thanh toán bằng thẻ doanh nghiệp,business/refund_request
+W1,h0099,Đơn trà sữa của tôi giao tới bị thiếu mất 1 ly,food/order_missing_wrong
+W1,h0174,Tôi bị va chạm với xe khác khi đang đi trên chuyến xe đặt từ app,transport/safety_incident
+W1,h0180,Tôi muốn biết cách thay đổi điểm đến thì phải làm như thế nào,transport/trip_howto
+W1,h0129,App báo đã giao đơn đi chợ của tôi nhưng tôi chưa nhận được gì,mart/order_not_received
+W1,h0054,Kiện hàng  của tôi nhận được là 1 cây bút nhưng hàng tôi cần giao là son,express/order_missing_wrong
+W1,h0051,Tôi nhận được phần pizza bị ôi và đã hết hạn sử dụng,food/order_damaged
+W1,h0069,Tôi chuyển tiền cho người khác 500k báo thất bại nhưng tài khoản ngân hàng của tôi vẫn bị trừ,finance/charged_but_failed
+W1,h0114,"Tôi đặt mua sữa, rau và trứng ở siêu thị, tài khoản bị trừ tiền nhưng tôi không thấy đơn hàng đâu",mart/charged_but_failed
+W1,h0048,Tiền trong tài khoản tôi đã bị trừ nhưng giao dịch báo thất bại,finance/charged_but_failed
+W1,h0066,Tôi gửi một kiện hàng cho người thân nhưng đến bước trả phí ship thì thẻ của tôi bị từ chối,express/payment_method_failed
+W1,h0135,Tôi đặt đơn hàng giao tận nơi hiện giá 150k nhưng tài khoản bị trừ 190k,food/overcharged
+W1,h0021,Chuyến xe đi công tác của tôi lại bị trừ vào tài khoản cá nhân của tôi,business/business_profile
+W1,h0120,Tại sao đơn của tôi bị hệ thống hủy,food/order_cancelled
+W1,h0039,Tôi sử dụng chức năng đặt bàn nhưug đến nơi thì không hề có bàn được đặt,dine_out/reservation_issue
+W1,h0045,Tôi vừa đặt một đơn hàng tài khoản đã bị trừ tiền nhưng tôi nhận được giao dịch thất bại,food/charged_but_failed
+W1,h0087,Tôi thấy có côn trùng trong tô bún vừa đặt và ăn xong bị đau bụng,food/food_safety
+W1,h0027,Tôi thêm thẻ công ty vào tài khoản doanh nghiệp nhưng bị báo lỗi,business/link_card_failed
+W1,h0168,Số tiền tôi bị trừ tại sao lại cao hơn giá hiển thị lúc đặt,transport/overcharged
+W1,h0033,Tôi muốn đổi số điện thoại liên hệ trên hồ sơ doanh nghiệp của công ty,business/update_contact
+W1,h0138,Khi tôi thanh toán bằng ví tại sao app lại từ chối,transport/payment_method_failed
+W1,h0024,Tại sao đơn công tác của tôi lại bị tính vào hồ sơ cá nhân,business/business_profile
+W1,h0156,Chiều nay lúc 5h tôi đã thanh toán cho một chuyến xe nhưng giao dịch lại thất bại,transport/charged_but_failed
+W1,h0153,"Tôi đặt xe và đã trả tiền xong thì app báo lỗi, không có tài xế nhận mà tôi vẫn bị trừ tiền",transport/charged_but_failed
+W1,h0009,Tôi quên mã PIN thanh toán của ví và muốn đặt lại,account/forgot_credential
+W1,h0078,Tôi không thể liên kết thẻ tín dụng vào ví của app,finance/link_card_failed
+W1,h0036,Tôi muốn thay đổi số điện thoại đang dùng,account/update_contact
+W1,h0102,Thức ăn của tôi vẫn chưa nhận được dù tôi đã lên đơn từ 2 tiếng trước,food/order_not_received
+W1,h0171,Tại sao tôi không thể thanh toán cho đơn hàng của tôi,food/payment_method_failed
+W1,h0093,Bánh mì tôi đặt giao đến đã bị hỏng và có mùi lạ,food/order_damaged
+W1,h0003,Tôi không muốn sử dụng ứng dụng nữa nhưng không thể xóa tài khoản và thông tin của tôi,account/delete_account
+W1,h0159,Tài xế đã nhận chuyến của tôi nhưng đứng yên một chỗ 20 phút không đến,transport/driver_no_show
+W1,h0150,Tôi đã đặt xe được 30 phút nhưng vẫn chưa có tài xế nhận chuyến,transport/cannot_book
+W1,h0111,Tôi thanh toán đơn hàng bằng thẻ nhưng báo lỗi và không thanh toán được,food/payment_method_failed
+W1,h0147,Tôi có nhu cầu nâng cấp gói hội viên nhưng bị từ chối,membership/membership_subscribe
+W1,h0141,Tại sao tôi không thể hủy gói hội viên của tôi,membership/membership_cancel
+W1,h0063,Phí gửi hàng lúc đặt hiện 20k nhưng khi người nhận nhận xong tôi lại bị tính 35k,express/overcharged
+W1,h0018,Tôi muốn cập nhật lại email trên tài khoản đặt xe của tôi,account/update_contact
+W1,h0084,Tôi bị trừ tiền trong tài khoản nhưng giao dịch lại báo không thành công,finance/charged_but_failed
+W1,h0057,Đơn giao hàng của tôi hiển thị đang giao đã hơn 3 tiếng nhưng người nhận chưa nhận được,express/order_not_received
+W1,h0105,Đơn đồ ăn của tôi lúc đặt hiện 65k nhưng đến lúc thanh toán lại bị tính 85k,food/overcharged
+W1,h0177,Làm sao để tôi theo dõi tài xế đang đến đón tôi trên bản đồ,transport/trip_howto
+W1,h0012,Tôi quên mật khẩu và muốn đặt lại,account/forgot_credential
+W1,h0060,Đơn của tôi báo đã giao nhưng tôi không thấy ai giao cả,food/order_not_received
+W1,h0132,App báo đơn của tôi đã giao nhưng tôi vẫn chưa nhận được gì,food/order_not_received
+W1,h0117,Đơn mua đồ siêu thị của tôi tự nhiên bị huỷ,mart/order_cancelled
+W1,h0006,Tôi muốn xóa lịch sử các chuyến xe cũ khỏi tài khoản của tôi,account/delete_history
+W1,h0072,Tài khoản tôi bị trừ tiền lúc 9h tối nhưng giao dịch không thành công,finance/charged_but_failed
+W1,h0015,Tại sao tài khoản của tôi bị khóa không rõ lí do,account/login_failed
+W1,h0096,Khi tôi nhận thức ăn thì nó đã bị hỏng tôi muốn hoàn tiền,food/order_damaged
+W1,h0165,Tôi đặt chuyến xe mà số tiền bị trừ nhiều hơn giá lúc đặt 30k,transport/overcharged
+W1,h0144,Tôi muốn hủy gói hội viên nhưng không tìm thấy nút hủy,membership/membership_cancel
+W1,h0123,"Tôi mua hàng ở siêu thị giao tới thì trứng bị vỡ hết, rau héo và sữa thì đã hết hạn",mart/order_damaged
+W1,h0126,Tôi mua đồ tạp hoá 3 món mà chỉ nhận được 2 món,mart/order_missing_wrong
+W1,h0042,Tôi dùng voucher ăn tại nhà hàng nhưng nhân viên báo không áp dụng được,dine_out/voucher_issue
+W1,h0081,Tôi vừa đặt một phần cơm sườn ở quán nhưng app báo thanh toán lỗi trong khi tài khoản đã bị trừ tiền,food/charged_but_failed
+W1,h0090,Đơn đồ ăn của tôi bị quán hủy mà tôi không hề yêu cầu,food/order_cancelled
+W1,h0075,Tôi nhận được rất nhiều đơn hàng và yêu cầu tôi phải thanh toán nhưung tôi không có đặt bất cứ đơn nào,finance/fraud_report
+W1,h0162,Hôm qua tôi để quên cái ví trên xe sau khi xuống và muốn liên hệ tài xế,transport/lost_item
+W1,h0108,Tại sao tôi bị trừ nhiều tiền hơn so với giá ban đầu,transport/overcharged
+W2,h0151,"Chuyến xe của tôi không tìm được tài xế quanh đây, tôi phải làm sao?",transport/cannot_book
+W2,h0043,Tôi đã mua voucher tại Hadilao nhưng khi đến thì nhà hàng từ chối voucher với lí do voucher đã được sử dụng. Nhờ bạn kiểm tra giúp tôi xem tại sao?,dine_out/voucher_issue
+W2,h0154,"Chuyến xe không thành công nhưng tôi vẫn bị trừ tiền trong ví điện tử Momo, nhờ bạn kiểm tra giúp tôi xe tại sao. Mã giao dịch: 191971292",transport/charged_but_failed
+W2,h0175,"Tài xế lái xe ẩu, vượt đèn đỏ khi di chuyển trên đường.",transport/safety_incident
+W2,h0145,"Tôi đăng kí gói hội viên nhưng app bị đơ, không đăng kí được",membership/membership_subscribe
+W2,h0148,"Tôi đăng kí gói hội viên nhưng lỗi không tìm thấy thông tin tài khoản, nhờ bạn kiểm tra giúp tôi.",membership/membership_subscribe
+W2,h0022,"Hồ sơ doanh nghiệp của tôi bị sửa thông tin địa chỉ, nhờ bạn kiểm tra giúp tôi xem tại sao? Và xuất lại hoá đơn tháng 10 theo đúng địa chỉ ban đầu.",business/business_profile
+W2,h0109,Đơn bún bò huế của tôi tại sao lại không thanh toán được? Thẻ của tôi vẫn hoạt động bình thường mà.,food/payment_method_failed
+W2,h0004,Tôi muốn xoá vĩnh viễn dữ liệu của tôi trên ứng dụng. Nhờ bạn xoá giúp tôi,account/delete_account
+W2,h0121,Cà rốt bị mốc trong đơn hàng đi chợ hộ của tôi,mart/order_damaged
+W2,h0076,"Tôi thấy có giao dịch lạ trong tài khoản ngân hàng liên quan đến công ty, đề nghị công ty kiểm tra tại sao? Ngày 11-11-2026, mã giao dịch 201919182",finance/fraud_report
+W2,h0088,"Tôi bị đau bụng nhập viện sau khi sử ăn, đề nghị công ty hoàn tiền và chịu trách nhiệm thanh toán viện phí.",food/food_safety
+W2,h0166,"Cuốc xe của tôi bị trừ gấp 3 lần giá hiển thị trên app, đề nghị hoàn tiền cho người dùng. Lừa đảo",transport/overcharged
+W2,h0061,Đơn hàng A-12192102 của tôi giao từ Quận 7 về Thủ Đức có giá 100k nhưng tài khoản của tôi bị trừ 200k. Nhờ bạn kiểm tra xem tại sao?,express/overcharged
+W2,h0019,Tôi muốn đổi email cho tài khoản từ anhntt@gmail.com sang emntt@gmail.com,account/update_contact
+W2,h0055,"Tài xế giao sai đơn express của người khác, tôi đã liên hệ tài xế nhưng không liên lạc được. Nhờ bạn kiểm tra và xử lý giúp. Tôi tên Tuấn Anh nhưng nhận được đơn hàng của Tuấn Em.",express/order_missing_wrong
+W2,h0160,"Tài xế đứng yên ở 1 chỗ không di chuyển, tôi không liên lạc được với họ. Nhờ bạn huỷ cuốc xe giúp tôi",transport/driver_no_show
+W2,h0073,"Tôi nhận được thông báo trên ứng dụng ngân hàng trừ 121k cho hoá đơn A-10123, nhưng không hiểu taị sao. Bạn kiểm tra giúp tôi?",finance/fraud_report
+W2,h0007,"Tôi muốn xoá lịch sử chuyến xe từ Đại học FPT về FPT software, nhờ bạn hỗ trợ giúp tôi.",account/delete_history
+W2,h0169,tôi không thanh toán được cuốc xe A-1231022 nhờ bạn kiểm tra xem tại sao,transport/payment_method_failed
+W2,h0040,"Tôi đến nơi nhưng không còn chỗ ngồi, đề nghị công ty xử lý vấn đề này mặc dù đã đặt chỗ.",dine_out/reservation_issue
+W2,h0058,"Tại sao tôi vẫn chưa nhận được đơn hàng express, app báo khoảng 1 tiếng là tài xế đến nhưng tôi đã chờ 3 tiếng rồi.",express/order_not_received
+W2,h0112,Tô bún bò của tôi bị huỷ với lý do thẻ bị từ chối. Nhờ bạn kiểm tra xe tại sao?,food/payment_method_failed
+W2,h0085,"Trong món ăn có chưa tóc, món ăn không hợp vệ sinh. Đề nghị hoàn tiền.",food/food_safety
+W2,h0037,"Tôi đặt bàn trên ứng dụng nhưng nhận lỗi này, nhờ các bạn kiểm tra xem tại sao (ảnh đính kèm).",dine_out/reservation_issue
+W2,h0016,"Tôi không nhận được SMS OTP, nhờ bạn kiểm tra xem có vấn đề gì",account/login_failed
+W2,h0142,Tôi không tìm được cách để huỷ gói hội viên VIP. Nhờ bạn kiểm tra và hướng dẫn giúp tôi.,membership/membership_cancel
+W2,h0130,"Tôi không nhận được đơn hàng mart, tôi phải làm gì? Tôi đã liên hệ tài xế nhiều lần nhưng không liên lạc được.",mart/order_not_received
+W2,h0172,"Thẻ của tôi báo lỗi ngân hàng gián đoạn cho giao dịch A-123123, tôi cần phải làm sao?",transport/payment_method_failed
+W2,h0001,"Tôi muốn xoá tài khoản này, tôi cần phải làm sao?",account/delete_account
+W2,h0100,"Đơn hàng của tôi bị thiếu 1 phần gà rán, nhờ bạn kiểm tra giúp tôi",food/order_missing_wrong
+W2,h0115,Tôi không nhận được đơn hàng mart nhưng mà tiền trong tài khoản đã bị trừ. Đề nghị hoàn tiền cho tôi,mart/order_not_received
+W2,h0031,"Chuyến xe doanh nghiệp của tôi bị huỷ, nhưng tiền chưa được hoàn về tài khoản ngân hàng. Nhờ bạn kiểm tra giúp tôi.",business/refund_request
+W2,h0178,Tôi muốn thay đổi điểm đến của chuyến xe này thì làm sao? Nhờ bạn gửi tôi hướng dẫn,transport/trip_howto
+W2,h0046,"Tôi ship hàng về quận 7 không thành công do không tìm được tài xế nhưng vẫn bị trừ tiền, đề nghị hoàn tiền cho tôi ngay lập tức",express/charged_but_failed
+W2,h0064,Tôi bị trừ tiền trong tài khoản cao hơn trên app. Nhờ bạn kiểm tra giúp tôi xem tại sao,transport/overcharged
+W2,h0094,"Món phở của tôi bị đổ hết nước ra ngoài, yêu cầu hoàn tiền",food/order_damaged
+W2,h0067,"Thanh toán đơn hàng express bị lỗi thẻ bị từ chối giao dịch, tôi đã xoá thẻ và liên kết lại nhưng vẫn không được.",express/payment_method_failed
+W2,h0082,"Đơn vịt quay của tôi thất bại nhưng tôi vẫn bị trừ tiền trong thẻ tín dụng, công ty hoàn tiền giúp tôi nhé",food/charged_but_failed
+W2,h0106,Đơn food của tôi giá 20 nghìn mà bị trừ tận 40 nghìn. Đề nghị hoàn tiền cho tôi,food/overcharged
+W2,h0034,Tôi muốn đổi số điện thoại cho doanh nghiệp mình từ 0987678172 sang 09918237112,business/update_contact
+W2,h0028,"Tôi không liên kết được thẻ vào tài khoản, nhờ bạn kiểm tra giúp tôi",finance/link_card_failed
+W2,h0091,"Đơn đồ ăn của tôi bị huỷ không rõ nguyên nhân, nhờ bạn kiểm tra xem tại sao, tôi đã chờ hơn 1 tiếng.",food/order_cancelled
+W2,h0013,"Tại sao tài khoản của tôi bị khoá, tôi không thể sử dụng dịch vụ? Mở khoá ngay cho tôi",account/login_failed
+W2,h0025,Doanh nghiệp của tôi không thêm được thẻ ngân hàng vào tài khoản. Nhờ bạn hướng dẫn cách sử dụng app.,business/link_card_failed
+W2,h0103,"Đơn gà rán của tôi, app báo đơn hàng giao thành công nhưng không thấy tài xế đâu cả, tôi chưa nhận được hàng. Kiểm tra giúp tôi",food/order_not_received
+W2,h0070,Tôi bị trừ tiền cho giao dịch A-1291212  trong tài khoản ngân hàng nhưng tôi không thấy giao dịch này trong app của tôi.,finance/fraud_report
+W2,h0157,"Tài xế không đến điểm đón và yêu cầu tôi huỷ chuyến, nhờ bạn xử lí vấn đề này",transport/driver_no_show
+W2,h0118,Tại sao đơn hàng mart của tôi bị huỷ? Tôi đã làm gì sai?,mart/order_cancelled
+W2,h0136,Đơn hàng khoai tây của tôi bị trừ gấp đôi so với số tiền trên app.,mart/overcharged
+W2,h0049,"Tài xế giao hàng không cẩn thận, làm hỏng mất chiếc iPhone 18 Promax của tôi. Đề nghị công ty bồi thường theo hợp đồng.",express/order_damaged
+W2,h0133,Tại sao đạo hàng đi chợ của tôi bị trừ gấp 3 lần giá hiển thị trên ứng dụng?,mart/overcharged
+W2,h0139,"Đơn hàng dì chợ gặp lỗi, thẻ credit card không thanh toán được, lỗi hệ thống không ổn định, vui lòng thử lại sau.",mart/payment_method_failed
+W2,h0052,"bưu kiện của tôi bị vỡ, nhờ bạn kiểm tra xem trách nhiệm thuộc về ai?",express/order_damaged
+W2,h0127,Đơn hàng đi chợ hộ B-12312 bị giao thiếu hành tây. Nhờ bạn kiểm tra và tìm phương án xử lí giúp tôi?,mart/order_missing_wrong
+W2,h0097,"Quán giao thiếu món gà rán của tôi rồi, đề nghị hoàn tiền đơn hàng này.",food/order_missing_wrong
+W2,h0124,"Thùng sữa milo bị hết hạn sử dụng, nhờ bạn hỗ trợ",mart/order_damaged
+W2,h0079,Khi liên kết thẻ ngân hàng vào ứng dụng gặp lỗi: hệ thống hiện tại không khả dụng. Nhờ bạn kiểm tra xem tại sao?,finance/link_card_failed
+W2,h0010,"Tôi bị quên mật khẩu đăng nhập, nhờ bạn hỗ trợ khôi phục lại mật khẩu giúp tôi. SDT: 0965678910",account/forgot_credential
+W2,h0163,"Bạn tôi quên điện thoại trên xe ô tô, nhờ các bạn hỗ trợ lấy lại tài sản.",transport/lost_item
+W3,h0152,tôi chờ mãi mà vẫn chưa có ai nhận yêu cầu,transport/cannot_book
+W3,h0065,Tôi không thể thanh toán phí giao hàng bằng ví điện tử,express/payment_method_failed
+W3,h0050,Tôi nhận được hàng giao đến nhưng sản phẩm bên trong đã bị hư hỏng,express/order_damaged
+W3,h0137,"Khi đặt hàng đi chợ, tôi không thể chọn phương thức thanh toán bằng ngân hàng.",mart/payment_method_failed
+W3,h0167,Tôi muốn khiếu nại vì phí chuyến xe không đúng với giá ban đầu,transport/overcharged
+W3,h0074,Tài khoản tài chính của tôi có dấu hiệu bị người khác truy cập trái phép,finance/fraud_report
+W3,h0041,tôi đến nhà hàng nhưng nhân viên báo mã voucher không hợp lệ,dine_out/voucher_issue
+W3,h0161,"tôi quên mất đồ trên xe, cần số điện thoại của tài xế của chuyến xe vừa rồi",transport/lost_item
+W3,h0032,Tôi cần hoàn tiền cho một giao dịch được ghi nhận trên tài khoản doanh nghiệp,business/refund_request
+W3,h0113,Tiền đã bị trừ khỏi tài khoản nhưng đơn hàng không được tạo,food/charged_but_failed
+W3,h0110,"khi đặt đồ ăn, tôi chọn ví điện tử nhưng hệ thống không chấp nhận",food/payment_method_failed
+W3,h0080,Tôi không thể liên kết phương thức thanh toán với tài khoản,finance/link_card_failed
+W3,h0143,tôi muốn hủy gói hội viên của tôi nhưng không tìm thấy nút hủy ở đâu,membership/membership_cancel
+W3,h0089,sao tôi vừa đặt đồ ăn xong đã bị hủy vậy?,food/order_cancelled
+W3,h0125,Tôi đặt hai sản phẩm nhưng chỉ nhận được một,mart/order_missing_wrong
+W3,h0014,"tôi không đăng nhập được vào tài khoản và bị báo lỗi khi đăng nhập, hiện lên tài khoản bị khóa",account/login_failed
+W3,h0101,Đơn đặt món của tôi bị báo giao thất bại dù không ai liên hệ,food/order_not_received
+W3,h0179,Tôi muốn quản lý những địa điểm đã lưu khi sử dụng tính năng đặt xe thì làm sao,transport/trip_howto
+W3,h0062,số tiền tôi phải trả cao hơn số tiền đã đặt hàng và hiện trong app,food/overcharged
+W3,h0128,nhận đơn hàng không giống như trong app,food/order_missing_wrong
+W3,h0053,shipper giao nhầm đồ ăn của tôi thành của người khác,food/order_missing_wrong
+W3,h0119,mình đặt đơn hàng nhưng đơn hàng đang giao lại bị hủy giữa chừng và không có thông báo gì,food/order_cancelled
+W3,h0098,tôi muốn phản ánh việc nhà hàng chuẩn bị sai món cho tôi.,food/order_missing_wrong
+W3,h0059,Tôi chưa nhận được bưu gửi dù hệ thống thông báo đã giao đến,express/order_not_received
+W3,h0026,mình không liên kết được ví điện tử vào trong tài khoản của app,finance/link_card_failed
+W3,h0068,tôi muốn thanh toán qua ngân hàng nhưng không thực hiện được,transport/payment_method_failed
+W3,h0149,Tôi đã bấm đặt xe nhiều lần nhưng hệ thống không phản hồi,transport/cannot_book
+W3,h0134,Tổng tiền mua hàng của tôi cao hơn số tiền ứng dụng thông báo.,mart/overcharged
+W3,h0092,"tôi đâu có bấm hủy, tại sao lại báo đã hủy?",food/order_cancelled
+W3,h0008,tôi muốn dọn sạch lịch sử sử dụng trước đây,account/delete_history
+W3,h0146,Tôi muốn sử dụng gói hội viên nhưng không thể kích hoạt đăng ký,membership/membership_subscribe
+W3,h0005,Có cách nào xóa toàn bộ lịch sử đặt xe của tôi không,account/delete_history
+W3,h0095,món ăn có mùi hôi thối khi tôi nhận hàng,food/order_damaged
+W3,h0104,Tôi vẫn chưa nhận được thứ mình đã đặt dù hệ thống báo hoàn tất,food/order_not_received
+W3,h0158,Tôi chờ xe khá lâu nhưng tài xế không di chuyển đến điểm đón,transport/driver_no_show
+W3,h0164,tôi muốn nhờ hỗ trợ tìm lại món đồ mà tôi đã để quên,transport/lost_item
+W3,h0170,tôi không thanh toán được bằng ví điện tử khi đặt cước cho chuyến xe,transport/payment_method_failed
+W3,h0083,Hệ thống báo không tạo được đơn món ăn nhưng tài khoản vẫn thông báo trừ tiền,food/charged_but_failed
+W3,h0023,"tôi không thể đăng ký tài khoản doanh nghiệp, nhờ bên mình hỗ trợ.",business/business_profile
+W3,h0020,tôi muốn cập nhật thông tin,account/update_contact
+W3,h0077,Tôi không thể liên kết thẻ ngân hàng với tài khoản của mình,finance/link_card_failed
+W3,h0131,"Tài xế không giao được đơn đi chợ cho tôi, nhờ hỗ trợ xử lý",mart/order_not_received
+W3,h0035,Tôi đã nhập email mới nhưng hệ thống báo không hợp lệ,account/update_contact
+W3,h0173,"Tài xế lái xe rất ẩu, khiến tôi cảm thấy không an toàn",transport/safety_incident
+W3,h0056,những thứ tôi nhận được không giống với những gì tôi đã yêu cầu,mart/order_missing_wrong
+W3,h0116,Tôi đã thanh toán nhưng hệ thống thông báo không thành công,finance/charged_but_failed
+W3,h0071,vì sao tôi đã thanh toán mà hệ thống vẫn báo đặt không thành công?,transport/charged_but_failed
+W3,h0176,tôi cần hỗ trợ báo cáo về hành vi đe dọa an toàn,transport/safety_incident
+W3,h0044,Tôi có một mã ưu đãi nhưng không sử dụng được,dine_out/voucher_issue
+W3,h0122,đơn hàng chứa li sứ dễ vỡ bị nứt khi tôi kiểm tra hàng đã được nhận,express/order_damaged
+W3,h0011,Làm cách nào để đặt lại mật khẩu tài khoản của toi,account/forgot_credential
+W3,h0107,Tôi không hiểu vì sao tổng tiền phải trả cho món ăn lại cao hơn ban đầu,food/overcharged
+W3,h0038,"Tôi không thể đặt bàn tại nhà hàng, nhờ hỗ trợ kiểm tra giúp",dine_out/reservation_issue
+W3,h0155,chuyến xe báo thất bại nhưng tài khoản của tôi vẫn bị trừ tiền,transport/charged_but_failed
+W3,h0047,Tôi bị trừ tiền hai lần trong khi đơn giao hàng không được xác nhận,express/charged_but_failed
+W3,h0002,làm thế nào để xóa tài khoản khỏi hệ thống?,account/delete_account
+W3,h0140,hệ thống liên tục báo lỗi khi tôi thanh toán bằng thẻ,transport/payment_method_failed
+W3,h0086,Tôi nghi ngờ món ăn từ nhà hàng không đảm bảo an toàn thực phẩm,food/food_safety
+W3,h0029,bên mình có thể hỗ trợ hoàn lại tiền cho đơn hàng thanh toán bằng thẻ công ty không?,business/refund_request
+W3,h0017,tôi muốn thay đổi số điện thoại liên hệ trong tài khoản,account/update_contact

@@ -42,16 +42,37 @@ code("""
 
 md("## 2. Tải dữ liệu lên")
 code("""
-import os, zipfile
-if os.path.basename(os.getcwd()) == "notebooks":
+import os, glob, shutil, zipfile
+if os.path.basename(os.getcwd()) == "notebooks":   # chạy trên máy: về thư mục gốc dự án
     os.chdir("..")
+try:
+    import google.colab            # Colab cũng có thư mục /kaggle/input, nên phải kiểm tra Colab trước
+    IN_COLAB = True
+except ImportError:
+    IN_COLAB = False
+KAGGLE = not IN_COLAB and "KAGGLE_KERNEL_RUN_TYPE" in os.environ
+print("Môi trường:", "Colab" if IN_COLAB else ("Kaggle" if KAGGLE else "máy cá nhân"))
 if not os.path.exists("data/superapp/dataset_all.csv"):
-    try:
-        from google.colab import files
-        up = files.upload()                      # chọn mlr501_data.zip
-        zipfile.ZipFile(next(iter(up))).extractall(".")
-    except ImportError:
-        raise SystemExit("Không phải Colab: chạy notebook từ thư mục gốc dự án.")
+    if KAGGLE:   # Kaggle: thêm mlr501_data.zip làm Dataset (Add Input); Kaggle tự giải nén
+        found = glob.glob("/kaggle/input/**/data/superapp/dataset_all.csv", recursive=True)
+        zips = glob.glob("/kaggle/input/**/mlr501_data.zip", recursive=True)
+        if found:
+            root = found[0].split("/data/superapp/")[0]
+            for d in ["data", "labels", "docs"]:
+                if os.path.isdir(f"{root}/{d}"):
+                    shutil.copytree(f"{root}/{d}", d, dirs_exist_ok=True)
+        elif zips:
+            zipfile.ZipFile(zips[0]).extractall(".")
+        else:
+            raise SystemExit("Kaggle: chưa thêm dataset chứa mlr501_data.zip (Add Input).")
+    else:
+        try:
+            from google.colab import files
+            up = files.upload()   # chọn mlr501_data.zip; chạy tiếp thì chọn thêm results_R2_*.zip của lần trước
+            for name in up:
+                zipfile.ZipFile(name).extractall(".")
+        except ImportError:
+            raise SystemExit("Không phải Colab/Kaggle: chạy notebook từ thư mục gốc dự án.")
 HUMAN = "data/human_test/human_test.csv"
 print("Có tập test do người viết:", os.path.exists(HUMAN))
 """)
@@ -65,7 +86,20 @@ if USE_DRIVE:
     drive.mount("/content/drive")
     RESULTS_DIR = "/content/drive/MyDrive/mlr501_results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
+
+# Chạy tiếp từ kết quả cũ (đổi tài khoản Colab hoặc chuyển sang Kaggle): nạp các file R2_* đã có
+os.makedirs("results", exist_ok=True)
+for z in glob.glob("results_R2_*.zip") + glob.glob("/kaggle/input/**/results_R2_*.zip", recursive=True):
+    zipfile.ZipFile(z).extractall(".")
+for f in glob.glob("/kaggle/input/**/R2_*.csv", recursive=True):
+    if not os.path.exists(f"results/{os.path.basename(f)}"):
+        shutil.copy(f, "results/")
+if RESULTS_DIR != "results":
+    for f in glob.glob("results/R2_*.csv"):
+        if not os.path.exists(f"{RESULTS_DIR}/{os.path.basename(f)}"):
+            shutil.copy(f, RESULTS_DIR)
 print("Lưu kết quả vào:", RESULTS_DIR)
+print("Kết quả cũ đã có:", sorted(os.path.basename(f) for f in glob.glob(f"{RESULTS_DIR}/R2_*_metrics.csv")) or "không")
 """)
 
 md("## 4. Cấu hình")
@@ -310,7 +344,7 @@ try:
     from google.colab import files
     files.download(zname)
 except ImportError:
-    print("Đã lưu vào", RESULTS_DIR)
+    print("Đã lưu vào", RESULTS_DIR, "và", zname, "(Kaggle: tải ở mục Output bên phải)")
 """)
 
 nb = {"cells": cells, "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
